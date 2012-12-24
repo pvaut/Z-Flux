@@ -1,0 +1,4 @@
+ACTION=RunScript;[CurrentFolder]\mars.SCI
+THUMBNAIL=[CurrentFolder]\_thumbnail.THB
+TITLE=Mars
+DESCRIPTION=Animation of Mars and moons

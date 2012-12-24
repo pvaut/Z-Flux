@@ -1,0 +1,1065 @@
+This is pdfTeX, Version 3.1415926-1.40.9 (MiKTeX 2.7) (preloaded format=pdflatex 2009.7.16)  12 JAN 2010 14:57
+entering extended mode
+**L:/3DCosmos/3DCosmos/Documentation/scriptdoc.tex
+(L:/3DCosmos/3DCosmos/Documentation/scriptdoc.tex
+LaTeX2e <2005/12/01>
+Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman, ngerman, german-x-2008-06-18, ngerman-x-2008-06-18, french, loaded.
+("C:\Program Files\MiKTeX 2.7\tex\latex\base\book.cls"
+Document Class: book 2005/09/16 v1.4f Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.7\tex\latex\base\bk10.clo"
+File: bk10.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files\MiKTeX 2.7\tex\latex\hyperref\hyperref.sty"
+Package: hyperref 2008/11/18 v6.78m Hypertext links for LaTeX
+
+("C:\Program Files\MiKTeX 2.7\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files\MiKTeX 2.7\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2007/12/12 v1.6 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in pdf mode detected.
+)
+("C:\Program Files\MiKTeX 2.7\tex\generic\oberdiek\ifvtex.sty"
+Package: ifvtex 2008/11/04 v1.4 Switches for detecting VTeX and its modes (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:\Program Files\MiKTeX 2.7\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2008/09/18 v0.4 Provides ifxetex conditional
+)
+("C:\Program Files\MiKTeX 2.7\tex\latex\oberdiek\hycolor.sty"
+Package: hycolor 2008/09/08 v1.4 Code for color options of hyperref/bookmark (H
+O)
+
+("C:\Program Files\MiKTeX 2.7\tex\latex\oberdiek\xcolor-patch.sty"
+Package: xcolor-patch 2008/09/08 xcolor patch
+))
+\@linkdim=\dimen103
+\Hy@linkcounter=\count88
+\Hy@pagecounter=\count89
+
+("C:\Program Files\MiKTeX 2.7\tex\latex\hyperref\pd1enc.def"
+File: pd1enc.def 2008/11/18 v6.78m Hyperref: PDFDocEncoding definition (HO)
+)
+("C:\Program Files\MiKTeX 2.7\tex\generic\oberdiek\etexcmds.sty"
+Package: etexcmds 2007/12/12 v1.2 Prefix for e-TeX command names (HO)
+
+("C:\Program Files\MiKTeX 2.7\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2007/09/09 v1.2 Providing info/warning/message (HO)
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)
+("C:\Program Files\MiKTeX 2.7\tex\latex\00miktex\hyperref.cfg"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+("C:\Program Files\MiKTeX 2.7\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2007/10/18 v3.0 Keyval support for LaTeX options (HO)
+)
+Package hyperref Info: Hyper figures OFF on input line 2907.
+Package hyperref Info: Link nesting OFF on input line 2912.
+Package hyperref Info: Hyper index ON on input line 2915.
+Package hyperref Info: Plain pages OFF on input line 2922.
+Package hyperref Info: Backreferencing OFF on input line 2927.
+
+Implicit mode ON; LaTeX internals redefined
+Package hyperref Info: Bookmarks ON on input line 3117.
+("C:\Program Files\MiKTeX 2.7\tex\latex\ltxmisc\url.sty"
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 3351.
+
+("C:\Program Files\MiKTeX 2.7\tex\generic\oberdiek\bitset.sty"
+Package: bitset 2007/09/28 v1.0 Data type bit set (HO)
+
+("C:\Program Files\MiKTeX 2.7\tex\generic\oberdiek\intcalc.sty"
+Package: intcalc 2007/09/27 v1.1 Expandable integer calculations (HO)
+)
+("C:\Program Files\MiKTeX 2.7\tex\generic\oberdiek\bigintcalc.sty"
+Package: bigintcalc 2007/11/11 v1.1 Expandable big integer calculations (HO)
+
+("C:\Program Files\MiKTeX 2.7\tex\generic\oberdiek\pdftexcmds.sty"
+Package: pdftexcmds 2007/12/12 v0.3 LuaTeX support for pdfTeX utility functions
+ (HO)
+Package pdftexcmds Info: LuaTeX not detected on input line 139.
+)))
+("C:\Program Files\MiKTeX 2.7\tex\generic\oberdiek\kvsetkeys.sty"
+Package: kvsetkeys 2007/09/29 v1.3 Key value parser with default handler suppor
+t (HO)
+)
+\Fld@menulength=\count90
+\Field@Width=\dimen104
+\Fld@charsize=\dimen105
+\Field@toks=\toks15
+Package hyperref Info: Hyper figures OFF on input line 4268.
+Package hyperref Info: Link nesting OFF on input line 4273.
+Package hyperref Info: Hyper index ON on input line 4276.
+Package hyperref Info: backreferencing OFF on input line 4283.
+Package hyperref Info: Link coloring OFF on input line 4288.
+Package hyperref Info: Link coloring with OCG OFF on input line 4293.
+Package hyperref Info: PDF/A mode OFF on input line 4298.
+
+("C:\Program Files\MiKTeX 2.7\tex\generic\oberdiek\atbegshi.sty"
+Package: atbegshi 2008/07/31 v1.9 At begin shipout hook (HO)
+)
+\Hy@abspage=\count91
+\c@Item=\count92
+\c@Hfootnote=\count93
+)
+*hyperref using default driver hpdftex*
+("C:\Program Files\MiKTeX 2.7\tex\latex\hyperref\hpdftex.def"
+File: hpdftex.def 2008/11/18 v6.78m Hyperref driver for pdfTeX
+\Fld@listcount=\count94
+)
+("C:\Program Files\MiKTeX 2.7\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.7\tex\latex\graphics\graphics.sty"
+Package: graphics 2006/02/20 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.7\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.7\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 90.
+
+("C:\Program Files\MiKTeX 2.7\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2008/09/08 v0.04l Graphics/color for pdfTeX
+\Gread@gobject=\count95
+))
+\Gin@req@height=\dimen106
+\Gin@req@width=\dimen107
+)
+("C:\Program Files\MiKTeX 2.7\tex\latex\psnfss\mathpazo.sty"
+Package: mathpazo 2005/04/12 PSNFSS-v9.2a Palatino w/ Pazo Math (D.Puga, WaS) 
+\symupright=\mathgroup4
+)
+("C:\Program Files\MiKTeX 2.7\tex\latex\caption\caption.sty"
+Package: caption 2008/08/24 v3.1j Customizing captions (AR)
+
+("C:\Program Files\MiKTeX 2.7\tex\latex\caption\caption3.sty"
+Package: caption3 2008/08/24 v3.1j caption3 kernel (AR)
+\captionmargin=\dimen108
+\captionmargin@=\dimen109
+\captionwidth=\dimen110
+\caption@indent=\dimen111
+\caption@parindent=\dimen112
+\caption@hangindent=\dimen113
+)
+\c@ContinuedFloat=\count96
+Package caption Info: hyperref package is loaded.
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 31.
+ (scriptdoc.aux
+
+LaTeX Warning: Label `T:RenderType|RenderSingle' multiply defined.
+
+
+LaTeX Warning: Label `T:RenderType|RenderDual' multiply defined.
+
+
+LaTeX Warning: Label `T:RenderType|RenderMultithreaded' multiply defined.
+
+
+LaTeX Warning: Label `T:SubFrameType|SubFrameNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:SubFrameType|SubFrameViewDir' multiply defined.
+
+
+LaTeX Warning: Label `T:SubFrameType|SubFrameScreen' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendTranslucent' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendTransparent' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskEnable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskDisable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestEnable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestDisable' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendTranslucent' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendTransparent' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskEnable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskDisable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestEnable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestDisable' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendTranslucent' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendTransparent' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskEnable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskDisable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestEnable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestDisable' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendTranslucent' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendTransparent' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskEnable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskDisable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestEnable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestDisable' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendTranslucent' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendTransparent' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskEnable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskDisable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestEnable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestDisable' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendTranslucent' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendTransparent' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskEnable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskDisable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestEnable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestDisable' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendTranslucent' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendTransparent' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskEnable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskDisable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestEnable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestDisable' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendTranslucent' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendTransparent' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskEnable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskDisable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestEnable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestDisable' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendTranslucent' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendTransparent' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskEnable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskDisable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestEnable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestDisable' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendTranslucent' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendTransparent' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskEnable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskDisable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestEnable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestDisable' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendTranslucent' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendTransparent' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskEnable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskDisable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestEnable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestDisable' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendTranslucent' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendTransparent' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskEnable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskDisable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestEnable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestDisable' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendTranslucent' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendTransparent' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskEnable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskDisable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestEnable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestDisable' multiply defined.
+
+
+LaTeX Warning: Label `T:CurveRenderType|CurveRenderNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:CurveRenderType|CurveRenderSmooth' multiply defined.
+
+
+LaTeX Warning: Label `T:CurveRenderType|CurveRenderRibbon' multiply defined.
+
+
+LaTeX Warning: Label `T:CurveRenderType|CurveRenderTube' multiply defined.
+
+
+LaTeX Warning: Label `T:CurveRenderType|CurveRenderCube' multiply defined.
+
+
+LaTeX Warning: Label `T:CurveRenderType|CurveRenderDot' multiply defined.
+
+
+LaTeX Warning: Label `T:CurveRenderType|CurveRenderDash' multiply defined.
+
+
+LaTeX Warning: Label `T:CurveRenderType|CurveRenderDashDot' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendTranslucent' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendTransparent' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskEnable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskDisable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestEnable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestDisable' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendTranslucent' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendTransparent' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskEnable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskDisable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestEnable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthTest|DepthTestDisable' multiply defined.
+
+
+LaTeX Warning: Label `T:ClockType|ClockTypeAnalog' multiply defined.
+
+
+LaTeX Warning: Label `T:ClockType|ClockTypeDigital' multiply defined.
+
+
+LaTeX Warning: Label `T:ClockType|ClockTypeCalendar' multiply defined.
+
+
+LaTeX Warning: Label `T:ClockType|ClockTypeDate' multiply defined.
+
+
+LaTeX Warning: Label `T:ClockType|ClockTypeDateTime' multiply defined.
+
+
+LaTeX Warning: Label `T:PEngineRenderType|PengineRenderQuads' multiply defined.
+
+
+
+LaTeX Warning: Label `T:PEngineRenderType|PengineRenderPoints' multiply defined
+.
+
+
+LaTeX Warning: Label `T:BlendType|BlendNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendTranslucent' multiply defined.
+
+
+LaTeX Warning: Label `T:BlendType|BlendTransparent' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskNormal' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskEnable' multiply defined.
+
+
+LaTeX Warning: Label `T:DepthMask|DepthMaskDisable' multiply defined.
+
+
+LaTeX Warning: Label `T:FogType|FogNone' multiply defined.
+
+
+LaTeX Warning: Label `T:FogType|FogExponential' multiply defined.
+
+
+LaTeX Warning: Label `T:FogType|FogExponentialSq' multiply defined.
+
+
+LaTeX Warning: Label `T:FogType|FogLinear' multiply defined.
+
+
+LaTeX Warning: Label `T:InterpolType|InterpolLinear' multiply defined.
+
+
+LaTeX Warning: Label `T:InterpolType|InterpolQuad' multiply defined.
+
+
+LaTeX Warning: Label `T:TimeType|UT0' multiply defined.
+
+
+LaTeX Warning: Label `T:TimeType|ST0' multiply defined.
+
+)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+ ("C:\Program Files\MiKTeX 2.7\tex\latex\graphics\color.sty"
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+("C:\Program Files\MiKTeX 2.7\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+Package hyperref Info: Link coloring ON on input line 69.
+
+("C:\Program Files\MiKTeX 2.7\tex\latex\hyperref\nameref.sty"
+Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
+
+("C:\Program Files\MiKTeX 2.7\tex\latex\oberdiek\refcount.sty"
+Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
+)
+\c@section@level=\count97
+)
+LaTeX Info: Redefining \ref on input line 69.
+LaTeX Info: Redefining \pageref on input line 69.
+ (scriptdoc.out) (scriptdoc.out)
+\@outlinefile=\write3
+\AtBeginShipoutBox=\box26
+ ("C:\Program Files\MiKTeX 2.7\tex\context\base\supp-pdf.tex"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count98
+\scratchdimen=\dimen114
+\scratchbox=\box27
+\nofMPsegments=\count99
+\nofMParguments=\count100
+\everyMPshowfont=\toks16
+\MPscratchCnt=\count101
+\MPscratchDim=\dimen115
+\MPnumerator=\count102
+\everyMPtoPDFconversion=\toks17
+)
+\big@size=\dimen116
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+
+Chapter 1.
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <10> not available
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 89.
+
+[1
+
+
+{C:/ProgramData/MiKTeX/2.7/pdftex/config/pdftex.map}]
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 103.
+
+
+("C:\Program Files\MiKTeX 2.7\tex\latex\psnfss\ot1ppl.fd"
+File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
+)
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 103
+.
+
+("C:\Program Files\MiKTeX 2.7\tex\latex\psnfss\omlzplm.fd"
+File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
+)
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 103
+.
+
+("C:\Program Files\MiKTeX 2.7\tex\latex\psnfss\omszplm.fd"
+File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
+)
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 103
+.
+
+("C:\Program Files\MiKTeX 2.7\tex\latex\psnfss\omxzplm.fd"
+File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
+)
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 103
+.
+
+("C:\Program Files\MiKTeX 2.7\tex\latex\psnfss\ot1zplm.fd"
+File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
+)
+Underfull \vbox (badness 1281) has occurred while \output is active []
+
+ [2]
+[3] [4] [5] [6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 333--341
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 370--374
+
+ []
+
+[9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21] [22] [23]
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 878--883
+
+ []
+
+[25] [26] [27] [28]
+Underfull \hbox (badness 10000) in paragraph at lines 1044--1049
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1050--1055
+
+ []
+
+[29] [30] [31] [32]
+LaTeX Font Info:    Try loading font information for OMS+cmss on input line 124
+4.
+LaTeX Font Info:    No file OMScmss.fd. on input line 1244.
+
+
+LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbullet' on input line 1244.
+
+[33] [34] [35] [36] [37] [38]
+Underfull \vbox (badness 1303) has occurred while \output is active []
+
+ [39]
+Underfull \hbox (badness 10000) in paragraph at lines 1469--1476
+
+ []
+
+[40]
+Underfull \hbox (badness 10000) in paragraph at lines 1487--1492
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1513--1518
+
+ []
+
+[41]
+Underfull \hbox (badness 10000) in paragraph at lines 1524--1533
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1524--1533
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1538--1543
+
+ []
+
+[42]
+Underfull \hbox (badness 10000) in paragraph at lines 1587--1595
+
+ []
+
+[43] [44] [45] [46] [47] [48] [49] [50] [51] [52]
+
+LaTeX Warning: Hyper reference `Object tree:Geometric objects' on page 53 undef
+ined on input line 1901.
+
+
+LaTeX Warning: Reference `Object tree:Geometric objects' on page 53 undefined o
+n input line 1901.
+
+
+LaTeX Warning: Reference `Object tree:Geometric objects' on page 53 undefined o
+n input line 1901.
+
+
+LaTeX Warning: Hyper reference `Object tree:Special objects' on page 53 undefin
+ed on input line 1901.
+
+
+LaTeX Warning: Reference `Object tree:Special objects' on page 53 undefined on 
+input line 1901.
+
+
+LaTeX Warning: Reference `Object tree:Special objects' on page 53 undefined on 
+input line 1901.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1903--1907
+
+ []
+
+[53] [54] [55] [56] [57] [58]
+
+LaTeX Warning: Hyper reference `T:FlatContourset' on page 59 undefined on input
+ line 2104.
+
+
+LaTeX Warning: Reference `T:FlatContourset' on page 59 undefined on input line 
+2104.
+
+
+LaTeX Warning: Reference `T:FlatContourset' on page 59 undefined on input line 
+2104.
+
+[59]
+Overfull \hbox (2.74089pt too wide) in paragraph at lines 2122--2127
+\OT1/cmtt/m/n/10 fnc=functor("color(p.x,1-p.x,0)","p"); ob.GenerateVertexProper
+ty(fnc,VertexPropertyColor); 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2122--2127
+
+ []
+
+[60] [61] [62] [63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74]
+[75] [76] [77] [78] [79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89]
+[90] [91] [92] [93] [94] [95] [96] [97] [98] [99] [100] [101] [102] [103]
+[104] [105]
+
+LaTeX Warning: Hyper reference `T:functor' on page 106 undefined on input line 
+3631.
+
+
+LaTeX Warning: Reference `T:functor' on page 106 undefined on input line 3631.
+
+
+LaTeX Warning: Reference `T:functor' on page 106 undefined on input line 3631.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3635--3640
+
+ []
+
+
+LaTeX Warning: Hyper reference `T:functor' on page 106 undefined on input line 
+3647.
+
+
+LaTeX Warning: Reference `T:functor' on page 106 undefined on input line 3647.
+
+
+LaTeX Warning: Reference `T:functor' on page 106 undefined on input line 3647.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3649--3654
+
+ []
+
+
+Underfull \vbox (badness 1466) has occurred while \output is active []
+
+ [106]
+[107] [108] [109] [110] [111] [112]
+Underfull \hbox (badness 10000) in paragraph at lines 3868--3873
+
+ []
+
+[113] [114] [115] [116] [117] [118] [119] [120] [121] [122] [123] [124]
+Overfull \hbox (11.07896pt too wide) in paragraph at lines 4269--4270
+\OT1/cmss/m/n/10 po-si-tions will be in-ter-po-lated over these frames (see [][
+][][]PEngine.AddFrame [][] ([][]1.7.21[][])[][] and [][][][]PEngine.FramePtPosi
+tion
+ []
+
+[125] [126] [127] [128] [129] [130] [131] [132] [133]
+Overfull \hbox (24.35658pt too wide) in paragraph at lines 4567--4569
+\OT1/cmss/m/n/10 This pa-ram-e-ter de-ter-mines the dis-tance be-tween the cam-
+era and the near clip-ping plane (see also [][][][]View-port.NearClipPlane
+ []
+
+[134]
+
+LaTeX Warning: Hyper reference `T:scene' on page 135 undefined on input line 46
+15.
+
+
+LaTeX Warning: Reference `T:scene' on page 135 undefined on input line 4615.
+
+
+LaTeX Warning: Reference `T:scene' on page 135 undefined on input line 4615.
+
+[135]
+Underfull \hbox (badness 10000) in paragraph at lines 4632--4650
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4632--4650
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4632--4650
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4632--4650
+
+ []
+
+[136] [137] [138] [139]
+Underfull \hbox (badness 10000) in paragraph at lines 4763--4771
+
+ []
+
+[140] [141] [142] [143] [144] [145] [146] [147] [148] [149] [150] [151]
+[152] [153] [154] [155] [156] [157] [158] [159]
+
+LaTeX Warning: Hyper reference `T:functor' on page 160 undefined on input line 
+5441.
+
+
+LaTeX Warning: Reference `T:functor' on page 160 undefined on input line 5441.
+
+
+LaTeX Warning: Reference `T:functor' on page 160 undefined on input line 5441.
+
+[160]
+Underfull \vbox (badness 1383) has occurred while \output is active []
+
+ [161]
+[162] [163]
+Underfull \hbox (badness 10000) in paragraph at lines 5582--5588
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5582--5588
+
+ []
+
+[164] [165] [166] [167] [168] (scriptdoc.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 7985 strings out of 95304
+ 120466 string characters out of 1183070
+ 231475 words of memory out of 1500000
+ 9608 multiletter control sequences out of 110000
+ 17936 words of font info for 54 fonts, out of 3000000 for 5000
+ 14 hyphenation exceptions out of 8191
+ 36i,6n,38p,529b,358s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{??} has been referenced but does not exist, repla
+ced by a fixed one
+
+{C:/Program Files/MiKTeX 2.7/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/
+MiKTeX 2.7/fonts/type1/bluesky/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.7/fonts
+/type1/bluesky/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.7/fonts/type1/bluesky/c
+m/cmr10.pfb><C:/Program Files/MiKTeX 2.7/fonts/type1/bluesky/cm/cmss10.pfb><C:/
+Program Files/MiKTeX 2.7/fonts/type1/bluesky/cm/cmssbx10.pfb><C:/Program Files/
+MiKTeX 2.7/fonts/type1/bluesky/cm/cmssi10.pfb><C:/Program Files/MiKTeX 2.7/font
+s/type1/bluesky/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.7/fonts/type1/bluesky/
+cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.7/fonts/type1/public/mathpazo/fplmri.p
+fb><C:/Program Files/MiKTeX 2.7/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program
+ Files/MiKTeX 2.7/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on scriptdoc.pdf (168 pages, 729478 bytes).
+PDF statistics:
+ 3641 PDF objects out of 4296 (max. 8388607)
+ 1521 named destinations out of 1728 (max. 131072)
+ 1341 words of extra memory for PDF output out of 10000 (max. 10000000)
+

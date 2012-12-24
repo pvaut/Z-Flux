@@ -1,0 +1,4 @@
+THUMBNAIL=[CurrentFolder]\_thumbnail.THB
+TITLE=3D lightning
+ACTION=BrowseThumbnails;[CurrentFolder]
+DESCRIPTION=Hyperstereoscopic images  of lightning 

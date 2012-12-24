@@ -1,0 +1,7 @@
+PointCharge;Point Charge
+ElectricDipole;Electric Dipole
+MagneticDipole;Magnetic Dipole
+TwoPointInterference;Two Point Interference
+SphericalPendulum;Spherical Pendulum
+MoleculeModel;Molecule Models
+Optics

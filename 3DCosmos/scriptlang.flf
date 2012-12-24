@@ -1,0 +1,4420 @@
+
+General
+>>>>
+A miscellaneous set of functions for various applications.
+----
+
+T:Anytype
+>>>>
+This is a generic object type that can stand for any specific object type.
+----
+
+F:Store
+>>>>
+Stores the content of an object in memory, and attach a name to it. This content can be retrieved with \linkitem{F:Recall}.
+
+
+Example: \\
+\sourcecode{
+Store("MyName","MyContent"); \\
+... \\
+result=Recall("MyName"); \\
+} \\
+
+
+----
+
+F:Recall
+>>>>
+Recalls a stored object.
+
+See \linkitem{F:Store}.
+----
+
+F:Message
+>>>>
+Shows a message box on the screen, displaying the text in \var{content}. \\
+Warning: this should only be used for debug purposes, because this message box will block a running animation!
+----
+
+T:List
+>>>>
+A list implements an array of objects, addressed by an index number. Note that a list can contain any type of objects, in a mixed manner. For example, a list can contain other lists. List indices are zero-based.
+
+Apart from the member functions that access the content of this list, you can also use an indexing operator, both for setting or returning an item of the list: \\
+\sourcecode{
+lst=list; \\
+lst(0)="abc"; \\
+lst(1)="def"; \\
+lst(10)=12.7; \\
+result=lst(10);
+} \\
+----
+
+F:List:get
+>>>>
+Sets or gets a component of the list. \var{Index} defines the index number in the list.
+----
+
+F:List:clear
+>>>>
+Resets a list to empty, clearing its content.
+----
+
+F:List:size
+>>>>
+Returns the number of items in a list.
+----
+
+F:List:add
+>>>>
+Adds a new item to a list, appending it at the end of the list.
+----
+
+F:List:del
+>>>>
+Removes the item at position \var{index} from a list.
+----
+
+F:list
+>>>>
+Constructs a new list, by enumerating its items. The created list is returned.
+
+Example: \\
+\sourcecode{
+lst=list("string1","string2",12.3,true); \\
+}
+----
+
+T:MapPair
+>>>>
+A map pair is the combination of an object, and a string that identifies that object. It is used to construct maps.
+
+See \linkitem{T:Map} for further information.
+----
+
+O:String:Anytype
+>>>>
+This operator constructs a new map pair by linking a string identifier to an object. See \linkitem{F:map} for further information.
+----
+
+F:map
+>>>>
+Builds and returns a new map, consisting in a number of map pairs.
+
+Example: \\
+\sourcecode{
+mp=map("Item1":"String1","Item2":"String2","Item3":42);
+result=mp.Item2;
+}
+----
+
+F:Map:clear
+>>>>
+Removes all the content of a map.
+----
+
+T:Map
+>>>>
+A map is a collection of objects, each one identified by a unique string. 
+
+Apart from the function \linkitem{F:Map:Get} to access objects in a map, the dot operator can be used to add or return objects in a map: \\
+\sourcecode{
+mp=map; \\
+mp.Item1="Test1"; \\
+mp.Item2=12.7; \\
+result=mp.Item1;
+}
+
+Using this syntax, a map can be used conveniently to implement a custom class structure that bundles a set of object together in a single variable.
+
+----
+
+F:Map:Get
+>>>>
+Returns or sets the content of an object in a map. \var{Name} contains the identifier of the objects that needs to be addressed.
+----
+
+Containers
+>>>>
+This section contains a number of data type that can be used to create compound objects, grouping several objects together in a structured way.
+----
+
+Simple types
+>>>>
+
+Data types that encapsulate geometric objects such as points and vectors can be found in \linkitem{Mathematics}.
+----
+
+F:Time:JD
+>>>>
+Returns or sets the Julian date of a time object.
+----
+
+F:CurrentTimeUT
+>>>>
+Returns a time object that contains the current time in UT.
+----
+
+F:timeJD
+>>>>
+Returns a time object that corresponds to a Julian date provided in \var{JD}.
+----
+
+T:MotionRotate
+>>>>
+Encapsulates a circular motion. This is a solid object motion that leaves the origin unchanged but modifies the $X$, $y$ and $Z$ axis directions of the subframe.
+----
+
+F:ForceField:AddCentralGravity
+>>>>
+Adds a central gravity component to the force field.
+The force is given by the equation
+\begin{equation}
+\vec{F}= - S . M . \frac{\vec{r}-\vec{p}}{|\vec{r}-\vec{p}|^3},
+\end{equation}
+with $M$ the mass of the object, $\vec{r}$ the position of the object, $\vec{p}$ the centre of the force field (represented by \var{Point}), and $S$ the strength of the force (represented by \var{Strength}).
+
+----
+
+F:plane
+>>>>
+Creates and returns a plane, providing the parameters for the plane equation.
+----
+
+T:String
+>>>>
+A String object type encapsulates a text string.
+----
+
+F:String:Length
+>>>>
+Returns the number of characters in a string.
+----
+
+F:String:substring
+>>>>
+Returns a part of a string, between the positions \var{start} and \var{stop}. Both values are zero-based. For example, the script \\
+\sourcecode{
+st="abcdef"; \\
+st2=st.substring(2,3);
+} \\
+returns "cd" in \sourcecode{st2}.
+----
+
+F:String:find
+>>>>
+Determines the position of the first occurrence of a subtring \var{target} in a string. This number is zero-based. If this substring does not occur, $-1$ is returned.
+----
+
+F:String:split
+>>>>
+Splits a string at the first occurrence of the string \var{split}. The left part is returned by the function, the right part is stored in the parent object of this function. For example, \\
+\sourcecode{
+st="abc-def"; \\
+st2=st.split("-"); \\
+}
+Returns "def" in \sourcecode{st} and "abc" in \sourcecode{st2}.
+----
+
+F:String:replace
+>>>>
+Replaces all occurrences of the string \var{source} by the string \var{dest}.
+For example, \\
+\sourcecode{
+st="This is a test"; \\
+st.Replace(" ","--"); \\
+}
+Returns "This--is--a--test" in \sourcecode{st}.
+
+----
+
+O:String+String
+>>>>
+Concatenates two strings.
+----
+
+O:String<String
+>>>>
+Determines if the first string is lexicographically smaller than the second. This comparison is case insensitive.
+----
+
+O:String<=String
+>>>>
+Determines if the first string is lexicographically smaller than or equal to the second. This comparison is case insensitive.
+----
+
+O:String>String
+>>>>
+Determines if the first string is lexicographically larger than the second. This comparison is case insensitive.
+----
+
+O:String>=String
+>>>>
+Determines if the first string is lexicographically larger than or equal to the second. This comparison is case insensitive.
+----
+
+O:String==String
+>>>>
+Determines if the first string equal to the second string. This comparison is case insensitive.
+----
+
+O:String!=String
+>>>>
+Determines if the first string differs from the second string. This comparison is case insensitive.
+----
+
+T:Scalar
+>>>>
+A scalar object type encapsulates a number. This number can be integral or floating point.
+----
+
+O:Scalar+Scalar
+>>>>
+Calculates the sum of two scalar values.
+----
+
+O:Scalar-Scalar
+>>>>
+Calculates the difference between two scalar values.
+----
+
+O:Scalar*Scalar
+>>>>
+Calculates the product of two scalar values.
+----
+
+O:Scalar/Scalar
+>>>>
+Calculates the division of two scalar values.
+----
+
+O:Scalar^Scalar
+>>>>
+Calculates the power of two scalar values.
+----
+
+O:Scalar<Scalar
+>>>>
+Determines if the first scalar value is smaller than the second.
+----
+
+O:Scalar<=Scalar
+>>>>
+Determines if the first scalar value is smaller than or equal to the second.
+----
+
+O:Scalar>Scalar
+>>>>
+Determines if the first scalar value is larger than the second.
+----
+
+O:Scalar>=Scalar
+>>>>
+Determines if the first scalar value is larger than or equal to the second.
+----
+
+O:Scalar==Scalar
+>>>>
+Determines if two scalar values are equal.
+----
+
+O:Scalar!=Scalar
+>>>>
+Determines if two scalar values are different.
+----
+
+T:Bool
+>>>>
+A Bool object type contains a boolean logical state, which can be True or False.
+----
+
+F:not
+>>>>
+Inverts the value of a logical Bool value.
+----
+
+O:Bool and Bool
+>>>>
+Applies the boolean AND operator on two boolean values.
+----
+
+O:Bool or Bool
+>>>>
+Applies the boolean OR operator on two boolean values.
+----
+
+T:Time
+>>>>
+A Time object variable encapsulates time information, including both a calendar date and a time of the day.
+----
+
+F:Time:Year
+>>>>
+Returns or sets the year value of a time object.
+----
+
+F:Time:Month
+>>>>
+Returns or sets the month value of a time object.
+----
+
+F:Time:Day
+>>>>
+Returns or sets the day value of a time object.
+
+----
+
+F:Time:Hour
+>>>>
+Returns or sets the hours value of a time object.
+
+----
+
+F:Time:Min
+>>>>
+Returns or sets the minutes value of a time object.
+
+----
+
+F:Time:Sec
+>>>>
+Returns or sets the seconds value of a time object.
+
+----
+
+F:Time:AddSeconds
+>>>>
+Adds a number of seconds to a time object. This value can be positive and negative.
+----
+
+F:Time:AddDays
+>>>>
+Adds a number of days to a time object. This value can be positive and negative.
+----
+
+F:Time:DiffDays
+>>>>
+Calculates the time difference in seconds between the parent time object and the time object provided in \var{reftime}.
+----
+
+F:Time:DiffSecs
+>>>>
+Calculates the time difference in days between the parent time object and the time object provided in \var{reftime}.
+
+----
+
+F:time
+>>>>
+Constructs a time object, providing the calendar time and the time of the day.
+----
+
+T:Color
+>>>>
+A Color object type encapsulates color information, containing Red, Green, Bue and Transparancy values.
+----
+
+F:Color:r
+>>>>
+Returns or sets the red component of a Color object, ranging between $0$ and $1$.
+----
+
+F:Color:g
+>>>>
+Returns or sets the green component of a Color object, ranging between $0$ and $1$.
+
+----
+
+F:Color:b
+>>>>
+Returns or sets the blue component of a Color object, ranging between $0$ and $1$.
+
+----
+
+F:Color:a
+>>>>
+Returns or sets the transparency component of a Color object, ranging between $0$ and $1$.
+
+----
+
+O:Scalar*Color
+>>>>
+See \linkitem{O:Color+Color} for more information.
+----
+
+O:Color+Color
+>>>>
+This operator can be used in conjunction with \linkitem{O:Scalar*Color} to calculate weighted averages between two or more colors.
+For example, in the script: \\
+\sourcecode{
+col1=Color(1,0.5,0.25); \\
+col2=Color(0,0.75,0.5); \\
+colrs=2*col1+col2; \\
+}
+will \sourcecode{colrs} contain a color that is a weighted combination of \sourcecode{col1} and \sourcecode{col2}, where the former will be weighted twice as much as the latter.
+----
+
+F:List:set
+>>>>
+Sets the component at position \var{index} to the content of \var{comp}.
+----
+
+Enumerations
+>>>>
+This section lists a all enumeration data types that are used throughout the script language.
+----
+
+T:TimeType
+>>>>
+Determines the time type.
+----
+
+T:TimeType|UT0
+>>>>
+Universal time at Greenwich.
+----
+
+T:TimeType|ST0
+>>>>
+Sidereal time at Greenwich.
+----
+
+Mathematics
+>>>>
+This section contains a variety of mathematics object types and functions.
+----
+
+T:Point
+>>>>
+This object type encapsulates a point in three-dimensional space.
+
+The software makes a distinction between points and vectors (see \linkitem{T:Vector}). A point is a unique position in the three-dimensional space, whereas a vector indicates a direction with a magnitude. A vector can be thought of as a line with a direction, connecting two points in the space. After the choice of an origin and a basis, both entities can be represented three coordinates $X$, $Y$ and $Z$, but they reflect different properties of the space.
+
+For example, they behave differently under an affine transformation (see \linkitem{T:Transformation}). A translation affects points, but leaves vectors unchanged.
+----
+
+T:Vector
+>>>>
+This object type encapsulates a vector in three-dimensional space. See \linkitem{T:Point} for a discussion on the difference between points and vectors.
+----
+
+F:Point:x
+>>>>
+Returns or sets the $X$ coordinate of a point.
+----
+
+F:Point:y
+>>>>
+Returns or sets the $Y$ coordinate of a point.
+----
+
+F:Point:z
+>>>>
+Returns or sets the $Y$ coordinate of a point.
+----
+
+F:point
+>>>>
+Constructs a returns a Point object. The three coordinates are provided by \var{x}, \var{y}, \var{z}. If \var{z} is omitted, it is assumed to be zero.
+
+
+Internally, both points and vectors are maintained using homogeneous coordinates. For points, the fourth coordinate $u$ is set to $1$ by default. Optionally, you can provide this parameter in \var{u}.
+----
+
+F:radial2point
+>>>>
+Returns a point object, provided the position in spherical coordinates.
+The resulting point is defined as
+\begin{equation}
+\begin{array}{rcl}
+x &=& R \, cos \phi \, cos \theta \\
+y &=& R \, sin \phi \, cos \theta \\
+z &=& R \, sin \theta \\
+\end{array}
+\end{equation}
+with \var{ang1} = $\phi$ and \var{ang2} = $\theta$.
+----
+
+F:distance
+>>>>
+Calculates the Euclidian distance between two points.
+----
+
+O:Point-Point
+>>>>
+Calculates the vector that results from subtracting two points.
+----
+
+O:Scalar*Point
+>>>>
+See \linkitem{O:Point+Point} for further information.
+----
+
+O:Point+Point
+>>>>
+This operator can be used in conjunction with \linkitem{O:Scalar*Point} to calculate weighted averages between two or more points. This weighted average will be a point that lies on the line connecting both points.
+For example, in the script: \\
+\sourcecode{
+pt1=Point(1,2,3); \\
+pt2=Point(7,5,4); \\
+pt3=3*pt1+2*pt2; \\
+}
+will cause \sourcecode{pt3} to contain a point that is a weighted combination of \sourcecode{pt1} and \sourcecode{pt2}, lying on the line connecting both points, but closer to \sourcecode{pt1} because of the difference in weight.
+----
+
+O:Point+Vector
+>>>>
+Adds a vector to a point, resulting in a new point that is shifted over the size and direction of that vector.
+----
+
+O:Point-Vector
+>>>>
+Adds a vector to a point, resulting in a new point that is shifted over minus the size and direction of that vector.
+----
+
+C:Point=Vector
+>>>>
+Converts a vector to a point, with the same coordinates.
+----
+
+C:Point=Matrix
+>>>>
+Converts a $3 \times 1$ matrix  to a point, with the same coordinates.
+----
+
+F:Vector:x
+>>>>
+Returns or sets the $X$ coordinate of a vector.
+----
+
+F:Vector:y
+>>>>
+Returns or sets the $Y$ coordinate of a vector.
+
+----
+
+F:Vector:z
+>>>>
+Returns or sets the $Z$ coordinate of a vector.
+
+----
+
+F:Vector:size
+>>>>
+Returns the magnitude of a vector.
+----
+
+F:vector
+>>>>
+Constructs and returns a vector. The three coordinates are provided by \var{x}, \var{y} and \var{z}. If \var{z} is omitted, it is assumed to be zero.
+----
+
+F:vecnorm
+>>>>
+Returns a vectors that has the same direction of \var{v}, but scaled to size of one (unity vector).
+----
+
+F:vecangle
+>>>>
+Returns the angle between two vectors \var{v1} and \var{v2}. This angle is provided in radians.
+----
+
+F:vecrotate
+>>>>
+Returns the rotated version of the vector \var{vc}, rotated over an angle \var{angle} (in radians), in a rotation plane normal to \var{rotdir}.
+----
+
+O:Vector+Vector
+>>>>
+Calculates the sum of two vectors.
+----
+
+O:Vector-Vector
+>>>>
+Calculates the difference between two vectors.
+----
+
+O:Scalar*Vector
+>>>>
+Multiplies the size of a vector with a scalar value.
+----
+
+O:Vector*Vector
+>>>>
+Calculates the vector (cross) product of two vectors.
+----
+
+O:Vector^Vector
+>>>>
+Calculates the dot product (scalar product) of two vectors.
+----
+
+C:Vector=Point
+>>>>
+Converts a point to a vector with the same coordinates.
+----
+
+C:Vector=Matrix
+>>>>
+Converts a $3 \times 1$ matrix  to a vector, with the same coordinates.
+----
+
+T:Plane
+>>>>
+This object type encapsulates a plane in three-dimensional space, defined by all points $(x,y,z)$ that satisfy
+\begin{equation}
+f_x . x + f_y . y + f_z . z + f_u = 0
+\end{equation}
+----
+
+F:Plane:fx
+>>>>
+Returns or sets the $f_x$ component of the plane.
+----
+
+F:Plane:fy
+>>>>
+Returns or sets the $f_y$ component of the plane.
+----
+
+F:Plane:fz
+>>>>
+Returns or sets the $f_z$ component of the plane.
+----
+
+F:Plane:fu
+>>>>
+Returns or sets the $f_u$ component of the plane.
+----
+
+F:Plane:Normal
+>>>>
+Returns the unity vector that is perpendicular to the plane.
+----
+
+F:Plane:AnyPoint
+>>>>
+Returns a point that lies on the plane.
+----
+
+F:Plane:EvalPoint
+>>>>
+Evaluates the plane equation for a point \var{pt}.
+----
+
+F:Plane:ClosestPoint
+>>>>
+Returns the point on the plane that has the shorted distance to the point \var{pt}.
+----
+
+F:CreatePlane1
+>>>>
+Creates and returns a plane, providing a point \var{pt} lying in the plane, and a normal vector \var{normal} perpendicular to the plane.
+----
+
+F:CreatePlane2
+>>>>
+Creates and returns a plane, providing three points \var{pt1}, \var{pt1} and \var{pt3} lying in the plane.
+----
+
+O:Plane and Plane
+>>>>
+Determines the line that lies at the intersection of two planes.
+----
+
+O:Plane and Line
+>>>>
+Determines the point that lies at the intersection of a plane and a line.
+----
+
+O:Line and Plane
+>>>>
+Determines the point that lies at the intersection of a plane and a line.
+----
+
+T:Line
+>>>>
+This object type encapsulates a line in three-dimensional space.
+----
+
+F:Line:Direction
+>>>>
+Returns or set the direction of a line as a unity vector.
+----
+
+F:Line:AnyPoint
+>>>>
+Returns a sets an arbitrarely point on a line.
+----
+
+F:Line:ClosestPoint
+>>>>
+Returns the point on a line that has the smallest distances to a given point \var{pt}.
+----
+
+F:CreateLine1
+>>>>
+Creates and returns a line that passes through two points \var{pt1} and \var{pt2}.
+----
+
+O:Line and Line
+>>>>
+Returns the line segments that makes the closest connection between a pair of lines.
+----
+
+T:LineSegment
+>>>>
+Encapsulates a line segment between a start and end point.
+----
+
+F:LineSegment:StartPoint
+>>>>
+Returns or sets the start point of a line segment.
+----
+
+F:LineSegment:EndPoint
+>>>>
+Returns or sets the end point of a line segment.
+----
+
+F:CreateLineSegment
+>>>>
+Creates and returns a new line segment, providing the start and stop points.
+----
+
+T:Matrix
+>>>>
+This object type encapsulates a matrix of scalar values.
+
+The member function \linkitem{F:Matrix:get} can be used to address elements in a matrix, but a shortcut notation with a bracket operator is also possible: \\
+\sourcecode{
+m=matrix(3,3); \\
+m(0,0)=2; \\
+}
+----
+
+F:Matrix:dim1
+>>>>
+Returns or sets the first (vertical) dimension of a matrix.
+----
+
+F:Matrix:dim2
+>>>>
+Returns or sets the second (horizontal) dimension of a matrix.
+
+----
+
+F:Matrix:get
+>>>>
+Returns or sets an element from a matrix \var{idx1} is the vertical index, \var{idx2} is the horizontal index. Both are zero-based.
+----
+
+F:Matrix:AddScalar
+>>>>
+Adds a scalar value to all elements in a matrix.
+----
+
+F:Matrix:GetMinVal
+>>>>
+Returns the value of the smallest element in a matrix.
+----
+
+F:Matrix:GetMaxVal
+>>>>
+Returns the value of the largest element in a matrix.
+
+----
+
+F:Matrix:SVD
+>>>>
+Calculates the Singular Value Decomposition of a matrix.
+----
+
+F:Matrix:LoadFile
+>>>>
+Loads a matrix from a file.
+----
+
+F:matrix
+>>>>
+Creates and returns a new matrix object, with vertical dimension \var{dim1}, and horizontal dimension \var{dim2}.
+----
+
+F:unitmatrix
+>>>>
+Creates and returns a unit matrix with dimension \var{dim}.
+----
+
+F:transpose
+>>>>
+Returns the transposed matrix.
+----
+
+O:Scalar*Matrix
+>>>>
+Multiplies a matrix with a scalar value.
+----
+
+O:Scalar/Matrix
+>>>>
+Calculates the inverse of a matrix, supposed that the scalar has value $1$.
+----
+
+O:Matrix/Matrix
+>>>>
+Divides two matrices.
+----
+
+O:Matrix+Matrix
+>>>>
+Adds two matrices.
+----
+
+O:Matrix-Matrix
+>>>>
+Subtracts two matrices.
+----
+
+O:Matrix*Matrix
+>>>>
+Multiplies two matrices.
+----
+
+C:Matrix=Transformation
+>>>>
+Converts a transformation to a $4 \times 4$ matrix.
+----
+
+C:Matrix=Vector
+>>>>
+Converts a vector to a $4 \times 1$ matrix (using homogeneous coordinates).
+----
+
+C:Matrix=Point
+>>>>
+Converts a point to a $4 \times 1$ matrix (using homogeneous coordinates).
+
+----
+
+T:Transformation
+>>>>
+Encapsulates an affine transformation of the three-dimensional space.
+----
+
+F:Transformation:reset
+>>>>
+Resets a transformation to a unity transformation (i.e. each point maps to itself).
+----
+
+F:Transformation:origin
+>>>>
+Returns or sets the origin after transformation.
+----
+
+F:Transformation:Xaxis
+>>>>
+Returns or sets the $X$ axis after transformation.
+----
+
+F:Transformation:Yaxis
+>>>>
+Returns or sets the $Y$ axis after transformation.
+
+----
+
+F:Transformation:Zaxis
+>>>>
+Returns or sets the $Z$ axis after transformation.
+
+----
+
+F:Transformation:translate
+>>>>
+Adds a translation over the vector \var{dir} to a transformation.
+----
+
+F:Transformation:rotate
+>>>>
+Adds a rotation to a transformation. The vector \var{rotdir} is perpendicular to the plane of rotation, and \var{angle} provides the amount of rotation in radians.
+----
+
+F:Transformation:scale
+>>>>
+Adds a global scaling to a transformation.
+----
+
+F:Transformation:invert
+>>>>
+Inverts a transformation, i.e. replaces a transformation by its inverse action.
+----
+
+F:Transformation
+>>>>
+Creates and returns a new (unity) transformation.
+----
+
+O:Transformation*Point
+>>>>
+Applies an affine transformation to a point, and returns the result.
+----
+
+O:Transformation*Vector
+>>>>
+Applies an affine transformation to a vector, and returns the result.
+
+----
+
+O:Transformation*Transformation
+>>>>
+Multiplies two transformation, returning a single transformation that has the combined effect of first applying the rightmost transformation, and then the leftmost.
+----
+
+C:Transformation=Matrix
+>>>>
+Converts a $4 \times 4$ matrix to a transformation.
+----
+
+T:Functor
+>>>>
+A functor object encapsulates a function of $n$ variables. This function can be specified in three different ways:
+\begin{enumerate}
+\item From a mathematical expression (see \linkitem{F:Functor})
+\item From a script function (see \linkitem{F:FunctionFunctor})
+\item As a polynomial in up to 3 variables (see \linkitem{F:PolynomialFunctor})
+\end{enumerate}
+----
+
+F:Functor
+>>>>
+Constructs and returns a function using a mathematical expression. The first argument contains the expression as a string, all subsequent arguments contain the names of the variables of the function, as used in this expression.
+
+Example: \\
+\sourcecode{
+fnc=functor("x/(x+y)","x","y"); \\
+rs=fnc.eval(2,3); \\
+}
+
+Another example takes a point as an argument, and projects it onto the $Z=0$ plane: \\
+\sourcecode{
+fnc=functor("point(pt.x,pt.y,0)","pt"); \\
+pt=fnc.eval(point(1,2,3)); \\
+}
+
+
+----
+
+F:Functor:getstring
+>>>>
+Returns the mathematical expression that is used as a basis for this functor.
+----
+
+F:FunctionFunctor
+>>>>
+Constructs and returns a function using a script function. The first argument contains the name of the function, all subsequent arguments contain the names of the variables of the function, as used in this function.
+
+----
+
+F:Functor:eval
+>>>>
+Evaluates a functor and returns the result.
+----
+
+Mathematics:Trigonometry
+>>>>
+This section bundles a number of trigonometric functions. All angles are always expressed in radians.
+----
+
+F:Pi
+>>>>
+Returns the value of the mathematical constant $\pi$.
+----
+
+F:rad2deg
+>>>>
+Converts an angle from radians to degrees.
+----
+
+F:deg2rad
+>>>>
+Converts an angle from degrees to radians.
+----
+
+F:sin
+>>>>
+Calculates the sine of an angle.
+----
+
+F:cos
+>>>>
+Calculates the cosine of an angle.
+----
+
+F:tan
+>>>>
+Calculates the tangent of an angle.
+----
+
+F:asin
+>>>>
+Calculates the arc sine of a value.
+----
+
+F:acos
+>>>>
+Calculates the arc cosine of a value.
+----
+
+F:atan
+>>>>
+Calculates the arc tangent of a value.
+----
+
+F:angle
+>>>>
+Calculates the angle between the direction $(x,y)$ and the horizontal axis, ranging from $0$ to $2 \pi$.
+----
+
+F:random
+>>>>
+Returns a random scalar value between $0$ and $1$.
+----
+
+F:floor
+>>>>
+Returns the largest integral value not larger than \var{arg}.
+----
+
+F:round
+>>>>
+Returns the rounded value of \var{arg}, up to a number of digits defined by \var{digits}.
+----
+
+F:abs
+>>>>
+Returns the absolute value of a scalar value.
+----
+
+F:sign
+>>>>
+Returns the sign of a scalar value. If this value is positive, $+1$ is returned. For negative values, $-1$ is returned, and  for zero values, $0$ is returned.
+----
+
+F:sqr
+>>>>
+Returns the squared value of a scalar value.
+----
+
+F:sqrt
+>>>>
+Returns the square root of a scalar value.
+----
+
+F:exp
+>>>>
+Returns the exponential of a scalar value.
+----
+
+F:log
+>>>>
+Returns the natural logarithm of a scalar value.
+----
+
+T:FlatContourSet
+>>>>
+Encapsulates a set of points in two-dimensional space that form a polygon. Such a polygon should have at least one contour. A single contour will define a polygon without holes, and should list the points in counterclockwise direction. Holes can be added by introducing new contours (see \linkitem{F:FlatContourSet:newcontour}), with points defined in clockwise direction.
+
+
+FlatContourSet objects are used as basic components for a number of functions that create three-dimensional shapes:
+\begin{itemize}
+\item \linkitem{F:ExtrudedShape}
+\item \linkitem{F:RevolvedShape}
+\item \linkitem{F:ConeShape}
+\end{itemize}
+----
+
+F:Contour
+>>>>
+Creates and returns a new FlatContourSet object, optionally taking a list of points that define the polygon.
+----
+
+F:FlatContourSet:addpoint
+>>>>
+Adds a new point to a FlatContourSet object. The coordinates of the point are provided in \var{point}.
+
+The vector \var{normal} optionally holds the normal of the shape at this point. This normal can be used to define smooth shading in case this object is used to define a three-dimensional shape.
+----
+
+F:FlatContourSet:close
+>>>>
+Defines the current contour as being closed.
+----
+
+F:FlatContourSet:calcflatnormals
+>>>>
+Automatically calculates normal vectors from the set of points.
+----
+
+F:FlatContourSet:newcontour
+>>>>
+Starts a new contour.
+----
+
+F:FlatContourSet:generate
+>>>>
+Generates a contour from a functor \var{function}. This functor should take a single scalar argument $t$, and return a point object for each value of $t$. During the contour generation, $t$ will be varied from \var{min} to \var{max}, generating \var{count} values.
+----
+
+T:SolidShape
+>>>>
+A SolidShape object defines a three-dimensional shape, that can be used for rendering in a scene through the object type \linkitem{T:SolidObject}.
+
+SolidShape objects can be created through a number of functions that create a variety of different shapes. In addition, warping functions can be used to morph the shape of a SolidShape object.
+
+Further on, powerful Constructive Solid Geometry (CSG) tools to create more complex shapes by combining shapes in a number of different ways, using addition, subtraction and multiplication operators.
+
+Each face of a shape can have a specific label ID, represented by a scalar number. This label can be used to paint the different faces of a shape in a different color (see \linkitem{F:SolidObject:SetColor}).
+----
+
+F:Bar
+>>>>
+Creates and returns a bar-shaped SolidShape object. \var{Position} contains the bottom left point of the bar, whereas \var{Size} contains the direction from the bottom left point to the top right point.
+----
+
+F:SolidShape:AddFace
+>>>>
+Adds a new face to the surface of a SolidShape object. This function can be used to build a shape by explicitelt providing all its faces. \var{vertices} contains a list of point objects that define the edges of this shape. \var{Label} contains the label ID of this face.
+----
+
+F:SolidShape:SetLabel
+>>>>
+Defines the label ID for all faces currently defined in a SolidShape object.
+----
+
+F:SolidShape:SubSample
+>>>>
+Enhances the triangulation of the faces of a SolidShape object, with \var{maxdist} holding the maximum size of a single edge. For example, this function can be used prior a warping function, to ensure that this warping gives a smooth result.
+----
+
+F:SolidShape:Transform
+>>>>
+Applies an affine transformation (see \linkitem{T:Transformation}) to a SolidShape object.
+----
+
+F:SolidShape:WarpSpiral
+>>>>
+Applies a spiral warping function to a SolidShape object. The winding is performed along the $z$-axis, and \var{winding} provides the winding number.
+----
+
+F:SolidShape:WarpConalPinch
+>>>>
+Performs a conal pinch transformation to a SolidShape. The points in the plane $z=0$ are left unchanged, whereas the points in the plane $z=h$ (with $h$ provided by \var{height}) are mapped to the point $(0,0,h)$.
+----
+
+F:SolidShape:WarpCustom
+>>>>
+Applies a custom warping to a SolidShape object. This warping is provided by the functor \var{warpfunction}, which should take a single Point argument, and return the warped point.
+
+Example: \\
+\sourcecode{
+s=Bar(point(-1,-1,0),vector(2,2,2)); \\
+s.subsample(0.25); \\
+fnc=functor("point(pt.x,pt.y,pt.z*2/(2+pt.x))","pt"); \\
+s.WarpCustom(fnc); \\
+}
+----
+
+F:CreateSurface
+>>>>
+Creates a SolidShape object defined as an isosurface of a given function. The function $f$ (provided by \var{equation}) which should take three scalar arguments $x$, $y$ and $z$, and return a scalar value, defines an implicit surface as:
+\begin{equation}
+f(x,y,z)=0
+\end{equation}
+The function CreateSurface constructs a SolidShape object that contains this surface. \var{Gridsize} contains an estimate of the resolution of the faces in the resulting shape, whereas \var{boundingbox} defines the maximum distance from the center within which the surface will be constructed. Surface parts outside this box will be clipped. \var{Startpoint} defines a starting point from which the surface reconstruction wille be initiated.
+
+\textbf{Important note}: if the surface consist in several separated components, this function will only construct the component that is closest to the starting point. If you want to render all components, you should repeat this process with different values for \var{startpoint}.
+
+Example: \\
+\sourcecode{
+fnc=functor("x*x+y*y+x*z*z-1","x","y","z"); \\
+s=CreateSurface(fnc,0.3,7,point(0,0,0),false); \\
+}
+----
+
+F:Sphere
+>>>>
+Creates and returns a sphere-shaped SolidShape object. \var{Center} is the center of the sphere, \var{radius} is the radius, and \var{resolution} determines the number of faces in the resulting shape.
+----
+
+F:Cylinder
+>>>>
+Creates and returns a cylinder-shaped SolidShape object. \var{Point} defines the center of the bottom cap disc, and \var{axis} defines the offset between the center of the top cap disc and the bottom cap. \var{Radius} defines the radius of the cylinder, and \var{resolution} determines the number of faces of the resulting shape.
+----
+
+F:Polyhedron
+>>>>
+Creates and returns a Polyhedron SolidShape object. \var{Planes} provides a list of \linkitem{T:Plane} objects, each one defining a face of the polyhedron. Optionally, \var{indices} provides a list of scalar label ID values for each face.
+----
+
+O:SolidShape+SolidShape
+>>>>
+This Constructive Solid Geometry (CSG) tool calculates the union between two SolidShape objects. The resulting object contains the volume that is defined by the first object \textbf{OR} the second object.
+----
+
+O:SolidShape*SolidShape
+>>>>
+This Constructive Solid Geometry (CSG) tool calculates the intersection between two SolidShape objects. The resulting object contains the volume that is defined by the first object \textbf{AND} the second object.
+----
+
+O:SolidShape-SolidShape
+>>>>
+This Constructive Solid Geometry (CSG) tool calculates the difference between two SolidShape objects. The volume occupied by the second object is subtracted from the volume occupied by the first object, and the resulting object is returned.
+----
+
+F:ExtrudedShape
+>>>>
+Returns a shape that results from extruding a polygon (closed contour) defined by \var{contour} along the $z$-axis, over a length provided by \var{height}. Optionally, \var{layercount} provides the number of intermediate layers that should be created.
+
+Example: \\
+\sourcecode{
+cset=Contour(list(point(0,0,0),point(1,0,0),point(0,1,0))); \\
+s=ExtrudedShape(cset,1); \\
+}
+----
+
+F:RevolvedShape
+>>>>
+Returns a shape that results from revolving an open contour around the $X$ axis. \var{Contour} provides the contour that should be revolved, and \var{resolution} determines the number of steps taken during a complete revolution of $2 \pi$.
+
+
+Example: \\
+\sourcecode{ \\
+cset=FlatContourSet; \\
+cset.addpoint(point(0,1,0)); \\
+cset.addpoint(point(1,2,0)); \\
+cset.addpoint(point(2,1.5,0)); \\
+cset.calcflatnormals; \\
+s=RevolvedShape(cset,30); \\
+}
+----
+
+F:ConeShape
+>>>>
+Returns a shape that results from building a cone with a polygon (closed contour) as basis. \var{Contour} defines the basis polygon, whereas \var{top} defines the top point of the cone.
+
+Example: \\
+\sourcecode{
+cset=Contour(list(point(0,0,0),point(1,0,0),point(0,1,0))); \\
+s=ConeShape(cset,point(1,1,1)); \\
+}
+----
+
+T:Blob
+>>>>
+A blob or metaball object is a method to model smooth 3D surfaces. The surface is defined as an isosurface over a number of control points, each one defining a sphere with a certain radius and influence zone. Spheres that are inside each other's influence zone will interact and may merge into a single larger smooth object.
+----
+
+F:Blob:AddSphere
+>>>>
+Adds a new control point to the blob, defining a sphere with a given radius.
+----
+
+F:Blob:CreateSolidShape
+>>>>
+Calculate the blob surface and converts it into a \linkitem{T:SolidShape} object.
+----
+
+Object tree
+>>>>
+An important aspect of the software is the \textit{Object Tree}, which gives a structured and hierarchical representation of all necessary elements to render a scene. This section contains all the necessary object types and function to build the object tree.
+----
+
+T:Object
+>>>>
+All objects in the object trees are derived from a generic type \textbf{Object}, which groups some common properties.
+----
+
+F:Object:Name
+>>>>
+Returns or sets the name of the object.
+----
+
+F:Object:Custom
+>>>>
+Returns or sets a map that can be used to hook custom pieces of information to any object in the object tree. For example, the following code creates a new subframe, and adds a custom scalar value "Size" to it: \\
+\sourcecode{
+subframe=parentframe.addsubframe("SubFrame"); \\
+subframe.Custom.Size=0.23; \\
+... \\
+if subframe.Custom.Size>0.2 then ... \\
+}
+----
+
+F:Object:dispose
+>>>>
+Removes a object and all dependent objects from the object tree.
+----
+
+F:Object:get
+>>>>
+Object tree members are structured hierarchically, and each object may have one or more dependent objects. This member function returns a dependent object from its parent, referred to by the name of the dependent object.
+----
+
+F:Object:getmembers
+>>>>
+Returns a list of all dependent objects (see also \linkitem{F:Object:get}).
+----
+
+T:ObjectRoot
+>>>>
+This function returns the root of the object tree.
+----
+
+F:ObjectRoot:Time
+>>>>
+Returns or sets the current time of the animation.
+----
+
+F:ObjectRoot:TimeSpeed
+>>>>
+Returns or sets the time increment speeds (in seconds), i.e. the jump between two consecutive frames.
+----
+
+T:RenderType|RenderSingle
+>>>>
+Rendering is performed to a single window (not stereo).
+----
+
+T:RenderType|RenderDual
+>>>>
+Rendering is performed to two windows in stereo mode, without multithreading.
+----
+
+T:RenderType|RenderMultithreaded
+>>>>
+Rendering is performed to two windows in stereo mode, using multithreading.
+----
+
+F:ObjectRoot:Pauzed
+>>>>
+Determines whether or not the animation is pauzed. If this parameter is true, the time variable is not incremenented between two frames.
+----
+
+F:ObjectRoot:ShowControls
+>>>>
+Determines whether or not User Interface controls (see \linkitem{UI Controls}) are visible on the rendered frame. If this parameter is false, the UI controls are hidden.
+----
+
+F:ObjectRoot:VSync
+>>>>
+Returns or sets the vertical synchronisation of the display(s) each time a frame is rendered.
+If this parameter is $0$, no vertical synchronisation is performed, resulting in the fastest frame rate but potential visible artifacts such a tearing. \\
+A value of $1$ will force a single synchronisation, resulting in a maximum frame rate that is equal to the refresh rate of the display (e.g. 60 frames per second if the screen refresh rate is 60Hz). \\
+A value of $2$ will force two synchronisations, resulting in a maximum frame rate that is half the refresh rate (e.g. 30 frames per second if the screen refresh rate is 60Hz).
+----
+
+F:ObjectRoot:FrameRate
+>>>>
+Returns or sets the target frame rate (in frames per second). The actual frame rate will also depend on the vertical synchronisation settings ( \linkitem{F:ObjectRoot:VSync} ), the complexity of the rendered scene and the performance of the computer.
+----
+
+T:Scene
+>>>>
+This object type serves as the root point for a the definition of a set of objects, together building up a scene. During an animation, an object tree should containt at least one scene.
+----
+
+F:Scene:BackColor
+>>>>
+Returns or sets the background color of the scene
+----
+
+F:Scene:Light0Pos
+>>>>
+Returns or sets the position of the first point light source that illuminates the scene.
+----
+
+F:Scene:Light0Color
+>>>>
+Returns or sets the color of the first point light source that illuminates the scene.
+----
+
+F:Scene:AmbientLightColor
+>>>>
+Returns or sets the color of the ambient light in the scene. Ambient light illuminates every object in a uniform way.
+----
+
+F:Scene:SpecularLightColor
+>>>>
+Returns or sets the color of the specular light in the scene. Specular light is used for specular reflection on visible objects.
+----
+
+F:Scene:FrameNr
+>>>>
+Returns or sets the current frame number. When an animation starts, this number is set to zero. Each time the function \linkitem{F:render} is called to render a frame, this number is incremented.
+----
+
+F:Scene:start
+>>>>
+Starts a scene and prior to the first rendering action.
+----
+
+F:Scene:addsubframe
+>>>>
+Each frame contains a number of \linkitem{T:Subframe} objects. This function adds a new subframe to a scene, returning the object that encapsulates it. Optionally, a name for the subframe can be provided.
+----
+
+F:Scene:getmembers
+>>>>
+Returns a list containing all the \linkitem{T:Subframe} objects that are member of this scene.
+----
+
+F:Scene:VolumeShadowReset
+>>>>
+Clears all information about volume shadow rendering.
+----
+
+F:Scene:VolumeShadowAdd
+>>>>
+Adds a new volume shadow rendering to a scene. \var{Lighradius} defines the radius of the light source (this parameter can  be zero), \var{color} determines the color of the shadow and \var{depth1} and \var{depth2} define the minimum and maximum distance of the shadow volumes that are created.
+----
+
+F:addscene
+>>>>
+This function adds a new scene to the object tree that defines the rendering.
+----
+
+T:Subframe
+>>>>
+A subframe object defines a component of a scene. Each subframe can have its own coordinate system, with an origin and a $X$, $Y$, and $Z$ axis. The member variable \linkitem{F:Subframe:Transf} defines the position and orientation of this subframe.
+
+Geometric objects that are member of a particular subframe, are defined with respect to this coordinate system. In addition, a subframe can contain other subframes, which allows to define a scene as a hiearchical set of components.
+----
+
+F:Subframe:Visible
+>>>>
+Determines whether or not a subframe is visible. If this attribute is false, this subframe and any of its components will not be rendered and hence will be invisible.
+----
+
+F:Subframe:SubFrameType
+>>>>
+Sets or returns the type of the subframe.
+----
+
+T:SubFrameType|SubFrameNormal
+>>>>
+Defines a regular subframe, defined by an origin and a basis ( $X$, $Y$ and $Z$ axis).
+----
+
+T:SubFrameType|SubFrameViewDir
+>>>>
+Defines a subframe for which the $Z$ axis is always aligned to the light of sight of the viewer of the scene, and the $X$ and $Y$ axis are oriented horizontally and vertically in the projection plane. The subframe still has an original that can be chosen freely using the transformation of the subframe (see \linkitem{F:Subframe:Transf}).
+----
+
+T:SubFrameType|SubFrameScreen
+>>>>
+This defines a subframe that is completely aligned to the viewport through wich a scene is seen by the viewer. The $X$ axis is aligned with the horizontal axis, and the $Y$ axis with the vertical axis. The bottom left point of the viewport corresponds to the origin of the subframe.
+----
+
+F:Subframe:Color
+>>>>
+Defines an overall color multiplication for all members of this subframes. The final color of an object in this frame will be determined by multiplying the $(r,g,b,a)$ values with the values defined in this color object.
+----
+
+F:Subframe:CastVolumeShadow
+>>>>
+Determines whether or not geometric objects in the frame cast volume shadows (see also \linkitem{F:Scene:VolumeShadowAdd}).
+----
+
+F:Subframe:Transf
+>>>>
+Returns or sets the \linkitem{T:Transformation} object that defines the position and orientation of this subframe.
+----
+
+F:Subframe:MotionName
+>>>>
+Returns or sets the name of the motion object that determines how this subframe moves during an animation (see also \linkitem{Motions}).
+----
+
+F:Subframe:Mass
+>>>>
+For some purposes, subframes can be used to model physical objects (see e.g. \linkitem{T:MotionForceField}). This attribute determines the mass of the point object associated with the subframe.
+----
+
+F:Subframe:Charge
+>>>>
+Determines the electric charge of the point object associated with this subframe (see also \linkitem{F:Subframe:Mass}).
+----
+
+Object tree:Geometric objects
+>>>>
+This section contains object types that encapsulate to visible, geometric object that can be used to build a scene.
+----
+
+T:SolidObject
+>>>>
+This object type can be used to encapsulate a generic render object, constructed using the functions that are available in the object type \linkitem{T:SolidShape}.
+----
+
+F:SolidObject:CreateShape
+>>>>
+Copies the shape of a 3D shape from from a \linkitem{T:SolidShape} object.
+----
+
+F:SolidObject:Color
+>>>>
+Returns or sets the color of the object.
+----
+
+F:SolidObject:SpecularColor
+>>>>
+Returns or sets the specular color of the object. The specular color determines the color of the shiny reflection.
+----
+
+F:SolidObject:SpecularValue
+>>>>
+Returns or sets the specular value, determining the shininess of the object. A high value results (e.g. >20) in a concentrated, intense shiny reflection, whereas a lower value gives a more diffuse shine.
+----
+
+F:SolidObject:EnableLight
+>>>>
+Determine whether or not a lightening model will be used to render this object. If this attribute is false, the object will appear with a flat color, whithout shadow or shine.
+----
+
+F:SolidObject:Texture
+>>>>
+Returns or sets the name of the texture that is mapped on this object (see also \linkitem{T:Texture}).
+----
+
+F:SolidObject:TextureRight
+>>>>
+This attribute can be set to specify a different texture for the left and right stereoscopic image. If it is left empty, both renderings will have the same texture applied.
+----
+
+F:SolidObject:BlendType
+>>>>
+Determines how the object is blended with the background when rendered in the scene.
+----
+
+T:BlendType|BlendNormal
+>>>>
+No blending is applied. The object will be opaque, and obscure any object behind it.
+----
+
+T:BlendType|BlendTranslucent
+>>>>
+Defines the object as partially transparent. The color of the object will blend with the background, but also partially obscure it. The larger the opacity factor $a$ of the color (see \linkitem{T:Color}), the more the background will be obscured. The resulting color is given by:
+\begin{equation}
+\begin{array}{rcl}
+r_f & = (1-a_o) . r_b + a_o . r_o \\
+g_f & = (1-a_o) . g_b + a_o . g_o \\
+b_f & = (1-a_o) . b_b + a_o . b_o \\
+\end{array}
+\end{equation}
+with $(r_b,g_b,b_b)$ the background color, $(r_o,g_o,b_o,a_o)$ the color of the transparent object to be drawn on top, and $(r_f,g_f,b_f)$ the resulting blended color. \\
+For rendering translucent objects, the depth buffer update should be disabled (see \linkitem{T:DepthMask|DepthMaskDisable}). \\
+IMPORTANT NOTE: when creating several overlapping translucent object, the order of creation is important, because a correct effect will only be obtained if the translucent objects are rendered from back to front, as seen from the viewpoint of the camera.
+----
+
+T:BlendType|BlendTransparent
+>>>>
+Defines the object as being fully transparent. The color of the transparent object is added to the color of the background, without blocking it. The opacity factor $a$ of the color (see \linkitem{T:Color}) determines how much of the object color is added. The resulting color is given by:
+\begin{equation}
+\begin{array}{rcl}
+r_f & = r_b + a_o . r_o \\
+g_f & = g_b + a_o . g_o \\
+b_f & = b_b + a_o . b_o \\
+\end{array}
+\end{equation}
+with $(r_b,g_b,b_b)$ the background color, $(r_o,g_o,b_o,a_o)$ the color of the transparent object to be drawn on top, and $(r_f,g_f,b_f)$ the resulting blended color. \\
+For rendering translucent objects, the depth buffer update should be disabled (see \linkitem{T:DepthMask|DepthMaskDisable}). \\
+In contrast to translucent objects, transparent objects render correctly independent of the order or rendering.
+----
+
+F:SolidObject:Visible
+>>>>
+Determines whether or not this object is visible. If this attribute is false, it will not be rendered.
+----
+
+F:SolidObject:Position
+>>>>
+Returns or sets the position of this object with respect to the parent subframe.
+----
+
+F:SolidObject:DepthMask
+>>>>
+Determines how the depth buffer will be affected by rendering this object.
+----
+
+T:DepthMask|DepthMaskNormal
+>>>>
+The update of the depth buffer will be inherited from the parent object properties.
+----
+
+T:DepthMask|DepthMaskEnable
+>>>>
+The depth buffer will be updated.
+----
+
+T:DepthMask|DepthMaskDisable
+>>>>
+The depth buffer will not be updated. This setting can be used to render transparent or translucent objects.
+----
+
+F:SolidObject:DepthTest
+>>>>
+Determines wether or not a depth test will be applied when rendering an object to the scene.
+----
+
+T:DepthTest|DepthTestNormal
+>>>>
+The depth test behaviour will be inherited from the parent object.
+----
+
+T:DepthTest|DepthTestEnable
+>>>>
+The depth test will be performed. Parts of the object that are obscured by objects closer to the camera, will not be visible.
+----
+
+T:DepthTest|DepthTestDisable
+>>>>
+The depth test will not be performed. Every part of the object will be rendered, even if it occurs in behind an object that is closer to the camera.
+----
+
+F:SolidObject:IsBackGround
+>>>>
+Determines whether or not this object is part of the background of the scene. Background objects are rendered before all other objects in the scene.
+----
+
+F:SolidObject:RenderFront
+>>>>
+Determines whether or not the front surface of the shape will be rendered. The front surface pointing outward of the shape, and visible to the viewer.
+----
+
+F:SolidObject:RenderBack
+>>>>
+Determines whether or not the back surface of the shape will be rendered. The back surface pointing inward to the shape. For a closed surface, this is normally not visible to the viewer.
+----
+
+F:SolidObject:RenderOutLine
+>>>>
+If this attribute is true, the surface of the shape is rendered by polygon outlines rather than filled shapes.
+----
+
+F:SolidObject:CanCache
+>>>>
+Determines whether or not this object can be cached in a display list.
+----
+
+F:SolidObject:CanBuffer
+>>>>
+Determines whether or not this object can be cached in vertex buffer object. For complex objects consisting of many triangles, this may speed up the rendering considerably.
+----
+
+F:SolidObject:CalculateEdges
+>>>>
+Determines whether or not the edges of the surface should be calculated. This is only required if the object ise used for volume shadowing.
+----
+
+F:SolidObject:CreateFlatShape
+>>>>
+Creates a flat, polygonal shape from a \linkitem{T:FlatContourset} object.
+----
+
+F:SolidObject:SetColor
+>>>>
+Associates a color to a those parts of a shape that carry a specific label. See \linkitem{T:SolidShape} for more details on how to assign labels to shape components.
+----
+
+F:SolidObject:GenerateVertexProperty
+>>>>
+Defines a specific property of the vertices of a shape, using a functor. See \linkitem{T:VertexProperty} for more details about what vertex properties can be defined. This functor should take a \linkitem{T:Point} variable as input, and produce a result that is conform the property that is specified.
+
+For example, suppose that \sourcecode{ob} contains a SolidObject, the the following code will cause the color of the object to fade from green to red along the $X$ axis, between $x=0$ and $x=1$: \\
+\sourcecode{
+fnc=functor("color(p.x,1-p.x,0)","p");
+ob.GenerateVertexProperty(fnc,VertexPropertyColor); \\
+}
+----
+
+T:VertexProperty|VertexPropertyRed
+>>>>
+The red color component of a vertex (scalar value).
+----
+
+T:VertexProperty
+>>>>
+Enumerates the different vertex properties that can be set for a shape object.
+----
+
+T:VertexProperty|VertexPropertyGreen
+>>>>
+The green color component of a vertex (scalar value).
+----
+
+T:VertexProperty|VertexPropertyBlue
+>>>>
+The blue color component of a vertex (scalar value).
+----
+
+T:VertexProperty|VertexPropertyTransp
+>>>>
+The alpha color component of a vertex (scalar value).
+----
+
+T:VertexProperty|VertexPropertyColor
+>>>>
+The color component of a vertex ( \linkitem{T:Color}).
+----
+
+T:VertexProperty|VertexPropertyTC1
+>>>>
+The first texture component of a vertex (scalar value).
+
+----
+
+T:VertexProperty|VertexPropertyTC2
+>>>>
+The second texture component of a vertex (scalar value).
+
+----
+
+F:SolidObject:Transform
+>>>>
+Warps a SolidObject using a linear transformation (see also \linkitem{T:Transformation}).
+----
+
+F:Subframe:add
+>>>>
+Adds a new render object to the subframe. \var{Type} should be the name of a render object (listed under \linkitem{Object tree:Geometric objects} and \linkitem{Object tree:Special objects}). In addition, this function can take a number of \linkitem{T:MapPair} objects that define values for the various attributes of the render object that will be created.
+
+For example, suppose that \sourcecode{fr} contains a subframe, then the following code will create a sphere at position $(1,2,2)$ with radius $1.7$, bearing the name "Sphere01": \\
+\sourcecode{
+fr.add("sphere","Name":"Sphere01","Position":point(1,2,2),"Radius":1.7); \\
+}
+----
+
+F:Subframe:moveobject
+>>>>
+Moves a member object of a subframe up or down in the list of member objects. \var{Objectname} specifies the name of the object to be moved, and \var{step} the number of objects it should jump over. A negative value of \var{step} will move it up in the list.
+----
+
+F:Subframe:clearobjects
+>>>>
+Removes all member objects (render objects and subframes) from a subframe.
+----
+
+F:Subframe:addsubframe
+>>>>
+Creates a new, regular subframe as a member of a frame object (see also \linkitem{F:Subframe:SubFrameType}).
+----
+
+F:Subframe:addviewdirframe
+>>>>
+Creates a new, view direction subframe as a member of a frame object (see also \linkitem{F:Subframe:SubFrameType}). \var{Position} contains the position of the origin of this subframe, relative to the coordinate system of the parent frame object.
+
+----
+
+F:Subframe:addscreenframe
+>>>>
+Creates a new, screen subframe as a member of a frame object (see also \linkitem{F:Subframe:SubFrameType}).
+
+----
+
+F:Subframe:totaltransformation
+>>>>
+Returns the total transformation of a subframe with respect to the scene object it is defined in. This sums the effect of the full chain of parent frames that embed this subframe in the scene.
+----
+
+F:Subframe:addclipplane
+>>>>
+Adds a clipping plane to a subframe. Everything that lies on the negative side of this plane will not be rendered.
+----
+
+F:Subframe:resetclipplanes
+>>>>
+Removes all clippling planes from the subframe.
+----
+
+F:Subframe:CreateTexture
+>>>>
+Creates a new texture object from a bitmap file, and attaches it to the subframe. \var{Name} provides a unique identifier for this texture object, and \var{bitmapfile} contains the name of the file that contains the texture bitmap (can be JPG or BMP files). Optionally, \var{bitmapfilealpha} contains the name of the file that contains the alpha (opacity) channel of the texture.
+----
+
+F:Subframe:CreateVideoTexture
+>>>>
+Creates a new video texture object, and attaches it to the subframe. \var{Name} provides a unique identifier for this texture object, and \var{source} contains the video object that defines the texure (see also \linkitem{T:Video}).
+
+----
+
+T:Bar
+>>>>
+Encapsulates a render object that displays a bar.
+----
+
+F:Bar:SizeX
+>>>>
+Returns or sets the $X$ dimension of the bar.
+----
+
+F:Bar:SizeY
+>>>>
+Returns or sets the $Y$ dimension of the bar.
+----
+
+F:Bar:SizeZ
+>>>>
+Returns or sets the $Z$ dimension of the bar.
+----
+
+T:Sphere
+>>>>
+Encapsulates a render object that displays a sphere.
+----
+
+T:Cylinder
+>>>>
+Encapsulates a render object that displays a cylinder.
+----
+
+T:Rectangle
+>>>>
+Encapsulates a render object that displays a flat rectangle.
+----
+
+T:Arrow
+>>>>
+Encapsulates a render object that displays an arrow.
+----
+
+T:SolidPoint
+>>>>
+Encapsulates a render object that displays a point.
+----
+
+T:Text3D
+>>>>
+Encapsulates a render object that displays 3D text.
+----
+
+T:TextFlat
+>>>>
+Encapsulates a render object that displays flat text. This text is always displayed in a direction perpendicular to the viewing direction, and will appear upright on the screen.
+----
+
+T:FormattedText:Attributes
+>>>>
+Encapsulates a render object that displays 3D LaTeX formatted text.
+----
+
+T:Surface
+>>>>
+Encapsulates a render object that displays a mathematical surface. The surface is defined by a matrix of three-dimensional points.
+----
+
+T:Curve
+>>>>
+Encapsulates a render object that displays a curve. The curve is defined by an array of \linkitem{T:Point} objects.
+----
+
+T:StarGlobe
+>>>>
+Encapsulates a render object that displays a star globe. The brightest stars are displayed on a fictitious globe. Optionally, the constellations can be drawn as connecting lines between the stars.
+----
+
+T:Clock
+>>>>
+Encapsulates a render object that displays a date calendar and/or a clock.
+----
+
+T:FormattedText
+>>>>
+Encapsulates a render object that displays LaTeX formatted text. The text is always displayed along the $X$ and $Y$ axis of the current frame.
+----
+
+F:Sphere:Radius
+>>>>
+Returns or sets the radius of the sphere.
+----
+
+F:Sphere:Resolution
+>>>>
+Returns or sets the resolution of the sphere. The number of vertices used to build the surface is proportional to the square of this value.
+----
+
+F:Sphere:Angle1Min
+>>>>
+Returns or sets the start angle of the first angular parameter $\phi$. This can be used to define a partial sphere. A complete sphere is defined by the following equation:
+\begin{equation}
+\begin{array}{rcl}
+x &=& R \, cos \phi \, cos \theta \\
+y &=& R \, sin \phi \, cos \theta \\
+z &=& R \, sin \theta,
+\end{array}
+\end{equation}
+with $\phi$ ranging between $0$ and $2 \pi$ and $\theta$ between $- \pi / 2$ and $\pi / 2$.
+
+A partial sphere can be created by defining a more restricted range for one or both parameters.
+----
+
+F:Sphere:Angle1Max
+>>>>
+Returns or sets the maximum value of the first angular parameter $\phi$. See also \linkitem{F:Sphere:Angle1Min}.
+----
+
+F:Sphere:Angle2Min
+>>>>
+Returns or sets the minimum value of the second angular parameter $\theta$. See also \linkitem{F:Sphere:Angle1Min}.
+
+----
+
+F:Sphere:Angle2Max
+>>>>
+Returns or sets the maximum value of the second angular parameter $\theta$. See also \linkitem{F:Sphere:Angle1Min}.
+
+
+----
+
+F:Cylinder:Radius
+>>>>
+Returns or sets the radius of the cylinder at the bottom edge.
+----
+
+F:Cylinder:RadiusChange
+>>>>
+Returns or sets the difference in radius of the cylinder at the top edge, compared to the bottom edge.
+
+----
+
+F:Cylinder:Axis
+>>>>
+Returns or sets the axis that defines connects the bottom centre point and the top centre point.
+----
+
+F:Cylinder:Resolution
+>>>>
+Returns or sets the number of vertices that is used to build a single revolution of the cylinder.
+----
+
+F:Cylinder:IsClosed
+>>>>
+Determines whether or not the cylinder has a top and bottom cap.
+----
+
+F:Rectangle:Axis1
+>>>>
+Returns or sets the first edge of the rectangle.
+
+The full rectangle is defined by 4 points:
+\begin{equation}
+\begin{array}{l}
+\vec{p} \\
+\vec{p} + \vec{a}_1 \\
+\vec{p} + \vec{a}_2 \\
+\vec{p} + \vec{a}_1 + \vec{a}_2, 
+\end{array}
+\end{equation}
+with $\vec{p}$ the position of the rectangle, and $\vec{a}_1$ and $\vec{a}_2$ the two axes.
+----
+
+F:Rectangle:Axis2
+>>>>
+Returns or sets the second edge of the rectangle. See also \linkitem{F:Rectangle:Axis1}.
+
+
+----
+
+F:Arrow:Axis
+>>>>
+Returns or sets the axis that connects the end point of the arrow with the start point.
+----
+
+F:Arrow:NormAxis
+>>>>
+Returns or sets the normal direction of the arrow. The Arrow is defined in a plane perpendicular to this vector.
+----
+
+F:Arrow:Width
+>>>>
+Returns or sets the width of the arrow (in the direction perpendicular to \linkitem{F:Arrow:NormAxis} and \linkitem{F:Arrow:Axis}).
+----
+
+F:Arrow:Thickness
+>>>>
+Returns or sets the thickness of the arrow (in the direction defined by \linkitem{F:Arrow:NormAxis}).
+----
+
+F:SolidPoint:Size
+>>>>
+Returns or sets the diameter of the point.
+----
+
+F:Text3D:GetSizeX
+>>>>
+Returns the horizontal size of the displayed text.
+----
+
+F:Text3D:Content
+>>>>
+Returns or sets the content of the text that is displayed.
+----
+
+F:Text3D:Depth
+>>>>
+Returns or sets the depth of the displayed text, in the direction perpendicular to \linkitem{F:Text3D:UnitX} and \linkitem{F:Text3D:UnitY}.
+----
+
+F:Text3D:UnitX
+>>>>
+Returns or sets the horizontal unit vector of the displayed text. The magnitude of this vector determines the horizontal size of the displayed text, the direction determines the horizontal direction it is displayed in.
+----
+
+F:Text3D:UnitY
+>>>>
+Returns or sets the vertical unit vector of the displayed text. The magnitude of this vector determines the vertical size of the displayed text, the direction determines the vertical direction it is displayed in.
+----
+
+F:TextFlat:Content
+>>>>
+Returns or sets the content of the text that will be displayed.
+----
+
+F:TextFlat:Size
+>>>>
+Returns or sets the size of the displayed text.
+----
+
+F:FormattedText:Content
+>>>>
+Returns or sets the content of the text that will be displayed.
+----
+
+F:FormattedText:Size
+>>>>
+Returns or sets the size of the displayed text.
+----
+
+F:FormattedText:MaxLenX
+>>>>
+Returns or sets the maximum horizontal extent of the displayed text. If the total size exceeds this, words will automatically be wrapped over several lines.
+----
+
+F:Surface:dim
+>>>>
+Sets the dimensions of the matrix of points that define the surface.
+----
+
+F:Surface:points
+>>>>
+Returns or sets a point in the matrix, providing the two indices.
+----
+
+F:Surface:normals
+>>>>
+Returns or sets the normal to the surface in a point, providing the two indices in the matrix of points.
+----
+
+F:Surface:colors
+>>>>
+Returns or sets the color of a point, providing the two indices in the matrix of points.
+----
+
+F:Surface:Generate
+>>>>
+Automatically generates a mathematical surface from an expression, provided as a \linkitem{T:functor}. This functor should be defined as an expression that takes two scalar parameters $t_1$ and $t_2$, and returns a \linkitem{T:Point}.
+
+For both parameters, the minimum and maximum value should be provided, as well as the number of steps that will be iterated to generate the matrix of points.
+
+For examle: \\
+\sourcecode{
+fnc=functor("point(t,s,t*s)","t","s"); \\
+srf.generate(fnc,-1,1,20,-1,1,20); \\
+}
+----
+
+F:Surface:GenerateSplineSurface
+>>>>
+This function generates a surface from a \linkitem{T:SplineSurface}. The resolution (number of points) in both directions should be provided.
+----
+
+F:Surface:GenerateVertexProperty
+>>>>
+This function can be used to define a specific property of each point on the surface, such as the color. See \linkitem{T:VertexProperty} for a list of all possible properties that can be used. A \linkitem{T:functor} should be provided that takes a \linkitem{T:Point} as an argument, and returns a variable that corresponds to the property that is to be set.
+
+For example, the following code used the $x$, $y$ and $z$ coordinates to build the $R$, $G$ and $B$ values of the color of the point: \\
+\sourcecode{
+fnc=functor("color(pt.x,pt.y,pt.z)","pt"); \\
+srf.GenerateVertexProperty(fnc,VertexPropertyColor); \\
+}
+----
+
+F:Surface:copyfrom
+>>>>
+Copies a surface from another surface object.
+----
+
+F:Surface:CopyToFrame
+>>>>
+An evolving surface can be modelled by defining a set of frames, reference surfaces with equal grid dimensions, each at a different point in time. During the animation, the rendered surface can be interpolated between those references.
+
+This function copies the currently defined surface into a reference frame, at a given interpolation point (see also \linkitem{F:Surface:InterpolFrame})
+----
+
+F:Surface:InterpolFrame
+>>>>
+During the rendering, this function defines at what point the rendered surface should be interpolated from the reference frames (see also \linkitem{F:Surface:CopyToFrame}).
+----
+
+F:Curve:Size
+>>>>
+Returns or sets the thickness of the line that is used to render the curve.
+----
+
+F:Curve:Arrow1Size
+>>>>
+This function returns or sets the size of the arrow at the start point of the curve. A zero size means that no arrow will be shown.
+----
+
+F:Curve:Arrow2Size
+>>>>
+This function returns or sets the size of the arrow at the end point of the curve. A zero size means that no arrow will be shown.
+----
+
+F:Curve:IsClosed
+>>>>
+Determines whether or not the curve will be closed (i.e. the last point will be connected to the first point).
+----
+
+F:Curve:CurveRenderType
+>>>>
+Returns or sets the way the curve object will be rendered.
+----
+
+F:Curve:addpoint
+>>>>
+Adds a new point to the array of points that defines the curve. Optionally, the color at this point may be provided.
+----
+
+F:Curve:makeline
+>>>>
+Defines a curve that consists in a straight line connecting two points.
+----
+
+F:Curve:reset
+>>>>
+Removes all currently defined points.
+----
+
+F:Curve:makecircle
+>>>>
+Defines a curve as a circle. The argument \var{center} defines the centre point of the circle, \var{normal} determines the normal on the plane of the circle, and \var{radius} determines the radius of the circle. The arguments \var{resolution} determines the number of points that will be used to create the curve object.
+----
+
+F:Curve:Generate
+>>>>
+Generates a curve object from a mathematical expression, provided by the functor \var{function}. This functor should take a scalar as argument, and return a \linkitem{T:Point} object. The arguments \var{min} and \var{max} determine the interval over which the scalar argument will be iterated, and \var{count} determines the number of steps.
+
+The following example creates a spiral: \\
+\sourcecode{
+fnc=functor("point(cos(t),sin(t),t)","t"); \\
+crv.Generate(fnc,0,6*Pi,100); \\
+}
+----
+
+F:Curve:GenerateSplineCurve
+>>>>
+Generates a curve from a \linkitem{T:SplineCurve} object, provided by \var{curve}. The number of points used to generate the curve is provided by \var{count}.
+----
+
+F:Curve:transform
+>>>>
+Transforms the shape of a curve using a linear transformation (see also \linkitem{T:Transformation}).
+----
+
+F:Curve:Track
+>>>>
+This function can be used to make a curve object track the movement of another object, defined by a \linkitem{T:Subframe} object, provided in \var{source}. When this object is moving over the scene, new points will automatically be added to the curve to trace the shape of the movement. The minimum distance between two consecutive trace points is provided by \var{MinDist}.
+----
+
+F:Curve:StopTrack
+>>>>
+This function stops the tracking of another object (see also \linkitem{F:Curve:Track}).
+----
+
+F:StarGlobe:Radius
+>>>>
+Returns or sets the radius of the star globe.
+----
+
+F:StarGlobe:StarSize
+>>>>
+Returns or sets a factor that influences the disc size that is used to render the stars. Note that the disc size of an individual star depends on its brightness.
+----
+
+F:StarGlobe:LineSize
+>>>>
+Returns or sets the size of the lines that connect the constellation stars.
+----
+
+F:StarGlobe:LineColor
+>>>>
+Returns or sets the color of the lines that connect the constellation stars.
+----
+
+F:Clock:Type
+>>>>
+Returns or sets the type of clock or calender that should be rendered.
+----
+
+F:Clock:Size
+>>>>
+Returns or sets the size of the clock image on the scene.
+----
+
+F:Clock:TimeShift
+>>>>
+Returns or sets the time difference the clock should display, compared to Universal Time.
+----
+
+F:Clock:HasOwnTime
+>>>>
+If this property is set, the clock object does not follow the UT of the simulation, but maintains its own time.
+----
+
+F:Clock:Time
+>>>>
+Returns or sets the current time of the object (see also \linkitem{F:Clock:HasOwnTime})
+----
+
+F:Clock:Axis1
+>>>>
+Returns or sets the direction of the horizontal axis of the displayed clock object.
+----
+
+F:Clock:Axis2
+>>>>
+Returns or sets the direction of the vertical axis of the displayed clock object.
+----
+
+F:Clock:Monthnames
+>>>>
+For a calendar object, this function can be used to define a list with all names of the Months. This can be used to customise an animation for a specific language.
+----
+
+T:LightPoint
+>>>>
+Encapsulates a render object that displays a transparent point.
+----
+
+T:RepeatedObject
+>>>>
+Encapsulates a render object that repeats the content of a given subframe at another point.
+----
+
+T:PEngine
+>>>>
+Encapsulates a particle engine render objects. Particle engines consist in a large number of point objects that follow a specific movement, controlled by some global properties. They can be used to simulate specific render effects such as fog, clouds and fire.
+
+The motion of particles in a PE can be controlled in two ways:
+\begin{enumerate}
+\item
+Using a global equation that determines the laws of motion (see \linkitem{F:PEngine:motion}).
+\item
+By specifying the exact position of each particle over a number of frames. During the animations, the actual positions will be interpolated over these frames (see \linkitem{F:PEngine:AddFrame} and \linkitem{F:PEngine:FramePtPosition}).
+\end{enumerate}
+----
+
+F:PEngine:SetSize
+>>>>
+Sets the number of particles in the PE.
+----
+
+F:PEngine:add
+>>>>
+Adds a new point to the PE. Optionally, the position and relative size factor can be provided.
+----
+
+F:PEngine:Pposition
+>>>>
+Returns or sets the actual position of a specific particle in the PE.
+----
+
+F:PEngine:Pvelocity
+>>>>
+Returns or sets the actual velocity of a specific particle in the PE.
+----
+
+F:PEngine:Pcolor
+>>>>
+Returns or sets the color of a specific particle in the PE.
+----
+
+F:PEngine:Psizefactor
+>>>>
+Returns or sets the size factor of a specific particle in the PE.
+----
+
+F:PEngine:motion
+>>>>
+Returns or sets the motion object that determines the movement of all particles in the PE
+(see also \linkitem{Motions}).
+----
+
+F:PEngine:AddFrame
+>>>>
+Adds a new frame to the PE, specifying the reference time point of this frame. This should be used if the movement of the particles is determined by providing their positions on a number of frames.
+----
+
+F:PEngine:FramePtPosition
+>>>>
+Returns or sets the position of a particle at a specific frame (see also \linkitem{F:PEngine:AddFrame}).
+----
+
+F:PEngine:FramePtColor
+>>>>
+Returns or sets the color of a particle at a given frame (see also \linkitem{F:PEngine:AddFrame}).
+----
+
+T:Fog
+>>>>
+Encapsulates the introduction of fog into the rendered scene.
+----
+
+F:Fog:Type
+>>>>
+Returns or sets the type of fog equation used.
+----
+
+T:Texture
+>>>>
+A texture is a bitmap that is wrapped over a rendered object, and can be used to give this object a more realistic appearance.
+----
+
+F:Texture:Bitmap
+>>>>
+Returns or sets the file name of the bitmap that specifies the texture.
+----
+
+F:Texture:BitmapAlpha
+>>>>
+Returns or sets the file name of the optional bitmap that specifies $\alpha$ (transparency) channel of the texture.
+----
+
+F:Texture:aspectratio
+>>>>
+Returns the aspect ratio ( $X/Y$ ) of the bitmap that defines the texture.
+----
+
+T:Viewport
+>>>>
+A viewport represents a rectangle on the screen through which the viewer can look at a scene during the animation. At least one viewport should be present during an animation, but it is possible to create several viewports that offer the viewer different points of views on the same scene, or even display several scenes at the same time.
+
+The point of view that is used to display the content of a scene through a viewport is managed by the concept of a \textbf{camera}, having a position and a direction.
+----
+
+F:Viewport:Scene
+>>>>
+Returns or sets the name of the scene that is attached to this viewport.
+----
+
+F:Viewport:CameraPos
+>>>>
+Returns or sets the current position of the camera that creates this viewport.
+----
+
+F:Viewport:CameraDir
+>>>>
+Returns or sets the current viewing direction of the camera that creates this viewport.
+----
+
+F:Viewport:CameraUpDir
+>>>>
+Returns or sets the current "up" or vertical direction of the camera that creates this viewport.
+----
+
+F:Viewport:EnableUserNavigation
+>>>>
+If this flag is set, the user can navigate the camera through the scene using the standard UI input (keyboard, mouse, joystick).
+----
+
+F:Viewport:EnableUserTimeControl
+>>>>
+If this flag is set, the user can control the time flow of the animation using the standard UI input.
+----
+
+F:Viewport:FadeColor
+>>>>
+An entire viewport can be faded to black (or another color) by specifying a fade color with a specific transparency. A fictitious curtain is put in front of the camera with this color.
+----
+
+F:Viewport:UseStereo
+>>>>
+Determines whether or not this viewport is rendered in stereoscopic mode.
+----
+
+F:Viewport:EraseBackground
+>>>>
+Determines whether or not the background of this viewport is explicitely erased before each rendering action.
+----
+
+F:Viewport:ShowControls
+>>>>
+Determines whether or not the currently defined dialog controls are displayed as an overlay in the viewport (see also \linkitem{UI Controls}).
+----
+
+F:Viewport:Framesize
+>>>>
+Returns or sets the size of the border around the viewport.
+----
+
+F:Viewport:Transf
+>>>>
+This property can be used to define a final transformation that will be applied to the scene before rendering to this viewport.
+----
+
+F:Viewport:FocalDistance
+>>>>
+For stereoscopic rendering, this parameter determines the distance between the camera and the plane with zero parallax (i.e. the plane where both left and right eye images exactly coincide).
+
+Note that, when the focal distance value is modified, the eye separation is automatically adjusted accordingly using the value defined by \linkitem{F:Viewport:EyeSepFactor}:
+\begin{equation}
+\mbox{EyeSeparation} = \mbox{EyeSepFactor} \times \mbox{FocalDistance}
+\end{equation}
+----
+
+F:Viewport:EyeSeparation
+>>>>
+For stereoscopic rendering, this parameter determines the distance between the left and righe eye camera.
+
+Note that this parameter is automatically adjusted if the \linkitem{F:Viewport:FocalDistance} is changed. You can change the eye separation independently by modifying this property.
+----
+
+F:Viewport:Aperture
+>>>>
+Determines the aperture angle that is used to capture the scene in the viewport.
+----
+
+F:Viewport:NearClipPlane
+>>>>
+Only the portion of the scene between two planes perpendicular to the camera direction is rendered to the viewport: the near clipping plane and the far clipping plane. This parameter determines the distance between the camera and the near clipping plane.
+
+Any object or part of an object that is closer to the camera than this distance, will not be rendered.
+----
+
+F:Viewport:FarClipPlane
+>>>>
+This parameter determines the distance between the camera and the near clipping plane (see also \linkitem{F:Viewport:NearClipPlane}).
+
+Any object or part of an object that is further away from the camera than this distance, will not be rendered.
+----
+
+F:Viewport:StretchFactor
+>>>>
+This parameters determines a horizontal stretch or compression factor of the rendered image. A value of $1$ will keep the natural aspect ratio.
+----
+
+F:Viewport:LeftDisplay
+>>>>
+Returns or sets the name of the display where the left eye image will be rendered.
+----
+
+F:Viewport:RightDisplay
+>>>>
+Returns or sets the name of the display where the right eye image will be rendered.
+
+----
+
+F:Viewport:start
+>>>>
+Initialised the viewport.
+----
+
+F:Viewport:aspectratio
+>>>>
+Returns the aspect ratio of the viewport.
+----
+
+F:Viewport:setscene
+>>>>
+Associates a \linkitem{T:scene} with the viewport. The content of this scene will be rendered in the viewport.
+----
+
+F:Viewport:StartRecording
+>>>>
+Starts the recording of the content of the scene to a video file. Each rendered frame (caused by a call to \linkitem{F:render}) will result in a new frame in the video.
+----
+
+F:Viewport:StopRecording
+>>>>
+Terminates the recording of the viewport to a video file.
+----
+
+F:addviewport
+>>>>
+Creates a new viewport.
+----
+
+T:Video
+>>>>
+This object type encapsulates a video object, and can be used to render video content to a scene. This can be done by creating a video texture (see also \linkitem{F:Subframe:CreateVideoTexture}).
+
+Example: \\
+\sourcecode{
+vd=addvideo("SampleVideo.avi"); \\
+vd.name="SampleVideo"; \\
+vd.playing=true; \\
+ \\
+vd.FrameReduction=3; \\
+ \\
+framecount=vd.GetFrameCount; \\
+framerate=vd.GetFrameRate; \\
+xres=vd.GetXRes; \\
+yres=vd.GetYRes; \\
+ \\
+rootframe=MyScene.addsubframe("Root"); \\
+vtx=rootframe.CreateVideoTexture("vtx",vd); \\
+s=rootframe.add("bar","position":point(0,0,1),"color":color(1,1,1)); \\
+s.texture=vtx.name; \\
+}
+----
+
+F:Video:FrameReduction
+>>>>
+Determines the reduction in frame rate between the video object and the rendering speed of the animation.
+----
+
+F:Video:GetFrameCount
+>>>>
+Returns the number of frames in the video.
+----
+
+F:Video:GetFrameRate
+>>>>
+returns the frame rate (samples/second) as defined in the video.
+----
+
+F:Video:GetXRes
+>>>>
+Returns the horizontal resolution of the video.
+----
+
+F:Video:GetYRes
+>>>>
+Returns the vertical resolution of the video.
+----
+
+F:Video:CurrentFrame
+>>>>
+Returns or sets the current frame number in the video.
+----
+
+F:addvideo
+>>>>
+Creates a new video object from a video file.
+----
+
+F:root
+>>>>
+Returns the root of the object tree.
+----
+
+F:DelObject
+>>>>
+Deletes an object. The content of the object will be removed, and the object will become unassigned.
+----
+
+F:SaveObject
+>>>>
+Saves an object to a file.
+----
+
+F:ReadObject
+>>>>
+Reads an object from a file that was created by \linkitem{F:SaveObject}.
+----
+
+T:Display
+>>>>
+A display encapsulates window that is shown in a display of the computer.
+----
+
+UI Controls
+>>>>
+You can define dialog-control like render objects as an overlay in a scene. These objects can be used to prompt the user for specific settings, which will influence the animation. UI controls can be added to a \linkitem{T:Subframe} just like any other render object, using \linkitem{F:Subframe:add}.
+
+Preferably, UI controls should be defined in a subframe that is aligned with the viewport (the plane of the screen).
+
+For example, if \sourcecode{rootframe} is a subframe variable: \\
+\sourcecode{
+plotcontrolframe=rootframe.addscreenframe("PlotControlFrame"); \\
+btedit=plotcontrolframe.add("ButtonControl", \\
+   "content":"Edit", \\
+   "position":point(0.02,0.95), \\
+   "size":dyunit,"sizex":0.1); \\
+}
+----
+
+T:FrameControl
+>>>>
+Encapsulates a semi-transparent rectangle that can be used to draw the background of a dialog box like overlay.
+----
+
+F:FrameControl:SizeX
+>>>>
+Returns or sets the horizontal size of the frame control.
+----
+
+F:FrameControl:SizeY
+>>>>
+Returns or sets the vertical size of the frame control.
+----
+
+T:TextControl
+>>>>
+Encapsulates a static string.
+----
+
+F:TextControl:Content
+>>>>
+Returns or sets the content of the static string.
+----
+
+T:ScalarControl
+>>>>
+Encapsulates a control that prompts the user for a scalar value.
+----
+
+F:ScalarControl:WasModified
+>>>>
+Determines whether or not the content of the control was modified.
+----
+
+F:ScalarControl:SizeX
+>>>>
+Returns or sets the X size of the control.
+----
+
+F:ScalarControl:RangeSizeX
+>>>>
+Determines the X size of the range selector part of the control.
+----
+
+F:ScalarControl:Value
+>>>>
+Returns or sets the current value of the control.
+----
+
+F:ScalarControl:Min
+>>>>
+Returns or sets the minimum of the scalar value that is kept in the control.
+----
+
+F:ScalarControl:Max
+>>>>
+Returns or sets the maximum of the scalar value that is kept in the control.
+----
+
+F:ScalarControl:Step
+>>>>
+Returns or sets size that is used to increment or decrement the scalar value in the control.
+----
+
+F:ScalarControl:DecimalCount
+>>>>
+Returns or sets the number of decimal positions that is used to display the scalar value in the control.
+----
+
+T:EditControl
+>>>>
+Encapsulates a control that prompts for a text string.
+----
+
+F:EditControl:SizeX
+>>>>
+Returns or sets the horizontal size of the control.
+----
+
+F:EditControl:Content
+>>>>
+Returns or sets the actual content of the control.
+----
+
+T:ListControl
+>>>>
+Encapsulates a control that prompts for choice in a list of strings.
+----
+
+T:CheckControl
+>>>>
+Encapsulates a control that prompts for a boolean value, represented by a checked or unchecked box.
+----
+
+T:ButtonControl
+>>>>
+Encapsulates a control that represents a button.
+----
+
+T:MenuControl
+>>>>
+Encapsulates a control that implements an on-screen menu.
+----
+
+F:ListControl:Selected
+>>>>
+Returns the currently selected item in the list.
+----
+
+F:ListControl:List
+>>>>
+Returns or sets the list of items that is displayed in the control.
+----
+
+F:ListControl:SizeX
+>>>>
+Returns or sets the horizontal size of the list control.
+----
+
+F:ListControl:SelectIdx
+>>>>
+Returns or sets the index of the currently selected item in the list.
+----
+
+F:ListControl:CountY
+>>>>
+Returns or sets the number of items that is displayed simultaneously in the control. If the list contains more items, it will be scrolled.
+----
+
+F:CheckControl:Checked
+>>>>
+Returns or sets the boolean status of the control.
+----
+
+F:ButtonControl:Content
+>>>>
+Returns or sets the displayed name of the button.
+----
+
+F:ButtonControl:SizeX
+>>>>
+Returns or sets the horizontal size of the button.
+----
+
+F:MenuControl:SizeX
+>>>>
+Returns or sets the horizontal size of the menu.
+----
+
+F:MenuControl:SelectID
+>>>>
+Returns or sets the ID of the active menu item.
+----
+
+F:MenuControl:Add
+>>>>
+Adds a new menu item to the menu control. For submenu items, \var{ParentID} contains the ID of the parent menu item. \var{Content} contains the name of the menu item, and \var{ID} contains the ID of this item. \var{CanCheck} determines whether or not this menu item can be checked.
+----
+
+F:MenuControl:Checked
+>>>>
+Returns or sets the checked status of a menu item.
+----
+
+Motions
+>>>>
+Motion objects can be used to determine the movement of a visible object in the scene during the animation. To this end, you can attach a motion object to a \linkitem{T:Subframe} object, using \linkitem{F:Subframe:motion}. The associated motion object will determine the position of the subframe during the animation.
+
+There are two types of motion objects:
+\begin{enumerate}
+\item
+\textbf{Point motions}.
+These only determine the position of the origin of the subframe.
+\item
+\textbf{Solid object motions}.
+These determine the position of the origin of the subframe, as well as the direction of the $X$, $Y$ and $Z$ axis.
+\end{enumerate}
+
+----
+
+F:Subframe:motion
+>>>>
+Returns or sets the currently active motion object that determines the movement of this subframe during the animation (see also \linkitem{Motions})
+----
+
+T:MotionTable
+>>>>
+Encapsulates a point motion from a table that contains a number of positions at given reference times. During the animation, actual positions will be interpolated from that table.
+----
+
+F:MotionTable:InterpolType
+>>>>
+Returns or sets the type of interpolation used by the motion.
+----
+
+F:MotionTable:create
+>>>>
+Creates and returns a new MotionTable object.
+----
+
+F:MotionTable:reset
+>>>>
+Clears the content of the table that contains the reference points.
+----
+
+F:MotionTable:add
+>>>>
+Adds a new reference point to the table. \var{Tm} contains the time of this reference point, and \var{posit} contains the position.
+----
+
+F:MotionTable:loadfile
+>>>>
+Reads the table of reference points from a TAB-delimited file.
+----
+
+F:MotionTable:CreateCurve
+>>>>
+Creates a \linkitem{T:Curve} from a table motion object. \var{Curve} contains the curve object that will be filled, \var{Resolution} the number of points that will be created. \var{Start} and \var{Stop} contain the begin and end time of the curve creation.
+----
+
+F:MotionTable:position
+>>>>
+Returns the current position determined by this motion, at the current time of the animation.
+----
+
+F:MotionTable:speed
+>>>>
+Returns the current velocity determined by this motion, at the current time of the animation.
+
+----
+
+F:MotionKepler:position
+>>>>
+Returns the current position determined by this motion, at the current time of the animation.
+
+----
+
+F:MotionCyclOrbit:position
+>>>>
+Returns the current position determined by this motion, at the current time of the animation.
+
+----
+
+F:MotionLuna:position
+>>>>
+Returns the current position determined by this motion, at the current time of the animation.
+
+----
+
+F:MotionSolidCustom:position
+>>>>
+Returns the current position determined by this motion, at the current time of the animation.
+
+----
+
+F:MotionPointCustom:position
+>>>>
+Returns the current position determined by this motion, at the current time of the animation.
+
+----
+
+F:MotionKepler:speed
+>>>>
+Returns the current velocity determined by this motion, at the current time of the animation.
+----
+
+F:MotionCyclOrbit:speed
+>>>>
+Returns the current velocity determined by this motion, at the current time of the animation.
+
+----
+
+F:MotionLuna:speed
+>>>>
+Returns the current velocity determined by this motion, at the current time of the animation.
+
+----
+
+F:MotionKepler:CreateCurve
+>>>>
+Creates a \linkitem{T:Curve} from a table motion object. \var{Curve} contains the curve object that will be filled, \var{Resolution} the number of points that will be created.
+
+----
+
+F:MotionCyclOrbit:CreateCurve
+>>>>
+Creates a \linkitem{T:Curve} from a table motion object. \var{Curve} contains the curve object that will be filled, \var{Resolution} the number of points that will be created. \var{Time} contains the start time at which the curve will be created (a full revolution will be created)
+
+
+----
+
+F:MotionLuna:CreateCurve
+>>>>
+Creates a \linkitem{T:Curve} from a table motion object. \var{Curve} contains the curve object that will be filled, \var{Resolution} the number of points that will be created.
+
+
+----
+
+T:MotionSpline
+>>>>
+Encapsulates a point motion that is determined by a spline (see also \linkitem{T:SplineCurve}).
+----
+
+F:MotionSpline:Spline
+>>>>
+Returns or sets the \linkitem{T:SplineCurve} object that determines the motion.
+----
+
+F:MotionSpline:StartTime
+>>>>
+Returns or sets the start time point of the motion. This time point corresponds to a zero argument for the spline object.
+----
+
+F:MotionSpline:TimeFactor
+>>>>
+Determines the conversion factor between the time variable (in seconds) and the argument of the spline object.
+----
+
+F:MotionSpline:create
+>>>>
+Creates and returns a new MotionSpline object.
+----
+
+F:MotionRotate:create
+>>>>
+Creates and returns a new MotionRotate object.
+----
+
+F:MotionKepler:create
+>>>>
+Creates and returns a new MotionKepler object.
+----
+
+F:MotionCyclOrbit:create
+>>>>
+Creates and returns a new MotionCyclOrbit object.
+----
+
+F:MotionLuna:create
+>>>>
+Creates and returns a new MotionLuna object.
+----
+
+T:MotionForceField
+>>>>
+Encapsulates a motion that is described by the integration of a force field (see also \linkitem{T:ForceField}).
+
+----
+
+F:MotionSolidCustom:create
+>>>>
+Creates and returns a new MotionSolidCustom object. \var{Owner} contains the subframe that will become the parent of this motion in the object tree. \var{Descript} contains the \linkitem{T:Functor} that describes the motion. It should \linkitem{T:Time} argument and return a \linkitem{T:Transformation} object.
+
+Optionally, \var{Name} contains the name of this functor.
+----
+
+F:MotionPointCustom:create
+>>>>
+Creates and returns a new MotionPointCustom object. \var{Owner} contains the subframe that will become the parent of this motion in the object tree. \var{Descript} contains the \linkitem{T:Functor} that describes the motion. It should accept a \linkitem{T:Time} argument and return a \linkitem{T:Point} object.
+
+Optionally, \var{Name} contains the name of this functor.
+
+----
+
+F:MotionRotate:NormDir
+>>>>
+Returns or sets the direction normal to the plane of the circular motion.
+----
+
+F:MotionRotate:RotSpeed
+>>>>
+Returns or sets the rotation speed.
+----
+
+F:MotionRotate:OffsetAngle
+>>>>
+Returns or sets the offset angle of the rotational motion.
+----
+
+T:MotionKepler
+>>>>
+Encapsulates a motion that is defined by the laws of Kepler (i.e. a point mass orbiting around another point mass).
+----
+
+T:MotionCyclOrbit
+>>>>
+Encapsulates a motion that is defined by a number of cyclic terms. This model is often used to describe the motion of planets in the solar system.
+----
+
+F:MotionCyclOrbit:loadfile
+>>>>
+Loads the cyclic orbit terms from a file.
+----
+
+F:MotionLuna:load
+>>>>
+Initialises the motion.
+----
+
+T:MotionLuna
+>>>>
+Describes the motion of the Moon around the Earth.
+----
+
+F:MotionForceField:create
+>>>>
+Creates and returns a new MotionForceField object.
+
+----
+
+F:MotionForceField:ForceField
+>>>>
+Returns or sets the force field used by this motion (see also \linkitem{T:ForceField}).
+----
+
+T:MotionSolidCustom
+>>>>
+Encapsulates a solid object motion that is described by a \linkitem{T:functor}.
+----
+
+F:readtextfile
+>>>>
+Reads the content of a text file into a string.
+----
+
+F:writetextfile
+>>>>
+Saves the content of a string into a text file.
+----
+
+F:GetFileList
+>>>>
+Returns a list of file names from a given directory. \var{Wildcard} contains the directory path and a wildcard. \var{Directories} specifies whether a list of files or directories should be returned.
+Example: \\
+\sourcecode{lst=GetFileList("c:/mydocs/*.txt");}
+----
+
+F:resetall
+>>>>
+Resets the complete rendering environment: all scenes, viewports, etc... will be removed. The result will be an empty object tree.
+----
+
+F:resetallscenes
+>>>>
+Deletes all currently defined scenes.
+----
+
+F:resetallviewports
+>>>>
+Deletes all currently defined viewports.
+----
+
+F:resetallvideos
+>>>>
+Deletes all currently defined videos.
+----
+
+F:incrtime
+>>>>
+Increments the current animation time (defined in \linkitem{F:ObjectRoot:Time}). The magnitude of this time step is defined by \linkitem{F:ObjectRoot:TimeSpeedFactor}. The function returns the actual time step that was executed.
+----
+
+F:render
+>>>>
+Renders the current scene(s) to the viewport(s).
+----
+
+F:ExecuteScript
+>>>>
+Runs a script. The content of the script is provided in the argument \var{script}. An argument for this script can be provided through \var{argument}. The script that is started by this command can retrieve this argument using \linkitem{F:ScriptArgument}.
+----
+
+F:ScriptArgument
+>>>>
+Recalls the argument that was provided when the current script was started (see \linkitem{F:ScriptArgument})
+----
+
+F:ExecDir
+>>>>
+Returns the directory name where the program was started from.
+----
+
+F:DataDir
+>>>>
+Returns the directory where animation data is stored.
+----
+
+F:ScriptDir
+>>>>
+Returns the directory where animation scripts are stored.
+----
+
+F:Bar:Color
+>>>>
+----
+
+F:Bar:SpecularColor
+>>>>
+----
+
+F:FrameControl:Name
+>>>>
+Returns or sets the name of the control.
+----
+
+F:FrameControl:Visible
+>>>>
+Determines whether or not the control is visible.
+----
+
+F:FrameControl:Position
+>>>>
+Returns or sets the position of the control in the frame it is defined in.
+----
+
+F:FrameControl:Size
+>>>>
+Returns or sets the size of the control.
+----
+
+F:FrameControl:Color
+>>>>
+Returns or sets the color of the control (see \linkitem{T:Color}).
+----
+
+F:FrameControl:WasModified
+>>>>
+Determines whether or not a control has been modified since the last render action.
+----
+
+F:FrameControl:Custom
+>>>>
+Returns a map object that is attached to the control. This can be used as a hook to attach custom information to a control object.
+----
+
+F:SolidObject:Custom
+>>>>
+Returns a map object that is attached to the object. This can be used as a hook to attach custom information to an object.
+
+----
+
+F:SolidObject:Name
+>>>>
+Returns or sets the name of an object.
+----
+
+F:String:get
+>>>>
+Returns a single character from a string.
+----
+
+F:String:Invert
+>>>>
+Inverts the ordering of the characters in a string.
+----
+
+F:Str
+>>>>
+Converts any data type to a string.
+----
+
+F:Translate
+>>>>
+Translates a string into the currently active language, using the language mapping files.
+----
+
+F:ToScalar
+>>>>
+Converts a string to a scalar value.
+----
+
+F:ScalarToString
+>>>>
+Converts a scalar value to a string, where the total length of the string can be speficied, as well as the number of decimal positions. If necessary, the string is padded on the left with spaces.
+----
+
+O:Time-Time
+>>>>
+Subtracts two times from each other, and returns the difference in seconds.
+----
+
+O:Time+Scalar
+>>>>
+Adds a number of seconds to a time value.
+----
+
+O:Time-Scalar
+>>>>
+Subtracts a number of seconds from a time variable.
+----
+
+F:color
+>>>>
+Creates and returns a color object type, based on RGB values.
+----
+
+T:InterpolType|InterpolLinear
+>>>>
+Linear interpolation between any pair of points.
+----
+
+T:InterpolType|InterpolQuad
+>>>>
+Quadratic interpolation between any set of 3 points.
+----
+
+T:UIAxisType|UIAxisX
+>>>>
+The X axis.
+----
+
+T:UIAxisType|UIAxisY
+>>>>
+The Y axis.
+----
+
+T:UIAxisType|UIAxisZ
+>>>>
+The Z axis.
+----
+
+T:UIAxisType|UIAxisR
+>>>>
+The R axis.
+----
+
+T:UIAxisType|UIAxisU
+>>>>
+The U axis.
+----
+
+T:UIAxisType|UIAxisV
+>>>>
+The V axis.
+----
+
+T:ClockType|ClockTypeAnalog
+>>>>
+Represents an analog time readout.
+----
+
+T:ClockType|ClockTypeDigital
+>>>>
+Represents an digital time readout.
+----
+
+T:ClockType|ClockTypeCalendar
+>>>>
+Represents a calendar-style date readout.
+----
+
+T:ClockType|ClockTypeDate
+>>>>
+Represents a text date readout.
+----
+
+T:ClockType|ClockTypeDateTime
+>>>>
+Represents a text readout for both date and time.
+----
+
+T:FogType|FogNone
+>>>>
+No fog used.
+----
+
+T:FogType|FogExponential
+>>>>
+Fog with an exponential decay.
+----
+
+T:FogType|FogExponentialSq
+>>>>
+Fog with a squared exponential decay.
+----
+
+T:FogType|FogLinear
+>>>>
+Fog with a linear decay.
+----
+
+T:PEngineRenderType|PengineRenderQuads
+>>>>
+Renders the particle engine points with viewport-aligned quads (slower, but flexible).
+----
+
+T:PEngineRenderType|PengineRenderPoints
+>>>>
+Renders the particle engine points with point objects (faster, but less flexible).
+----
+
+F:Functor:derive
+>>>>
+Not implemented.
+----
+
+F:PolynomialFunctor
+>>>>
+Constructs and returns a functor that contains a polynomial expression in one or more variables. The member function \linkitem{F:Functor:AddPolynomialComponent} is used to add polynomial components.
+----
+
+F:Functor:AddPolynomialComponent
+>>>>
+See \linkitem{F:PolynomialFunctor} for an explanation.
+----
+
+T:ForceField
+>>>>
+This object type encapsulates a 3-dimensional force field. This force field can be defined using a variety of physical types of forces, such as gravity, electromagnetic, etc...
+
+The motion type \linkitem{T:MotionForceField} can be used to define a subframe that follows a motion controlled by a specific force field.
+----
+
+F:ForceField:EvalForce
+>>>>
+Evaluates the force field for a point object. In the most general case, the force field is dependend on the \var{position}, current \var{speed}, the \var{mass} and \var{charge} of the object, and the \var{time}. The force is returned as a vector.
+----
+
+F:ForceField:RestrictToSphere
+>>>>
+Forces the force field to act only along the surface of a sphere. This causes the object motion to be confined to the surface of this sphere.
+----
+
+F:ForceField:Integrate
+>>>>
+Integrates the motion of a point object in the force field during a given period of time. The point object is defined by its \var{position}, \var{speed}, \var{mass} and \var{charge}. The integration starts at the moment defined by \var{time}, and for a duration defined by \var{timestep} (in seconds). The accuracy of the integration can be chosen using \linkitem{F:ForceField:SetAccuracy}.
+----
+
+F:ForceField:SetAccuracy
+>>>>
+This function defines the accuracy of the integration of the force field, by defining a maximum change in time \var{MaxTimeStep} during each integration iteration, and a maximum distance between two consecutive iteration points in space \var{MaxSpaceStep}.
+----
+
+F:ForceField:AddParallelGravity
+>>>>
+Adds a parallel gravity component to the force field. The direction of \var{Direction} defines the direction of the force, and the magnitude defines the intensity.
+
+If $m$ is the mass of a point object, and $\vec{D}$ is the direction, then the force is defined by
+\begin{equation}
+\vec{F}=m \vec{D}
+\end{equation}
+----
+
+F:ForceField:AddElectricPointCharge
+>>>>
+Defines the force exerted by an electric central field on a point charge object.
+The force is given by the equation
+\begin{equation}
+\vec{F}= - S . E . \frac{\vec{r}-\vec{p}}{|\vec{r}-\vec{p}|^3},
+\end{equation}
+with $E$ the mass of the point charge object the force is exerted on, $\vec{r}$ the position of the object, $\vec{p}$ the centre of the force field (represented by \var{Point}), and $S$ the strength of the force (represented by \var{Strength}).
+
+----
+
+F:ForceField:AddElectricDipole
+>>>>
+Defines the force exerted by an electric dipole field on a point charge object.
+The force is given by the equation
+\begin{equation}
+\vec{F}= \frac{E}{|\vec{r}-\vec{p}|^3} . 
+\left[
+ \frac{(\vec{r}-\vec{p}).\vec{m}}{|\vec{r}-\vec{p}|^2} (\vec{r}-\vec{p})
+  - \vec{m} 
+\right],
+\end{equation}
+
+with $E$ the mass of the point charge object the force is exerted on, $\vec{r}$ the position of the object, $\vec{p}$ the position of the dipole (represented by \var{Position}), and $m$ the moment of the dipole (represented by \var{Moment}).
+
+----
+
+F:ForceField:AddMagneticDipole
+>>>>
+Defines the force exerted by a magnetic dipole field on a moving point charge object.
+The force is given by the equation
+\begin{equation}
+\vec{F}=
+\vec{v} \times
+\left[
+ \frac{E}{|\vec{r}-\vec{p}|^3} . 
+\left(
+ \frac{(\vec{r}-\vec{p}).\vec{m}}{|\vec{r}-\vec{p}|^2} (\vec{r}-\vec{p})
+  - \vec{m} 
+\right)
+\right] ,
+\end{equation}
+
+with $E$ the mass of the point charge object the force is exerted on, $\vec{r}$ and $\vec{v}$ the position and speed of the object, $\vec{p}$ the position of the dipole (represented by \var{Position}), and $m$ the moment of the force (represented by \var{Moment}).
+
+----
+
+F:ForceField:AddSphericalHarmonicOscillator
+>>>>
+Defines the force exerted by a spherical harmonic oscillator.
+The force is given by the equation
+\begin{equation}
+\vec{F}= - S . (\vec{r}-\vec{p}),
+\end{equation}
+with $\vec{r}$ the position of the object, $\vec{p}$ the centre of the force field (represented by \var{Point}), and $S$ the strength of the force (represented by \var{Strength}).
+
+
+----
+
+F:ForceField:AddCylindricalHarmonicOscillator
+>>>>
+Defines the force exerted by a cylindrical harmonic oscillator, i.e. producing a force that is always perpendicular to a given direction.
+The force is given by the equation
+\begin{equation}
+\vec{F}= - S . 
+\left(
+(\vec{r}-\vec{p})
+- \frac{(\vec{r}-\vec{p}). \vec{d}}{|\vec{d}|} \vec{d}
+\right)
+,
+\end{equation}
+with $\vec{r}$ the position of the object, $\vec{p}$ the centre of the force field (represented by \var{Point}), $\vec{d}$ is the cylindric direction (represented by \var{Direction}), and $S$ the strength of the force (represented by \var{Strength}).
+
+
+----
+
+F:ForceField:AddLinearHarmonicOscillator
+>>>>
+Defines the force exerted by a linear harmonic oscillator, i.e. producing a force that is always in a given direction.
+The force is given by the equation
+\begin{equation}
+\vec{F}= - S . 
+((\vec{r}-\vec{p}). \vec{d}) \vec{d}
+,
+\end{equation}
+with $\vec{r}$ the position of the object, $\vec{p}$ the centre of the force field (represented by \var{Point}), $\vec{d}$ is the force direction (represented by \var{Direction}), and $S$ the strength of the force (represented by \var{Strength}).
+
+
+----
+
+F:ForceField:AddCentrifugal
+>>>>
+Defines a centrifugal force, given by the equation
+\begin{equation}
+\vec{F}= - m . \vec{d} \times ( \vec{d} \times (\vec{r}-\vec{p}) )
+,
+\end{equation}
+with $m$ and $\vec{r}$ the mass and position of the object, $\vec{p}$ the centre of the force field (represented by \var{Point}), $\vec{d}$ is the rotation direction and speed (represented by \var{Direction}).
+
+
+----
+
+F:ForceField:AddCoriolis
+>>>>
+Defines a coriolis force, given by the equation
+\begin{equation}
+\vec{F}= - 2 m .  \vec{d} \times (\vec{r}-\vec{p})
+,
+\end{equation}
+with $m$ and $\vec{r}$ the mass and position of the object, $\vec{p}$ the centre of the force field (represented by \var{Point}), $\vec{d}$ is the rotation direction and speed (represented by \var{Direction}).
+
+
+----
+
+F:ForceField:AddLinearDrag
+>>>>
+Defines a linear drag force, given by the equation
+\begin{equation}
+\vec{F}= - S \vec{v}
+,
+\end{equation}
+with $\vec{v}$ the speed of the object, and $S$ strength of the drag force (represented by \var{Strength}).
+
+
+----
+
+F:ForceField:AddQuadraticDrag
+>>>>
+Defines a quadratic drag force, given by the equation
+\begin{equation}
+\vec{F}= - S |\vec{v}| \vec{v}
+,
+\end{equation}
+with $\vec{v}$ the speed of the object, and $S$ strength of the drag force (represented by \var{Strength}).
+
+
+----
+
+F:ForceField:AddCustomForce
+>>>>
+Defines a custom force field, given by a \linkitem{T:Functor}. This functor should take the following arguments:
+\begin{itemize}
+\item
+Position (type \linkitem{T:Point})
+\item
+Speed (type: \linkitem{T:Point})
+\item
+Mass (type: \linkitem{T:Scalar})
+\item
+Charge (type: \linkitem{T:Scalar})
+\item
+Time (type: \linkitem{T:Time})
+\end{itemize}
+
+----
+
+T:SplineCurve
+>>>>
+A SplineCurve object type interpolates a three-dimensional curve between a one-dimensional set of points, using Bezier splines.
+
+The curve is defined as an interpolation over a parameter $t$ for each dimension: $\vec{p}(t)=(p_x(t),p_y(t),p_z(t)$.
+
+----
+
+F:SplineCurve:AddPoint
+>>>>
+Adds a new interpolation point to the curve. \var{point} defines the interpolation point, and \var{t} determines at what value of the interpolation parameter $t$ this point is added.
+----
+
+F:SplineCurve:Close
+>>>>
+Connects the last interpolation point to the first, closing the curve. The interpolation parameter $t$ becomes cyclic, with period \var{T}.
+----
+
+F:SplineCurve:Eval
+>>>>
+Evaluates the spline interpolation, at the interpolation parameter \var{frac}.
+----
+
+F:SplineCurve:EvalFirstDer
+>>>>
+Evaluates the first derivative of the spline interpolation, at the interpolation parameter \var{frac}.
+
+----
+
+F:SplineCurve:EvalSecondDer
+>>>>
+Evaluates the second derivative of the spline interpolation, at the interpolation parameter \var{frac}.
+----
+
+T:SplineSurface
+>>>>
+A SplineSurface object type interpolates a three-dimensional surface between a two-dimensional set of points, using Bezier splines.
+
+The surface  is defined as an interpolation over two parameters $i_1, i_2$:
+$\vec{p}(i_1,i_2)=(p_x(i_1,i_2),p_y(i_1,i_2),p_z(i_1,i_2)$.
+
+----
+
+F:SplineSurface:AddPoint
+>>>>
+Adds a new interpolation point to the surface. \var{point} defines the interpolation point, and \var{i1} and \var{i2} determine at what value of the interpolation parameters this point is added.
+
+----
+
+F:SplineSurface:Eval
+>>>>
+Evaluates the spline interpolation, at the interpolation parameters \var{i1} and \var{i2}.
+
+----
+
+F:SplineSurface:EvalDer1
+>>>>
+Evaluates the first partial derivative (with respect to $i_1$) of the spline interpolation, at the interpolation parameters \var{i1} and \var{i2}.
+
+
+----
+
+F:SplineSurface:EvalDer2
+>>>>
+Evaluates the second partial derivative (with respect to $i_2$) of the spline interpolation, at the interpolation parameters \var{i1} and \var{i2}.
+
+
+----
+
+F:ObjectRoot:Rendertype
+>>>>
+Determines the type of rendering used by the software.
+----
+
+F:Subframe:BlendType
+>>>>
+Determines how objects in the subframe are blended with the background when rendered in the scene.
+
+----
+
+F:Subframe:DepthMask
+>>>>
+Determines how the depth buffer will be affected by rendering objects in this subframe.
+
+----
+
+F:Subframe:DepthTest
+>>>>
+Determines wether or not a depth test will be applied when rendering objects in this subframe to the scene.
+----
+
+F:Subframe:EnableLight
+>>>>
+Determine whether or not a lightening model will be used to render objects in this subframe. If this attribute is false, objects will appear with a flat color, whithout shadow or shine.
+----
+
+F:Subframe:CanCache
+>>>>
+Determines whether or not objects in this subframe can be caches in a display list.
+----
+
+F:Subframe:NearClipPlane
+>>>>
+Returns or sets the distance to the near clipping plane for rendering objects in this subframe.
+----
+
+F:Subframe:FarClipPlane
+>>>>
+Returns or sets the distance to the far clipping plane for rendering objects in this subframe.
+----
+
+F:CatchedError
+>>>>
+Returns the error that was captured in the last \sourcecode{try...catch} block. If no error occurred, the returned string is empty.
+
+Example:
+\sourcecode{
+try i=1/0; \\
+message(catchederror);
+}
+----
+
+F:createvar
+>>>>
+Creates a new, unassigned variable. This function can be useful to control the scope of a variable.
+----
+
+F:Ref
+>>>>
+Creates a reference to an object.
+----
+
+F:Deref
+>>>>
+Returns the object a reference is pointing to.
+----
+
+F:typeof
+>>>>
+Returns the type of an object, as a string.
+----
+
+F:isdefined
+>>>>
+Determines whether or not the content of a variable is defined (i.e. a variable is not empty).
+----
+
+F:return
+>>>>
+Returns from a function, optionally providing a return value.
+----
+
+F:EditText
+>>>>
+Prompts the user for a text string. The resulting string is filled in \var{content}. \\
+Warning: this should only be used for debug purposes, because this edit box will block a running animation!
+
+----
+
+F:stop
+>>>>
+Stops the execution of the script.
+----
+
+F:break
+>>>>
+In debug mode, interrupts the execution of a script.
+----
+
+F:Output
+>>>>
+Writes a string to the output window. This can be useful for debug purposes.
+----
+
+F:UIGetAxisActive
+>>>>
+Returns true if a User Interface axis is active, i.e. differs from the neutral position (see \linkitem{F:UIGetAxisPos} for more information about User Interface axes). \var{Axis} determines what axis is checked (see \linkitem{T:UIAxisType}), and \var{Level} determines the modifier level of this axis (see \linkitem{T:UIAxisLevel}).
+----
+
+F:UIGetAxisPos
+>>>>
+Returns the current position of a User Interface axis. The user of an animation can influence the animation using the keyboard, mouse, gamepad or joystick. These different input methods are abstracted to a certain extent by the concept of User Interface axes. Each axis has a current position, which can be influenced by any of the beforementioned input devices.
+
+The software knows six UI axes ((see \linkitem{T:UIAxisType} for a list). In addition, each axis has three levels that have a separate readout (see \linkitem{T:UIAxisLevel}). The User Manual provides a detailed description on how the user can control these axes and modifiers using the input devices.
+
+\var{Axis} determines what axis is checked, and \var{Level} determines the modifier level of this axis.
+
+----
+
+T:UIAxisType
+>>>>
+See \linkitem{F:UIGetAxisPos} for a description of the usage of this enumeration.
+
+----
+
+T:UIAxisLevel
+>>>>
+See \linkitem{F:UIGetAxisPos} for a description of the usage of this enumeration.
+
+
+----
+
+F:UIIsKeyDown
+>>>>
+Determines whether or not a specific key on the keyboard is currently being pressed.
+----
+
+F:UIGetKeyPressed
+>>>>
+If a key was pressed since the last render command, the name of this key is returned by this function. If not, the function returns an empty string.
+----
+
+Input / Output:Files
+>>>>
+A number of script functions for reading and writing files.
+----
+
+F:Execute
+>>>>
+Executes a windows program, with the full path specified in \var{content}. If \var{wait} is true, the execution of the script is suspended until this program finishes.
+----
+
+F:ExitProgram
+>>>>
+Exits \softwarename.
+----
+
+F:ShutdownComputer
+>>>>
+Shuts the Operating System down, and switches of the computer.
+----
+
+F:SetMonitorStatus
+>>>>
+Switches the monitor off or on.
+----
+
+F:GetFunctionList
+>>>>
+Returns a complete list of all script functions.
+----
+
+F:GetHighlightFuncID
+>>>>
+Returns the ID of the currently highlighted topic in the function tree.
+----
+
+F:ExportFunctionDocumentation
+>>>>
+Exports the function description documentation to a LaTex formatted file.
+
+----
+
+F:SetRawFunctionDescription
+>>>>
+Sets the description for a topic in the function tree.
+----
+
+F:GetRawFunctionDescription
+>>>>
+Returns the description of a topic in the function tree.
+----
+
+F:ObjectRoot:TimeSpeedFactor
+>>>>
+Returns or sets the time speed factor, defined as a multiplication factor of the real world time.
+----
+
+F:Subframe:Center
+>>>>
+Returns or sets the center point of an object, used for automatic distance sorting of a set of objects in a subframe (see also \linkitem{F:Subframe:AutoSort}).
+----
+
+F:Subframe:AutoSort
+>>>>
+If this property is true, all member objects of the subframe will be automatically sorted according to decreasing distance to the camera viewpoint. This sorting is based on the center position defined for each object (see e.g. \linkitem{F:Subframe:Center}).
+
+Automatic distance sorting of objects is needed for correct rendering if several objects in are semi-transparent.
+----
+
+F:Bar:Center
+>>>>
+Returns or sets the center point of an object, used for automatic distance sorting of a set of objects in a subframe (see also \linkitem{F:Subframe:AutoSort}).
+----
+
+F:SolidObject:Center
+>>>>
+Returns or sets the center point of an object, used for automatic distance sorting of a set of objects in a subframe (see also \linkitem{F:Subframe:AutoSort}).
+----
+
+F:Subframe:CreateBitmapTexture
+>>>>
+Creates a new texture object from a \linkitem{T:Bitmap} object, and attaches it to the subframe. \var{Name} provides a unique identifier for this texture object, and \var{bitmap} contains the texture bitmap. Optionally, \var{bitmapalpha} contains the bitmap that specifies the alpha (opacity) channel of the texture.
+
+----
+
+T:Bitmap
+>>>>
+A bitmap object encapsulates a rasterised bitmap, and can be loaded from a file.
+----
+
+F:Bitmap:Load
+>>>>
+Loads a bitmap from a file. The file format can be jpeg, png, or bmp.
+----
+
+F:Bitmap:XRes
+>>>>
+Returns the horizontal resolution of the bitmap.
+----
+
+F:Bitmap:YRes
+>>>>
+Returns the vertical resolution of the bitmap.
+
+----
+
+F:Bitmap:MirrorHorizontal
+>>>>
+Flips the bitmap around the horizontal axis.
+----
+
+F:Bitmap:MirrorVertical
+>>>>
+Flips the bitmap around the vertical axis.
+----
+
+F:Bitmap:MirrorDiagonal
+>>>>
+Flips the bitmap around the first diagonal.
+----
+
+F:LoadBitmap
+>>>>
+Loads a bitmap from file and returns the bitmap object.
+----
+
+F:Bitmap:Crop
+>>>>
+Returns a new bitmap that contains a portion of the original bitmap.
+----
+
+F:isvardefined
+>>>>
+Determines whether or not of a variable is defined.
+
+----
+
+F:Viewport:EyeSepFactor
+>>>>
+This parameter determines the automatic proportion that is preserved between the eye separation and the focal distance (see \linkitem{F:Viewport:FocalDistance} for more details).
+----
+
+F:List:Sort
+>>>>
+Returns a list that contains the indices of the sorted items in the list.
+----
+
+T:Chrono
+>>>>
+Implements a chronometer object that can be used to measure time lapses.
+----
+
+F:Chrono:Start
+>>>>
+Resets and starts the chronometer.
+----
+
+F:Chrono:Pauze
+>>>>
+Pauzed the chronometer (the counting is suspended).
+----
+
+F:Chrono:Resume
+>>>>
+Resumes the counting of the chronometer.
+----
+
+F:Chrono:Set
+>>>>
+Sets the counter of the chronometer at a certain time (in seconds).
+----
+
+F:Chrono:Elapsed
+>>>>
+Returns the elapsed number of seconds.
+----
+
+T:Sound
+>>>>
+This object encapsulated a digitally recorded sound that can be played during an animation. A new sound object is created using \linkitem{F:addsound}.
+----
+
+F:Sound:Start
+>>>>
+Starts the playing of the sound.
+----
+
+F:Sound:Stop
+>>>>
+Stops the playing of the sound.
+----
+
+F:Sound:Pauze
+>>>>
+Pauzes the playing of the sound.
+----
+
+F:Sound:Resume
+>>>>
+Resumes the playing of the sound.
+----
+
+F:Sound:SetVolume
+>>>>
+Sets the sound reproduction volume.
+----
+
+F:Sound:FadeVolume
+>>>>
+Smoothly changes the sound volume to a new value ( \var{Volume} ) over an interval of time ( \var{Duration} , specified in seconds).
+----
+
+F:ActivateControl
+>>>>
+Sets a control in the viewport as being the active one.
+----
+
+F:EvalMotionList
+>>>>
+Evaluates a list of motion objects, reporting the positions in a list.
+----
+
+F:CreateDirectory
+>>>>
+Creates a new directory.
+----
+
+F:DeleteFile
+>>>>
+Removes an existing file.
+----
+
+F:CopyFile
+>>>>
+Copies a file from one location to another.
+----
+
+F:FileIsPresent
+>>>>
+Determines whether or not a file is present on the system.
+----
+
+F:FileCreatedTime
+>>>>
+Returns the creation time stamp of a file.
+----
+
+F:FileModifiedTime
+>>>>
+Returns the modification time stamp of a file.
+----
+
+F:resetallsounds
+>>>>
+Deletes all currently defined sounds.
+----
+
+F:EvalFunction
+>>>>
+Evaluates a function, with the arguments provided as a list.
+----
+
+F:ReadSetting
+>>>>
+Reads a settings from the settings file.
+----
+
+F:WriteSetting
+>>>>
+Writes a setting to the settings file.
+----
+
+F:JoystickGetAxis
+>>>>
+Returns the current position of the axis on a joystick (first joystick has ID 0).
+----
+
+F:JoystickGetAxisCorrected
+>>>>
+Returns the current position of the axis on a joystick, with a corrected zero position.
+----
+
+F:JoystickRockerPos
+>>>>
+Returns the current position of the rocker pad on a joystick.
+----
+
+F:JoystickButtonDown
+>>>>
+Determines if a particular button on a joystick is currently being pressed.
+----
+
+F:JoystickButtonClicked
+>>>>
+Determines if a particular button on a joystick was clicked.
+----
+
+F:JoystickButtonLongClicked
+>>>>
+Determines if a particular button on a joystick click with a long down action.
+----
+
+T:MotionPointCustom
+>>>>
+Encapsulates a motion that is defined by a functor.
+----
+
+F:Display:start
+>>>>
+Initialises a specify display.
+----
+
+F:GetDisplayList
+>>>>
+Returns a list of all displays that are currently present.
+----
+
+F:Display:Description
+>>>>
+Returns the description of a display.
+----
+
+F:Display:ID
+>>>>
+Returns the ID of a display.
+----
+
+F:Display:Xoffset
+>>>>
+Returns or sets the horizontal offset of a display window on the desktop.
+----
+
+F:Display:Yoffset
+>>>>
+Returns or sets the vertical offset of a display window on the desktop.
+
+----
+
+F:Display:Xres
+>>>>
+Returns or sets the horizontal resolution of a display window.
+
+----
+
+F:Display:Yres
+>>>>
+Returns or sets the vertical resolution of a display window.
+
+----
+
+F:Display:BitDepth
+>>>>
+Returns or sets the color bit depth of a display window.
+
+----
+
+F:Display:Fullscreen
+>>>>
+Returns or sets whether or not a display window should be created as full-screen.
+
+----
+
+F:Viewport:CaptureFrame
+>>>>
+Captures the current frame of a viewport, and returns it as a bitmap.
+----
+
+F:Viewport:EnableUserStop
+>>>>
+Determines whether or not the user can stop the animation in this viewport.
+----
+
+F:Viewport:SwapStereo
+>>>>
+Determines whether or not the left and right eye images should be swapped.
+----
+
+F:Viewport:HMirrorLeft
+>>>>
+Determines whether or not the left image should be mirrored horizontally.
+
+----
+
+F:Viewport:HMirrorRight
+>>>>
+Determines whether or not the right image should be mirrored horizontally.
+----
+
+F:Viewport:VMirrorLeft
+>>>>
+Determines whether or not the left image should be mirrored vertically.
+----
+
+F:Viewport:VMirrorRight
+>>>>
+Determines whether or not the right image should be mirrored vertically.
+----
+
+F:Viewport:XMinFrac
+>>>>
+Returns or sets the relative X position of the top left corner of the viewport, as a fraction of the display window.
+----
+
+F:Viewport:YMinFrac
+>>>>
+Returns or sets the relative Y position of the top left corner of the viewport, as a fraction of the display window.
+----
+
+F:Viewport:XMaxFrac
+>>>>
+Returns or sets the relative X position of the bottom right corner of the viewport, as a fraction of the display window.
+----
+
+F:Viewport:YMaxFrac
+>>>>
+Returns or sets the relative Y position of the bottom right corner of the viewport, as a fraction of the display window.
+
+----
+
+F:SolidObject:WarpSpiral
+>>>>
+Applies a spiral-shaped warping along the $Z$-axis to a solid object.
+----
+
+F:SolidObject:WarpConalPinch
+>>>>
+Applies a conal pich warping along the $Z$-axis to a solid object
+----
+
+F:Subframe:BoundingBox
+>>>>
+Returns the bounding box that envelopes a subframe.
+----
+
+F:Subframe:drop
+>>>>
+Removes an individual component from the subframe.
+----
+
+F:Subframe:getparent
+>>>>
+Returns the parent subframe of this subframe.
+----
+
+F:Subframe:getmembers
+>>>>
+Returns all the member components of this subframe.
+----
+
+F:Subframe:get
+>>>>
+Gets a specific component from this subframe.
+----
+
+F:Subframe:setprerenderaction
+>>>>
+Specifies a functor that will be executed each time before this subframe is rendered.
+----
+
+F:Subframe:velocity
+>>>>
+Returns or sets the current speed of this subframe.
+----
+
+Media
+>>>>
+This section groups a number of multimedia object types.
+----
+
+Mathematics:Interpolation
+>>>>
+This section contains object types for cublic spline interpolation.
+----
+
+Geometric shapes
+>>>>
+A number of object types that are used to define 3D geometric shapes.
+----
+
+Object tree:Special objects
+>>>>
+This section contains some special objects that can be used in the Object Tree.
+----
+
+Input / Output:User Interface:Joystick
+>>>>
+A set of functions to query the status of a joystick.
+----
+
+Input / Output
+>>>>
+This section contains various functions and object types for input and output of data.
+----
+
+Input / Output:User Interface
+>>>>
+A number of User Interface object types and functions.
+----
+
+General:Introspection
+>>>>
+Functions for introspection of the script language.
+----
+
+Rendering
+>>>>
+A set of functions to control the rendering flow.
+----
+
+F:SolidShape:Intersect
+>>>>
+Calculates the first intersection point between a ray of light and a solid object. If no intersection is found, the function returns false. If an intersection is found, it returns true, and \var{returndistance} contains the distance to the intersection point. \var{returnnormal} contains the object surface normal at this point.
+
+Note that \var{RayDirection} should be a unit vector.
+----
+
+F:ObjectRoot:MouseDampingFactor
+>>>>
+When the mouse is used to control the camera position, a smooth damping factor can be applied, resulting in an improved user feedback experience. The larger this factor, the more the movement will be damped.
+----
+
+F:ObjectRoot:ColorMatrixLeft
+>>>>
+Determines the RGB color transformation window for the left eye. This can be used in case there is a color discrepancy between the left and right eye, due to the specifics of the 3D projection hardware.
+----
+
+F:ObjectRoot:ColorMatrixRight
+>>>>
+Determines the RGB color transformation window for the right eye. This can be used in case there is a color discrepancy between the left and right eye, due to the specifics of the 3D projection hardware.
+----
+
+F:NavigationMove
+>>>>
+Returns the movement status of a 3D mouse (if present).
+----
+
+F:NavigationRotate
+>>>>
+Returns the rotation status of a 3D mouse (if present).
+----
+
+F:ScriptFilename
+>>>>
+Returns the file name of the script that is currently running.
+----
+
+F:ScriptFilePath
+>>>>
+Returns the full path of the script that is currently running.
+----
+
+F:GetLanguageList
+>>>>
+Returns a list of all the languages that are currently supported by the software.
+----
+
+F:GetActiveLanguage
+>>>>
+Returns the name of the language that is currently active in the software.
+----
+
+F:SetActiveLanguage
+>>>>
+Defines what language is currently active in the software (a restart may be needed to activate this).
+----
+
+F:Throw
+>>>>
+Throws an error exception (see also \linkitem{F:CatchedError}).
+----
+
+F:delay
+>>>>
+Suspends the execution of a script for a given number of seconds.
+----
+
+F:renderskip
+>>>>
+Renders the current scene(s) to the viewport(s). When the variable \var{doskip} is true, the viewports are not actually rendered on the screen. All other update actions are performed.
+----
+
+F:UIIsLeftMouseButtonDown
+>>>>
+Returns true if the left mouse button is being pressed down.
+----
+
+F:UIIsRightMouseButtonDown
+>>>>
+Returns true if the right mouse button is being pressed down.
+----
+
+F:PEngine:SetPpositionVec
+>>>>
+Sets the actual position for all particles in the PE.
+----
+
+F:addsound
+>>>>
+Opens a sound file, and creates a new sound object attached to it.
+----
+
+F:Video:Playing
+>>>>
+Determines whether or not the video is being played or pauzed.
+----
+
+F:Bitmap:Reduce
+>>>>
+Reduces the resolution of a bitmap with a given factor.
+----
+
+F:Bitmap:SaveJpg
+>>>>
+Saves a bitmap to file in JPEG format.
+----
+
+F:weight
+>>>>
+Calculates a weighted linear combination of two transformations.
+\begin{equation}
+\mbox{Dest} = \mbox{Transf1} + \mbox{Frac2} \times \mbox{Transf2}
+\end{equation}
+----
+
+F:StarMap:Center
+>>>>
+Returns or sets the center point of an object, used for automatic distance sorting of a set of objects in a subframe (see also \linkitem{F:Subframe:AutoSort}).
+----
+
+F:LightPoint:Center
+>>>>
+Returns or sets the center point of an object, used for automatic distance sorting of a set of objects in a subframe (see also \linkitem{F:Subframe:AutoSort}).
+----
+
+F:RepeatedObject:Center
+>>>>
+Returns or sets the center point of an object, used for automatic distance sorting of a set of objects in a subframe (see also \linkitem{F:Subframe:AutoSort}).
+----
+
+F:PEngine:Center
+>>>>
+Returns or sets the center point of an object, used for automatic distance sorting of a set of objects in a subframe (see also \linkitem{F:Subframe:AutoSort}).
+----
+
+F:Fog:Center
+>>>>
+Returns or sets the center point of an object, used for automatic distance sorting of a set of objects in a subframe (see also \linkitem{F:Subframe:AutoSort}).
+----
+
+F:FormattedText:GetSizeY
+>>>>
+Returns the vertical size of the text box.
+
+\textbf{IMPORTANT NOTE:} This function can only be called after a first rendering of this object. If necessary, a first rendering can be done with complete transparency to determine the size of the box.
+----

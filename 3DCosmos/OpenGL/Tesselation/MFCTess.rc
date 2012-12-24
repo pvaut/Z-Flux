@@ -1,0 +1,539 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\MFCTess.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\MFCTess.ico"
+IDR_MFCTESTYPE          ICON    DISCARDABLE     "res\\MFCTessDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    MENUITEM "Define &Polygon...",          ID_MENU_DEFPOLY
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About MFCTess...",           ID_APP_ABOUT
+        MENUITEM SEPARATOR
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+    END
+END
+
+IDR_POPUP MENU DISCARDABLE 
+BEGIN
+    POPUP "PopupMenu"
+    BEGIN
+        MENUITEM "&Positive Winding",           IDM_POPUP_WINDPOS
+        MENUITEM "&Negative Winding",           IDM_POPUP_WINDNEG
+        MENUITEM "&Odd Winding",                IDM_POPUP_WINDODD
+        MENUITEM "Non&Zero Winding",            IDM_POPUP_WINDNONZERO
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F1,          ID_HELP,                VIRTKEY, NOINVERT
+    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About MFCTess"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "MFCTess Version 1.2",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2005 G. Frank Paynter",IDC_STATIC,40,25,
+                    119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_ESPDLG DIALOG DISCARDABLE  0, 0, 186, 90
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,24,50,14
+END
+
+IDD_POLYGON DIALOGEX 0, 0, 492, 238
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Define Polygon Contours"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,163,217,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,220,217,50,14
+    LISTBOX         IDC_LIST_FILE,13,13,163,75,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "&New",IDC_BTN_NEW,187,20,44,11,NOT WS_TABSTOP
+    PUSHBUTTON      "&Remove",IDC_BTN_REMPROF,187,37,44,11,NOT WS_TABSTOP
+    GROUPBOX        "Contour List",IDC_STATIC,7,3,237,91
+    LTEXT           "X-Pos",IDC_STATIC,51,107,20,8
+    LTEXT           "Y-Pos",IDC_STATIC,85,107,25,8
+    COMBOBOX        IDC_COMBO_WALLPTS,13,115,223,75,CBS_SIMPLE | WS_VSCROLL
+    PUSHBUTTON      "&Add...",IDC_BTN_ADD,16,190,40,14
+    PUSHBUTTON      "&Insert...",IDC_BTN_INSERT,75,190,40,14
+    PUSHBUTTON      "&Delete",IDC_BTN_DELETE,134,190,40,14
+    PUSHBUTTON      "&Modify...",IDC_BTN_MODIFY,193,190,40,14
+    GROUPBOX        "Contour Points",IDC_STATIC,7,98,237,111
+    CONTROL         "Button1",IDC_BUTTON1,"Button",BS_OWNERDRAW,247,7,238,
+                    202,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "&Help",ID_HELP,278,217,50,14
+    LTEXT           "RGB Color",IDC_STATIC,160,107,37,8
+    LTEXT           "Vertex",IDC_STATIC,13,107,24,8
+    LTEXT           "Z-Pos",IDC_STATIC,124,107,25,8
+END
+
+IDD_CONTOUR DIALOG DISCARDABLE  0, 0, 246, 63
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Polygon Contour Definition"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Contour Name",IDC_STATIC,7,7,64,8
+    EDITTEXT        IDC_EDIT_NAME,7,17,125,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,189,7,50,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,189,24,50,14
+END
+
+IDD_ADD2DCORNER DIALOG DISCARDABLE  0, 0, 186, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add Corner"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "x",IDC_STTXT_XLABEL,67,22,43,13,SS_CENTERIMAGE
+    EDITTEXT        IDC_REF_EDITX,24,22,40,13,ES_AUTOHSCROLL
+    LTEXT           "y",IDC_STTXT_YLABEL,67,42,43,13,SS_CENTERIMAGE
+    EDITTEXT        IDC_REF_EDITY,24,42,40,13,ES_AUTOHSCROLL
+    GROUPBOX        "Coordinates:",IDC_REF_COORDS,18,7,97,61,WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,24,50,14
+END
+
+IDD_OPENGLVERTEX DIALOG DISCARDABLE  0, 0, 260, 195
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "OpenGL Vertex Definition"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDIT_X,15,33,54,12,ES_AUTOHSCROLL
+    LTEXT           "X",IDC_STATIC,71,33,9,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_Y,15,48,54,12,ES_AUTOHSCROLL
+    LTEXT           "Y",IDC_STATIC,71,48,9,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_Z,15,63,54,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Z",IDC_STATIC,71,63,9,12,SS_CENTERIMAGE
+    GROUPBOX        "Coordinates",IDC_STATIC,7,16,123,69
+    EDITTEXT        IDC_EDIT_RED,15,111,54,12,ES_AUTOHSCROLL
+    LTEXT           "Red",IDC_STATIC,71,111,30,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_BLUE,15,126,54,12,ES_AUTOHSCROLL
+    LTEXT           "Blue",IDC_STATIC,71,126,30,13,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_GREEN,15,141,54,12,ES_AUTOHSCROLL
+    LTEXT           "Green",IDC_STATIC,71,141,30,12,SS_CENTERIMAGE
+    PUSHBUTTON      "Color Picker...",IDC_BTN_COLOR,96,119,58,14
+    GROUPBOX        "Color",IDC_STATIC,7,94,160,69
+    DEFPUSHBUTTON   "OK",IDOK,203,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,203,24,50,14
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "MFCTess MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "MFCTess\0"
+            VALUE "LegalCopyright", "Copyright (C) 2005\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "MFCTess.EXE\0"
+            VALUE "ProductName", "MFCTess Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_ESPDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_POLYGON, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 485
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+
+    IDD_CONTOUR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 239
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    IDD_OPENGLVERTEX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 253
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 188
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "MFCTess\nMFCTess\nMFCTess Input\nMFCTess Input (*.dat)\n.dat\nMFCTess.Document\nMFCTess Document"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "MFCTess"
+    AFX_IDS_IDLEMESSAGE     "For Help, press F1"
+    AFX_IDS_HELPMODEMESSAGE "Select an object on which to get Help"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+    ID_HELP_FINDER          "List Help topics\nHelp Topics"
+    ID_HELP                 "Display help for current task or command"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_MENU_DEFPOLY         "Define Polygon Coordinates\nDefine Polygon"
+    IDM_POPUP_WINDPOS       "Use GL_TESS_WINDING_POSITIVE Winding Rule\nGL_TESS_WINDING_POSITIVE"
+    IDM_POPUP_WINDNEG       "Use GL_TESS_WINDING_NEGATIVE Winding Rule\nGL_TESS_WINDING_NEGATIVE"
+    IDM_POPUP_WINDODD       "Use GL_TESS_WINDING_ODD Winding Rule\nGL_TESS_WINDING_ODD"
+    IDM_POPUP_WINDNONZERO   "Use GL_TESS_WINDING_NONZERO Winding Rule\nGL_TESS_WINDING_NONZERO"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\MFCTess.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

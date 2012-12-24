@@ -1,0 +1,4 @@
+ACTION=BrowsePictures;[CurrentFolder]
+THUMBNAIL=[DATADIR]\StereoPictures\Wintervoorstelling\sneeuw\0001.THB
+TITLE=Sneeuw
+DESCRIPTION=Dit gaat over sneeuw

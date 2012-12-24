@@ -1,0 +1,17 @@
+_Movie;Animaties film
+Astronomy
+Physics
+Mathematics
+Chemistry
+Space
+-
+StereoPictures;Stereo Pictures
+UserMenu;User menu
+Presentations
+AnimationSets;Animation sets
+-
+RunScript;Run a script
+BasicHelp;Basic Help
+Samples
+StereoSettings;Stereo settings
+Exit;Exit

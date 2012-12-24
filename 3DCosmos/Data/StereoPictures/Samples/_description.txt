@@ -1,0 +1,4 @@
+ACTION=BrowsePictures;[CurrentFolder]
+THUMBNAIL=[DATADIR]\StereoPictures\samples\1.THB
+TITLE=Voorbeelden
+DESCRIPTION=Dit zijn enkele voorbeelden

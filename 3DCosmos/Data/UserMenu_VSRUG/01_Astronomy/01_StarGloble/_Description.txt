@@ -1,0 +1,4 @@
+ACTION=RunScript;[CurrentFolder]\StarGlobe.SCI
+THUMBNAIL=[CurrentFolder]\_thumbnail.THB
+TITLE=Star globe
+DESCRIPTION=Animation of the earth with stars and starconcellations projected on a fictive globe

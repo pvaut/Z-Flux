@@ -1,0 +1,3 @@
+THUMBNAIL=[CurrentFolder]\_thumbnail.THB
+TITLE=Space Travel
+DESCRIPTION=3D models and trajects

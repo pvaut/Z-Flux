@@ -1,0 +1,232 @@
+\BOOKMARK [0][-]{chapter.1}{Software fundamentals}{}
+\BOOKMARK [1][-]{section.1.1}{General concepts}{chapter.1}
+\BOOKMARK [1][-]{section.1.2}{Data organisation and settings}{chapter.1}
+\BOOKMARK [1][-]{section.1.3}{The default startup script}{chapter.1}
+\BOOKMARK [1][-]{section.1.4}{The Settings script }{chapter.1}
+\BOOKMARK [1][-]{section.1.5}{Sample animations}{chapter.1}
+\BOOKMARK [1][-]{section.1.6}{Stereo rendering }{chapter.1}
+\BOOKMARK [2][-]{subsection.1.6.1}{Polarisation stereo projection}{section.1.6}
+\BOOKMARK [2][-]{subsection.1.6.2}{Parallel viewing and cross viewing}{section.1.6}
+\BOOKMARK [2][-]{subsection.1.6.3}{Mirror viewing}{section.1.6}
+\BOOKMARK [2][-]{subsection.1.6.4}{The stereo baseline and stereo distance }{section.1.6}
+\BOOKMARK [1][-]{section.1.7}{Warped rendering}{chapter.1}
+\BOOKMARK [0][-]{chapter.2}{User interface}{}
+\BOOKMARK [1][-]{section.2.1}{Introduction}{chapter.2}
+\BOOKMARK [1][-]{section.2.2}{Keyboard shortcut keys}{chapter.2}
+\BOOKMARK [1][-]{section.2.3}{User navigation}{chapter.2}
+\BOOKMARK [1][-]{section.2.4}{User interface controls}{chapter.2}
+\BOOKMARK [1][-]{section.2.5}{The cursor }{chapter.2}
+\BOOKMARK [0][-]{chapter.3}{Stereo pictures}{}
+\BOOKMARK [1][-]{section.3.1}{Stereo foto browser}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.1.1}{Setting up the browser}{section.3.1}
+\BOOKMARK [2][-]{subsection.3.1.2}{Using the browser}{section.3.1}
+\BOOKMARK [1][-]{section.3.2}{Stereo photo slideshows}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.2.1}{List of slide show commands}{section.3.2}
+\BOOKMARK [0][-]{chapter.4}{Script development }{}
+\BOOKMARK [1][-]{section.4.1}{Introduction}{chapter.4}
+\BOOKMARK [1][-]{section.4.2}{The source code window}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.2.1}{The Source Code Panel}{section.4.2}
+\BOOKMARK [2][-]{subsection.4.2.2}{The Functions Panel}{section.4.2}
+\BOOKMARK [2][-]{subsection.4.2.3}{The Variables Panel}{section.4.2}
+\BOOKMARK [2][-]{subsection.4.2.4}{The Output Panel}{section.4.2}
+\BOOKMARK [2][-]{subsection.4.2.5}{The Objects Panel}{section.4.2}
+\BOOKMARK [1][-]{section.4.3}{Fundamentals of FluxScript}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.3.1}{Types and variables}{section.4.3}
+\BOOKMARK [2][-]{subsection.4.3.2}{Basic object types}{section.4.3}
+\BOOKMARK [2][-]{subsection.4.3.3}{Container object types}{section.4.3}
+\BOOKMARK [2][-]{subsection.4.3.4}{Animation object types}{section.4.3}
+\BOOKMARK [2][-]{subsection.4.3.5}{Custom functions}{section.4.3}
+\BOOKMARK [2][-]{subsection.4.3.6}{Including code from other locations}{section.4.3}
+\BOOKMARK [1][-]{section.4.4}{A sample animation script}{chapter.4}
+\BOOKMARK [1][-]{section.4.5}{The Object Tree}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.5.1}{The Object Root}{section.4.5}
+\BOOKMARK [2][-]{subsection.4.5.2}{Viewports}{section.4.5}
+\BOOKMARK [2][-]{subsection.4.5.3}{Scenes}{section.4.5}
+\BOOKMARK [2][-]{subsection.4.5.4}{Subframes}{section.4.5}
+\BOOKMARK [2][-]{subsection.4.5.5}{Geometric objects}{section.4.5}
+\BOOKMARK [2][-]{subsection.4.5.6}{Textures}{section.4.5}
+\BOOKMARK [2][-]{subsection.4.5.7}{Motions}{section.4.5}
+\BOOKMARK [0][-]{chapter.5}{Script language reference}{}
+\BOOKMARK [1][-]{section.5.1}{Simple types }{chapter.5}
+\BOOKMARK [2][-]{subsection.5.1.1}{Type Anytype }{section.5.1}
+\BOOKMARK [2][-]{subsection.5.1.2}{Type String }{section.5.1}
+\BOOKMARK [2][-]{subsection.5.1.3}{Type Scalar }{section.5.1}
+\BOOKMARK [2][-]{subsection.5.1.4}{Type Bool }{section.5.1}
+\BOOKMARK [2][-]{subsection.5.1.5}{Type Time }{section.5.1}
+\BOOKMARK [2][-]{subsection.5.1.6}{Type Chrono }{section.5.1}
+\BOOKMARK [2][-]{subsection.5.1.7}{Type Color }{section.5.1}
+\BOOKMARK [1][-]{section.5.2}{Containers }{chapter.5}
+\BOOKMARK [2][-]{subsection.5.2.1}{Type List }{section.5.2}
+\BOOKMARK [2][-]{subsection.5.2.2}{Type MapPair }{section.5.2}
+\BOOKMARK [2][-]{subsection.5.2.3}{Type Map }{section.5.2}
+\BOOKMARK [1][-]{section.5.3}{Enumerations }{chapter.5}
+\BOOKMARK [2][-]{subsection.5.3.1}{Type TimeType }{section.5.3}
+\BOOKMARK [2][-]{subsection.5.3.2}{Type RenderType }{section.5.3}
+\BOOKMARK [2][-]{subsection.5.3.3}{Type SubFrameType }{section.5.3}
+\BOOKMARK [2][-]{subsection.5.3.4}{Type BlendType }{section.5.3}
+\BOOKMARK [2][-]{subsection.5.3.5}{Type DepthMask }{section.5.3}
+\BOOKMARK [2][-]{subsection.5.3.6}{Type DepthTest }{section.5.3}
+\BOOKMARK [2][-]{subsection.5.3.7}{Type CurveRenderType }{section.5.3}
+\BOOKMARK [2][-]{subsection.5.3.8}{Type VertexProperty }{section.5.3}
+\BOOKMARK [2][-]{subsection.5.3.9}{Type InterpolType }{section.5.3}
+\BOOKMARK [2][-]{subsection.5.3.10}{Type UIAxisType }{section.5.3}
+\BOOKMARK [2][-]{subsection.5.3.11}{Type UIAxisLevel }{section.5.3}
+\BOOKMARK [2][-]{subsection.5.3.12}{Type ClockType }{section.5.3}
+\BOOKMARK [2][-]{subsection.5.3.13}{Type FogType }{section.5.3}
+\BOOKMARK [2][-]{subsection.5.3.14}{Type PEngineRenderType }{section.5.3}
+\BOOKMARK [1][-]{section.5.4}{Media }{chapter.5}
+\BOOKMARK [2][-]{subsection.5.4.1}{Type Bitmap }{section.5.4}
+\BOOKMARK [2][-]{subsection.5.4.2}{Type Video }{section.5.4}
+\BOOKMARK [2][-]{subsection.5.4.3}{Type Sound }{section.5.4}
+\BOOKMARK [1][-]{section.5.5}{Mathematics }{chapter.5}
+\BOOKMARK [2][-]{subsection.5.5.1}{Type Point }{section.5.5}
+\BOOKMARK [2][-]{subsection.5.5.2}{Type Vector }{section.5.5}
+\BOOKMARK [2][-]{subsection.5.5.3}{Type Plane }{section.5.5}
+\BOOKMARK [2][-]{subsection.5.5.4}{Type Line }{section.5.5}
+\BOOKMARK [2][-]{subsection.5.5.5}{Type LineSegment }{section.5.5}
+\BOOKMARK [2][-]{subsection.5.5.6}{Type Matrix }{section.5.5}
+\BOOKMARK [2][-]{subsection.5.5.7}{Type Transformation }{section.5.5}
+\BOOKMARK [2][-]{subsection.5.5.8}{Type Functor }{section.5.5}
+\BOOKMARK [2][-]{subsection.5.5.9}{Type ForceField }{section.5.5}
+\BOOKMARK [2][-]{subsection.5.5.10}{Type SplineCurve }{section.5.5}
+\BOOKMARK [2][-]{subsection.5.5.11}{Type SplineSurface }{section.5.5}
+\BOOKMARK [2][-]{subsection.5.5.12}{Function Pi }{section.5.5}
+\BOOKMARK [2][-]{subsection.5.5.13}{Function rad2deg }{section.5.5}
+\BOOKMARK [2][-]{subsection.5.5.14}{Function deg2rad }{section.5.5}
+\BOOKMARK [2][-]{subsection.5.5.15}{Function sin }{section.5.5}
+\BOOKMARK [2][-]{subsection.5.5.16}{Function cos }{section.5.5}
+\BOOKMARK [2][-]{subsection.5.5.17}{Function tan }{section.5.5}
+\BOOKMARK [2][-]{subsection.5.5.18}{Function asin }{section.5.5}
+\BOOKMARK [2][-]{subsection.5.5.19}{Function acos }{section.5.5}
+\BOOKMARK [2][-]{subsection.5.5.20}{Function atan }{section.5.5}
+\BOOKMARK [2][-]{subsection.5.5.21}{Function angle }{section.5.5}
+\BOOKMARK [2][-]{subsection.5.5.22}{Function random }{section.5.5}
+\BOOKMARK [2][-]{subsection.5.5.23}{Function floor }{section.5.5}
+\BOOKMARK [2][-]{subsection.5.5.24}{Function round }{section.5.5}
+\BOOKMARK [2][-]{subsection.5.5.25}{Function abs }{section.5.5}
+\BOOKMARK [2][-]{subsection.5.5.26}{Function sign }{section.5.5}
+\BOOKMARK [2][-]{subsection.5.5.27}{Function sqr }{section.5.5}
+\BOOKMARK [2][-]{subsection.5.5.28}{Function sqrt }{section.5.5}
+\BOOKMARK [2][-]{subsection.5.5.29}{Function exp }{section.5.5}
+\BOOKMARK [2][-]{subsection.5.5.30}{Function log }{section.5.5}
+\BOOKMARK [1][-]{section.5.6}{Geometric shapes }{chapter.5}
+\BOOKMARK [2][-]{subsection.5.6.1}{Type FlatContourSet }{section.5.6}
+\BOOKMARK [2][-]{subsection.5.6.2}{Type SolidShape }{section.5.6}
+\BOOKMARK [2][-]{subsection.5.6.3}{Type Blob }{section.5.6}
+\BOOKMARK [1][-]{section.5.7}{Object tree }{chapter.5}
+\BOOKMARK [2][-]{subsection.5.7.1}{Type Object }{section.5.7}
+\BOOKMARK [2][-]{subsection.5.7.2}{Type ObjectRoot }{section.5.7}
+\BOOKMARK [2][-]{subsection.5.7.3}{Type Scene }{section.5.7}
+\BOOKMARK [2][-]{subsection.5.7.4}{Type Subframe }{section.5.7}
+\BOOKMARK [2][-]{subsection.5.7.5}{Type SolidObject }{section.5.7}
+\BOOKMARK [2][-]{subsection.5.7.6}{Type Bar }{section.5.7}
+\BOOKMARK [2][-]{subsection.5.7.7}{Type Sphere }{section.5.7}
+\BOOKMARK [2][-]{subsection.5.7.8}{Type Cylinder }{section.5.7}
+\BOOKMARK [2][-]{subsection.5.7.9}{Type Rectangle }{section.5.7}
+\BOOKMARK [2][-]{subsection.5.7.10}{Type Arrow }{section.5.7}
+\BOOKMARK [2][-]{subsection.5.7.11}{Type SolidPoint }{section.5.7}
+\BOOKMARK [2][-]{subsection.5.7.12}{Type Text3D }{section.5.7}
+\BOOKMARK [2][-]{subsection.5.7.13}{Type TextFlat }{section.5.7}
+\BOOKMARK [2][-]{subsection.5.7.14}{Type FormattedText }{section.5.7}
+\BOOKMARK [2][-]{subsection.5.7.15}{Type Surface }{section.5.7}
+\BOOKMARK [2][-]{subsection.5.7.16}{Type Curve }{section.5.7}
+\BOOKMARK [2][-]{subsection.5.7.17}{Type StarGlobe }{section.5.7}
+\BOOKMARK [2][-]{subsection.5.7.18}{Type Clock }{section.5.7}
+\BOOKMARK [2][-]{subsection.5.7.19}{Type LightPoint }{section.5.7}
+\BOOKMARK [2][-]{subsection.5.7.20}{Type RepeatedObject }{section.5.7}
+\BOOKMARK [2][-]{subsection.5.7.21}{Type PEngine }{section.5.7}
+\BOOKMARK [2][-]{subsection.5.7.22}{Type Fog }{section.5.7}
+\BOOKMARK [2][-]{subsection.5.7.23}{Type Texture }{section.5.7}
+\BOOKMARK [2][-]{subsection.5.7.24}{Type Viewport }{section.5.7}
+\BOOKMARK [2][-]{subsection.5.7.25}{Type Display }{section.5.7}
+\BOOKMARK [2][-]{subsection.5.7.26}{Function root }{section.5.7}
+\BOOKMARK [2][-]{subsection.5.7.27}{Function DelObject }{section.5.7}
+\BOOKMARK [2][-]{subsection.5.7.28}{Function SaveObject }{section.5.7}
+\BOOKMARK [2][-]{subsection.5.7.29}{Function ReadObject }{section.5.7}
+\BOOKMARK [1][-]{section.5.8}{UI Controls }{chapter.5}
+\BOOKMARK [2][-]{subsection.5.8.1}{Type FrameControl }{section.5.8}
+\BOOKMARK [2][-]{subsection.5.8.2}{Type TextControl }{section.5.8}
+\BOOKMARK [2][-]{subsection.5.8.3}{Type ScalarControl }{section.5.8}
+\BOOKMARK [2][-]{subsection.5.8.4}{Type EditControl }{section.5.8}
+\BOOKMARK [2][-]{subsection.5.8.5}{Type ListControl }{section.5.8}
+\BOOKMARK [2][-]{subsection.5.8.6}{Type CheckControl }{section.5.8}
+\BOOKMARK [2][-]{subsection.5.8.7}{Type ButtonControl }{section.5.8}
+\BOOKMARK [2][-]{subsection.5.8.8}{Type MenuControl }{section.5.8}
+\BOOKMARK [2][-]{subsection.5.8.9}{Function ActivateControl }{section.5.8}
+\BOOKMARK [1][-]{section.5.9}{Motions }{chapter.5}
+\BOOKMARK [2][-]{subsection.5.9.1}{Type MotionTable }{section.5.9}
+\BOOKMARK [2][-]{subsection.5.9.2}{Type MotionSpline }{section.5.9}
+\BOOKMARK [2][-]{subsection.5.9.3}{Type MotionRotate }{section.5.9}
+\BOOKMARK [2][-]{subsection.5.9.4}{Type MotionKepler }{section.5.9}
+\BOOKMARK [2][-]{subsection.5.9.5}{Type MotionCyclOrbit }{section.5.9}
+\BOOKMARK [2][-]{subsection.5.9.6}{Type MotionLuna }{section.5.9}
+\BOOKMARK [2][-]{subsection.5.9.7}{Type MotionForceField }{section.5.9}
+\BOOKMARK [2][-]{subsection.5.9.8}{Type MotionSolidCustom }{section.5.9}
+\BOOKMARK [2][-]{subsection.5.9.9}{Type MotionPointCustom }{section.5.9}
+\BOOKMARK [2][-]{subsection.5.9.10}{Function EvalMotionList }{section.5.9}
+\BOOKMARK [1][-]{section.5.10}{Input / Output }{chapter.5}
+\BOOKMARK [2][-]{subsection.5.10.1}{Function UIGetAxisPos }{section.5.10}
+\BOOKMARK [2][-]{subsection.5.10.2}{Function UIGetAxisActive }{section.5.10}
+\BOOKMARK [2][-]{subsection.5.10.3}{Function UIIsLeftMouseButtonDown }{section.5.10}
+\BOOKMARK [2][-]{subsection.5.10.4}{Function UIIsKeyDown }{section.5.10}
+\BOOKMARK [2][-]{subsection.5.10.5}{Function UIGetKeyPressed }{section.5.10}
+\BOOKMARK [2][-]{subsection.5.10.6}{Function JoystickGetAxis }{section.5.10}
+\BOOKMARK [2][-]{subsection.5.10.7}{Function JoystickGetAxisCorrected }{section.5.10}
+\BOOKMARK [2][-]{subsection.5.10.8}{Function JoystickRockerPos }{section.5.10}
+\BOOKMARK [2][-]{subsection.5.10.9}{Function JoystickButtonDown }{section.5.10}
+\BOOKMARK [2][-]{subsection.5.10.10}{Function JoystickButtonClicked }{section.5.10}
+\BOOKMARK [2][-]{subsection.5.10.11}{Function JoystickButtonLongClicked }{section.5.10}
+\BOOKMARK [2][-]{subsection.5.10.12}{Function readtextfile }{section.5.10}
+\BOOKMARK [2][-]{subsection.5.10.13}{Function writetextfile }{section.5.10}
+\BOOKMARK [2][-]{subsection.5.10.14}{Function FileIsPresent }{section.5.10}
+\BOOKMARK [2][-]{subsection.5.10.15}{Function FileCreatedTime }{section.5.10}
+\BOOKMARK [2][-]{subsection.5.10.16}{Function FileModifiedTime }{section.5.10}
+\BOOKMARK [2][-]{subsection.5.10.17}{Function CopyFile }{section.5.10}
+\BOOKMARK [2][-]{subsection.5.10.18}{Function DeleteFile }{section.5.10}
+\BOOKMARK [2][-]{subsection.5.10.19}{Function CreateDirectory }{section.5.10}
+\BOOKMARK [2][-]{subsection.5.10.20}{Function GetFileList }{section.5.10}
+\BOOKMARK [1][-]{section.5.11}{Rendering }{chapter.5}
+\BOOKMARK [2][-]{subsection.5.11.1}{Function resetall }{section.5.11}
+\BOOKMARK [2][-]{subsection.5.11.2}{Function resetallscenes }{section.5.11}
+\BOOKMARK [2][-]{subsection.5.11.3}{Function resetallviewports }{section.5.11}
+\BOOKMARK [2][-]{subsection.5.11.4}{Function resetallvideos }{section.5.11}
+\BOOKMARK [2][-]{subsection.5.11.5}{Function resetallsounds }{section.5.11}
+\BOOKMARK [2][-]{subsection.5.11.6}{Function incrtime }{section.5.11}
+\BOOKMARK [2][-]{subsection.5.11.7}{Function render }{section.5.11}
+\BOOKMARK [1][-]{section.5.12}{General }{chapter.5}
+\BOOKMARK [2][-]{subsection.5.12.1}{Function Store }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.2}{Function Recall }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.3}{Function ExecuteScript }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.4}{Function ScriptArgument }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.5}{Function ScriptFilename }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.6}{Function ScriptFilePath }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.7}{Function GetLanguageList }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.8}{Function GetActiveLanguage }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.9}{Function SetActiveLanguage }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.10}{Function Throw }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.11}{Function CatchedError }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.12}{Function ExecDir }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.13}{Function DataDir }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.14}{Function ScriptDir }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.15}{Function ReadSetting }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.16}{Function WriteSetting }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.17}{Function createvar }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.18}{Function Ref }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.19}{Function Deref }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.20}{Function typeof }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.21}{Function isvardefined }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.22}{Function EvalFunction }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.23}{Function isdefined }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.24}{Function return }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.25}{Function stop }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.26}{Function break }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.27}{Function Output }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.28}{Function Execute }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.29}{Function ExitProgram }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.30}{Function ShutdownComputer }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.31}{Function SetMonitorStatus }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.32}{Function GetFunctionList }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.33}{Function GetRawFunctionDescription }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.34}{Function SetRawFunctionDescription }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.35}{Function GetHighlightFuncID }{section.5.12}
+\BOOKMARK [2][-]{subsection.5.12.36}{Function ExportFunctionDocumentation }{section.5.12}

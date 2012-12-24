@@ -1,0 +1,4 @@
+ACTION=BrowsePictures;[CurrentFolder]
+THUMBNAIL=[DATADIR]\StereoPictures\Wintervoorstelling\rijm\10.THB
+TITLE=Rijm
+DESCRIPTION=Dit gaat over rijm

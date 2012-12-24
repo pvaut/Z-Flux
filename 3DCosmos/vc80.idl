@@ -1,0 +1,11 @@
+import "docobj.idl";
+
+
+[ version(1.0), uuid(fe993e16-9ec0-3221-b2da-a911d0a3c80b) ]
+library Cosmos3D
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+}
+

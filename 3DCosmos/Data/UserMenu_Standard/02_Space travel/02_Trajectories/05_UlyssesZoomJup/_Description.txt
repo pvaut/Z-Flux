@@ -1,0 +1,4 @@
+ACTION=RunScript;[DATADIR]\Scripts\Space\Trajectories\Ulysses zoom Jupiter.sci
+THUMBNAIL=[CurrentFolder]\_thumbnail.THB
+TITLE=Ulysses close by Jupiter
+DESCRIPTION=Passage close by Jupiter, bringing  Ulysses it in a polar orbit

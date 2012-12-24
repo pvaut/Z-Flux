@@ -1,0 +1,3 @@
+THUMBNAIL=[CurrentFolder]\_thumbnail.THB
+TITLE=Astronomy
+DESCRIPTION=3D Animations of planets in our solar system

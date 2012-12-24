@@ -1,0 +1,11 @@
+scene_nacht
+scene_foucault
+scene_dayvariation
+scene_staryearvariation
+scene_siderealtime
+scene_seizoenen
+scene_analemma
+
+scene_dwaalplaneet
+scene_planetsystem
+scene_ochtendavondplaneet

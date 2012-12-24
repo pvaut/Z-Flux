@@ -1,0 +1,4 @@
+ACTION=RunScript;[DATADIR]\Scripts\Space\Trajectories\Ulysses overview.sci
+THUMBNAIL=[CurrentFolder]\_thumbnail.THB
+TITLE=Ulysses
+DESCRIPTION=Traject of Ulysses to a polar orbit around the sun 

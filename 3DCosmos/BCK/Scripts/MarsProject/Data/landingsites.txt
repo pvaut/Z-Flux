@@ -1,0 +1,9 @@
+Name  	North latitude	West longitude
+Pathfinder	19.26	33.25
+Viking 1	22.46	47.95
+Viking 2	47.93	-133.74
+Opportunity	-1.95	5.53
+Spirit	-14.57	-175.47
+Beagle 2	10.6	-90
+Mars Polar Lander	-76.7	-164.7
+Phoenix	68.21	-234.25

@@ -1,0 +1,3 @@
+THUMBNAIL=[CurrentFolder]\_thumbnail.THB
+TITLE=Stereo images
+DESCRIPTION=Hyperstereoscopic images of clouds, lightning and landscapes (made by Luk De Rop)

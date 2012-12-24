@@ -1,0 +1,4 @@
+THUMBNAIL=[CurrentFolder]\_thumbnail.THB
+TITLE=Landscapes
+ACTION=BrowseThumbnails;[CurrentFolder]
+DESCRIPTION=Hyperstereoscopic landscape images

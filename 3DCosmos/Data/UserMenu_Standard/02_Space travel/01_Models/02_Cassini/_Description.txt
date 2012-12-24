@@ -1,0 +1,4 @@
+ACTION=RunScript;[CurrentFolder]\cassini.SCI
+THUMBNAIL=[CurrentFolder]\_thumbnail.THB
+TITLE=Cassini
+DESCRIPTION=3D model of Cassini

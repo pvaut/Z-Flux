@@ -1,0 +1,222 @@
+
+Animation sets
+Settings
+Show in stereo
+Swap left and right
+Left mirror horizontal
+Right mirror horizontal
+Left mirror vertical
+Right mirror vertical
+Horizontal Stretch:
+Eye separation factor:
+Display
+Name:
+Full screen
+Offset X:
+Size X:
+Offset Y:
+Size Y:
+Frame rate:
+Sync factor:
+Language:
+Apply
+Cancel
+Please restart the software now
+Exit
+Astronomy
+Solar System
+Earth
+Planetarium
+Seasons
+Zoom on Earth
+Jump to next point
+Show points
+Show map
+Spring equinox
+Fall equinox
+Summer solstice
+Winter solstice
+Solar eclipses
+Star globe
+Show horizon
+Co-rotate with Earth
+Sundial
+Vary season
+Track position
+North Pole
+Nortern hemisphere
+Equator
+Southern hemisphere
+South Pole
+Mars
+Mars + Moons
+Mars surface
+Show surface in 3D
+Show solar movement
+Overlay
+Image overlay
+Geology overlay
+Topography overlay
+Show grid
+Show wind rose
+Show distances
+hohman
+s prime meridian (i.e., at the centre of the crater Airy-0).
+East
+Earth time (UT):
+Local Mars time:
+Sun position:
+Show globe
+Azimuth: 
+Height: 
+Show height
+Show level
+Loading data
+Januari
+West
+North
+South
+Jupiter
+Jupiter + Moons
+Saturnus
+Saturnus + Moons
+Uranus
+Uranus + Moons
+Neptunus
+Neptunus + Moons
+Asteroids
+LoadPlanetMoonsKepler
+Show moons
+Show moon orbits
+Show moon names
+Chemistry
+Show molecule
+Mathematics
+Bezier curve
+Evolving surface
+Calculating
+Harmonic objects
+Resolution
+Calculate
+Isosurface
+Plot surface
+Edit
+Add
+Transparent
+U from
+to
+steps
+V from
+White
+Plot
+Red
+Green
+Blue
+Polyhedra
+Show framework
+Polyhedron
+Extra
+Physics
+Coriolis force
+Electric dipole
+Magnetic dipole
+Orbitals
+Orbitals2
+Point charge
+Spherical pendulum
+Start angle
+Start speed
+Drag
+Two Point Interference
+Distance
+Ampl. 1
+Freq. 1
+Ampl. 2
+Freq. 2
+Resol
+Space
+Models
+Cassini
+ISS
+Ulysses
+Voyager
+Orbit simulations
+Calculate Launch Window
+Start at
+Rendez-vous succeeded
+synodic period
+Gravitational assist
+Speed:
+Angle:
+Strength:
+Simulate
+Launch Window
+Time
+The present
+Orbit simulator
+Satellites
+Orbit explanation - 1
+Speed (km/s) :
+Orbit explanation - 2
+Velocity size variation
+Velocity direction variation (2.5 km/s)
+Velocity direction variation (4.0 km/s)
+Distance variation (2.5 km/s)
+Distance variation (4.0 km/s)
+Circular orbits
+Orbit inclination
+Inclination:
+Satellites overview
+Trajectories
+Cassini overview
+Ulysses overview
+Ulysses zoom Jupiter
+Voyager 2 overview
+Voyager 2 zoom Jupiter
+Stereo pictures
+Browse Stereo pictures
+Slide shows
+Stereo picture settings
+Stereo pictures folder:
+Rows in browser:
+Create Thumbnails
+Test
+Blob
+Cgs
+Color scale
+Controls
+Show object
+Some text
+Yellow
+Purple
+Formatted text
+Joystick
+Menu
+Multiviewport
+Particle engine
+Shape
+Sphere
+SSC
+CreateDistribution
+createdoc
+CreateTranslationStrings
+")>=0 then {
+");
+EditDescription
+ExportDoc
+ShowModel
+solarsys
+startup
+Intro
+bezier
+bol
+MarsSolarMovement
+VallisMarineris
+Bitmaps
+Data
+SUB
+CreateMarsGeoGlobe
+CreateMarsSolarMovement
+CreateMarsSurface
+general
+waypoints

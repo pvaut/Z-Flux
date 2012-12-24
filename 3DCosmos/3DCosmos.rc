@@ -1,0 +1,259 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MY3DCOSMOS          ICON                    "3DCosmos.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_MY3DCOSMOS MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About ...",                  IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_MY3DCOSMOS ACCELERATORS 
+BEGIN
+    "?",            IDM_ABOUT,              ASCII,  ALT
+    "/",            IDM_ABOUT,              ASCII,  ALT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG  22, 17, 230, 75
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "System"
+BEGIN
+    ICON            IDI_MY3DCOSMOS,IDC_MYICON,14,9,16,16
+    LTEXT           "Z-Flux Version 1.0",IDC_STATIC,49,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2010",IDC_STATIC,49,20,119,8
+    DEFPUSHBUTTON   "OK",IDOK,195,6,30,11,WS_GROUP
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_ROUNDCORNER         BITMAP                  "bitmap1.bmp"
+IDB_SCROLLDOWN          BITMAP                  "bmp00001.bmp"
+IDB_SCROLLEFT           BITMAP                  "bitmap2.bmp"
+IDB_SCROLLRIGHT         BITMAP                  "bmp00002.bmp"
+IDB_SCROLLUP            BITMAP                  "bmp00003.bmp"
+IDB_STOP                BITMAP                  "bmp00004.bmp"
+IDB_ADD                 BITMAP                  "stop1.bmp"
+IDB_PROCEED             BITMAP                  "add1.bmp"
+IDB_PROCEEDALL          BITMAP                  "proceed1.bmp"
+IDB_SAVE                BITMAP                  "bmp00005.bmp"
+IDB_LOAD                BITMAP                  "bmp00006.bmp"
+IDB_NEW                 BITMAP                  "bmp00007.bmp"
+IDB_CLOSEFILE           BITMAP                  "new1.bmp"
+IDB_UNDO                BITMAP                  "bmp00008.bmp"
+IDB_REDO                BITMAP                  "undo1.bmp"
+IDB_CLIPBOARD_COPY      BITMAP                  "bmp00009.bmp"
+IDB_CLIPBOARD_PASTE     BITMAP                  "clipboar.bmp"
+IDB_ANIMATE             BITMAP                  "proceeda.bmp"
+IDB_SEARCH              BITMAP                  "bmp00010.bmp"
+IDB_SETTINGS            BITMAP                  "bmp00011.bmp"
+IDB_BACK                BITMAP                  "bmp00012.bmp"
+IDB_FORWARD             BITMAP                  "back1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_APP_TITLE           "3DCosmos"
+    IDC_MY3DCOSMOS          "MY3DCOSMOS"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Dutch (Belgium) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NLB)
+#ifdef _WIN32
+LANGUAGE LANG_DUTCH, SUBLANG_DUTCH_BELGIAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SEARCH DIALOGEX 0, 0, 222, 64
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Find"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        101,7,17,208,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Find",IDOK,92,43,50,14
+    PUSHBUTTON      "Exit",IDCANCEL,165,43,50,14
+END
+
+IDD_SETTINGS DIALOGEX 0, 0, 209, 159
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Settings"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,152,114,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,152,138,50,14
+    LTEXT           "Data directory:",IDC_STATIC,7,9,50,8
+    EDITTEXT        IDC_SCRIPTSDIR,7,22,193,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "In My Documents",IDC_BUTTON1,65,7,66,14
+    PUSHBUTTON      "In Program folder",IDC_BUTTON2,134,7,66,14
+    CONTROL         "Use dark window background",IDC_COLORSCHEME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,59,109,10
+    LTEXT           "Language:",IDC_STATIC,7,84,35,8
+    COMBOBOX        IDC_LANGUAGE,54,82,148,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_EDITTEXT DIALOGEX 0, 0, 507, 318
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit text"
+FONT 9, "Courier New", 400, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,450,276,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,450,297,50,14
+    CONTROL         "",IDC_EDIT1,"RichEdit20W",ES_MULTILINE | ES_WANTRETURN | WS_BORDER | WS_VSCROLL | WS_TABSTOP,7,7,493,259
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_SEARCH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 215
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 57
+    END
+
+    IDD_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 202
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 152
+    END
+
+    IDD_EDITTEXT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 500
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 311
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+101                     CURSOR                  "cursor1.cur"
+#endif    // Dutch (Belgium) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

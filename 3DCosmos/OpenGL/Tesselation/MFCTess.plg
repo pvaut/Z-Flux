@@ -1,0 +1,78 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MFCTess - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release/MFCTess.res" /d "NDEBUG" /d "_AFXDLL" "C:\Data Files\CodeExamples\OpenGL\MFCTess\MFCTess.rc"" 
+Creating temporary file "C:\DOCUME~1\Frank\LOCALS~1\Temp\RSP1C0.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/MFCTess.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Data Files\CodeExamples\OpenGL\MFCTess\ColorComboBox.cpp"
+"C:\Data Files\CodeExamples\OpenGL\MFCTess\Contour.cpp"
+"C:\Data Files\CodeExamples\OpenGL\MFCTess\ContourDlg.cpp"
+"C:\Data Files\CodeExamples\OpenGL\MFCTess\ESPDlgEdit.cpp"
+"C:\Data Files\CodeExamples\OpenGL\MFCTess\Forio.cpp"
+"C:\Data Files\CodeExamples\OpenGL\MFCTess\MainFrm.cpp"
+"C:\Data Files\CodeExamples\OpenGL\MFCTess\MFCTess.cpp"
+"C:\Data Files\CodeExamples\OpenGL\MFCTess\MFCTessDoc.cpp"
+"C:\Data Files\CodeExamples\OpenGL\MFCTess\MFCTessView.cpp"
+"C:\Data Files\CodeExamples\OpenGL\MFCTess\PolyDlg.cpp"
+"C:\Data Files\CodeExamples\OpenGL\MFCTess\Vector3d.cpp"
+"C:\Data Files\CodeExamples\OpenGL\MFCTess\VertexDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Frank\LOCALS~1\Temp\RSP1C0.tmp" 
+Creating temporary file "C:\DOCUME~1\Frank\LOCALS~1\Temp\RSP1C1.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/MFCTess.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Data Files\CodeExamples\OpenGL\MFCTess\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Frank\LOCALS~1\Temp\RSP1C1.tmp" 
+Creating temporary file "C:\DOCUME~1\Frank\LOCALS~1\Temp\RSP1C2.tmp" with contents
+[
+Opengl32.lib GLu32.lib GLaux.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/MFCTess.pdb" /machine:I386 /out:"Release/MFCTess.exe" 
+".\Release\ColorComboBox.obj"
+".\Release\Contour.obj"
+".\Release\ContourDlg.obj"
+".\Release\ESPDlgEdit.obj"
+".\Release\Forio.obj"
+".\Release\MainFrm.obj"
+".\Release\MFCTess.obj"
+".\Release\MFCTessDoc.obj"
+".\Release\MFCTessView.obj"
+".\Release\PolyDlg.obj"
+".\Release\StdAfx.obj"
+".\Release\Vector3d.obj"
+".\Release\VertexDlg.obj"
+".\Release\MFCTess.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\Frank\LOCALS~1\Temp\RSP1C2.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+ColorComboBox.cpp
+Contour.cpp
+ContourDlg.cpp
+ESPDlgEdit.cpp
+Forio.cpp
+MainFrm.cpp
+MFCTess.cpp
+MFCTessDoc.cpp
+MFCTessView.cpp
+PolyDlg.cpp
+Vector3d.cpp
+VertexDlg.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+MFCTess.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,222 @@
+Animation sets	Animatie sets
+Settings	Instellingen
+Show in stereo	Stereo beeld
+Swap left and right	Verwissel linker en rechter beeld
+Left mirror horizontal	Spiegel linkerbeeld horizontaal
+Right mirror horizontal	Spiegel rechterbeeld horizontaal
+Left mirror vertical	Spiegel linkerbeeld vertikaal
+Right mirror vertical	Spiegel rechterbeeld vertikaal
+Horizontal Stretch:	Horizontale uitrekking:
+Eye separation factor:	Oogseparatie factor:
+Display	Beeldscherm
+Name:	Naam:
+Full screen	Volledig scherm
+Offset X:	X offset:
+Size X:	X grootte:
+Offset Y:	Y offset:
+Size Y:	Y grootte:
+Frame rate:	Frame snelheid:
+Sync factor:	Sync factor:
+Language:	Taal
+Apply	Pas toe
+Cancel	Annuleer
+Please restart the software now	Herstart a.u.b. nu de toepassing
+Exit	Afsluiten
+Astronomy	Sterrenkunde
+Solar System	Zonnestelsel
+Earth	Aarde
+Planetarium	Planetarium
+Seasons	Seizoenen
+Zoom on Earth	Zoom op Aarde
+Jump to next point	Spring naar volgende punt
+Show points	Toon punten
+Show map	Toon kaart
+Spring equinox	Lente equinox
+Fall equinox	Herfst equinox
+Summer solstice	Zomer equinox
+Winter solstice	Winter equinox
+Solar eclipses	Zonsverduisteringen
+Star globe	Sterrenglobe
+Show horizon	Toon horizon
+Co-rotate with Earth	Roteer mee met Aarde
+Sundial	Zonnewijzer
+Vary season	Variëer seizoen
+Track position	Track Positie
+North Pole	Noordpool
+Nortern hemisphere	Noordelijk halfrond
+Equator	Evenaar
+Southern hemisphere	Zuidelijk halfrond
+South Pole	Zuidpool
+Mars	Mars
+Mars + Moons	Mars + manen
+Mars surface	Mars oppervlak
+Show surface in 3D	Toon oppervlak in 3D
+Show solar movement	Toon pad van de zon
+Overlay	Overlay
+Image overlay	Foto overlay
+Geology overlay	Geologie overlay
+Topography overlay	Topografie overlay
+Show grid	Toon grid
+Show wind rose	Toon windroos
+Show distances	Toon adstanden
+East	Oost
+Earth time (UT):	Tijd Aarde (UT):
+Local Mars time:	Locale Mars tijd:
+Sun position:	Positie zon:
+Show globe	Toon globe
+Azimuth: 	Azimuth:
+Height: 	Hoogte:
+Show height	Toon hoogte
+Show level	Toon niveau
+Loading data	Data inlezen
+Januari	Januari
+West	West
+North	Noord
+South	Zuid
+Jupiter	Jupiter
+Jupiter + Moons	Jupiter + manen
+Saturnus	Saturnus
+Saturnus + Moons	Saturnus + manen
+Uranus	Uranus
+Uranus + Moons	Uranus + manen
+Neptunus	Neptunus
+Neptunus + Moons	Neptunus + manen
+Asteroids	Planetoïden
+Show moons	Toon manen
+Show moon orbits	Toon banen van manen
+Show moon names	Toon namen van manen
+Chemistry	Scheikune
+Show molecule	Toon molecule
+Mathematics	Wiskunde
+Bezier curve	Bezier curve
+Evolving surface	Veranderend oppervlak
+Calculating	Berekenen...
+Harmonic objects	Harmonische objecten
+Resolution	Resolutie
+Calculate	Bereken
+Isosurface	Impliciet oppervlak
+Plot surface	Plot oppervlak
+Add	Voeg toe
+Transparent	Transparent
+Polyhedra	Polyhedra
+Show framework	Toon raamwerk
+Polyhedron	Polyhedron
+Extra	Extra
+Physics	Fysica
+Electric dipole	Electrische dipool
+Magnetic dipole	Magnetische dipool
+Point charge	Puntlading
+Spherical pendulum	Sferische slinger
+Start angle	Start hoek
+Start speed	Start snelheid
+Drag	Wrijving
+Two Point Interference	Twee punt interferentie
+Distance	Afstand
+Ampl. 1	Ampl. 1
+Freq. 1	freq. 1
+Ampl. 2	Ampl. 2
+Freq. 2	Freq. é
+Resol	Resol
+Space	Ruimtevaart
+Models	Modellen
+Cassini	Cassini
+ISS	ISS
+Ulysses	Ulysses
+Voyager	Voyager
+Orbit simulations	Baansimulaties
+Gravitational assist	Zwaartekrachtduw
+Speed:	Snelheid:
+Angle:	Hoek:
+Strength:	Sterkte:
+Simulate	Simuleer
+Orbit simulator	Baan simulator
+Satellites	Satellieten
+Speed (km/s) :	Snelheid (km/s) :
+Velocity size variation	Variëer snelheid
+Velocity direction variation (2.5 km/s)	Variëer richting (2.5 km/s)
+Velocity direction variation (4.0 km/s)	Variëer richting (4.0 km/s)
+Distance variation (2.5 km/s)	Variëer afstand (2.5 km/s)	
+Distance variation (4.0 km/s)	Variëer afstand (4.0 km/s)
+Circular orbits	Cirkelbanen
+Orbit inclination	Baanhelling
+Satellites overview	Overzicht satellieten
+Trajectories	Trajecten
+Cassini overview	Overzicht Cassini
+Ulysses overview	Overzicht Ulysses
+Ulysses zoom Jupiter	Ulysses bij Jupiter
+Voyager 2 overview	Voyager 2 overzicht
+Stereo pictures	Stereofoto's
+Browse Stereo pictures	Blader door stereofoto's
+Slide shows	Diavoorstellingen
+Stereo picture settings	Stereofoto instellingen
+Stereo pictures folder:	Stereofoto folder:
+Rows in browser:	Rijen in browser:
+Create Thumbnails	Maak thumbnails
+Intro	Indro
+=================================================	
+hohman	Hohman
+s prime meridian (i.e., at the centre of the crater Airy-0).	
+LoadPlanetMoonsKepler	
+Edit	Edit
+U from	U van
+to	tot
+steps	stappen
+V from	V van
+White	Wit
+Plot	Plot
+Red	Rood
+Green	Groen
+Blue	Blauw
+Coriolis force	Coriolis kracht
+Orbitals	
+Orbitals2	
+Calculate Launch Window	Bereken lanceervenster
+Start at	Start op
+Rendez-vous succeeded	Rendez-vous geslaagd
+synodic period	synodische periode
+Launch Window	Lanceervenster
+Time	Tijd
+The present	Het heden
+Orbit explanation - 1	
+Orbit explanation - 2	
+Inclination:	Inclinatie:
+Voyager 2 zoom Jupiter	Voyager 2 zoom Jupiter
+Test	Test
+Blob	Blob
+Cgs	
+Color scale	Kleurenschaal
+Controls	
+Show object	Toon object
+Some text	
+Yellow	Geel
+Purple	Paars
+Formatted text	Geformatteerde tekst
+Joystick	Joystick
+Menu	Menu
+Multiviewport	
+Particle engine	
+Shape	Vorm
+Sphere	Sfeer
+SSC	
+CreateDistribution	
+createdoc	
+CreateTranslationStrings	
+")>=0 then {	
+");	
+EditDescription	
+ExportDoc	
+ShowModel	
+solarsys	
+startup	
+bezier	
+bol	
+MarsSolarMovement	
+VallisMarineris	
+Bitmaps	
+Data	
+SUB	
+CreateMarsGeoGlobe	
+CreateMarsSolarMovement	
+CreateMarsSurface	
+general	
+waypoints	

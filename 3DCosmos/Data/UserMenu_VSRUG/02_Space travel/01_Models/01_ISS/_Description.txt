@@ -1,0 +1,4 @@
+ACTION=RunScript;[CurrentFolder]\ISS.SCI
+THUMBNAIL=[CurrentFolder]\_thumbnail.THB
+TITLE=ISS
+DESCRIPTION=3D model of the International Space Station

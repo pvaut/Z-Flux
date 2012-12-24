@@ -1,0 +1,4 @@
+THUMBNAIL=[CurrentFolder]\_thumbnail.THB
+ACTION=BrowseThumbnails;[CurrentFolder]
+TITLE=Cloud hyperstereo ALL IMAGES
+DESCRIPTION=A complete collection of hyperstereoscopic cloud images

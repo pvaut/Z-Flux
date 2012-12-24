@@ -1,0 +1,101 @@
+#pragma once
+
+#include "CSG_components.h"
+
+#include "CSG_face.h"
+
+#include "CSG_object.h"
+
+
+
+
+
+
+class CSGFace;
+class CSGSegment;
+
+
+class CSGShape
+{
+private:
+	CSGVertexList vertices;
+	Titemarray<CSGFace> faces;
+	CSGBBox bbox;
+public:
+	CSGShape();
+
+	void addvertex(const CSGVertex &ivertex);
+
+	CSGVertex* addvertexifnew(const CSGVertex &ivertex);
+
+	CSGVertex* addVertex(const CSGVector &ipos, const CSGColor &icolor, int istatus);
+
+	void delvertex(int nr);
+	CSGFace* addFace(CSGVertex *v1, CSGVertex *v2, CSGVertex *v3);
+
+	void createsphere(CSGVertex &cent, double radius, int resol);
+
+	int G_vertexcount() const { return vertices.G_count(); }
+	const CSGVertex& G_vertex(int nr) const;
+	int G_facecount() const { return faces.G_count(); }
+	const CSGFace& G_face(int nr) const;
+	CSGFace& G_face(int nr);
+
+
+
+	CSGBBox& G_BBox() { return bbox; }
+
+	void splitFaces(CSGShape *pObject);
+
+//private:
+
+	double computeDistance(const CSGVertex &vertex, const CSGFace &face);
+
+	void splitFace(int facePos, CSGSegment &segment1, CSGSegment &segment2);
+	  
+	void breakFaceInTwo(int facePos, const CSGVector &newPos, int splitEdge);
+	
+	void breakFaceInTwo(int facePos, const CSGVector &newPos, CSGVertex &endVertex);
+	
+	void breakFaceInThree(int facePos, const CSGVector &newPos1, const CSGVector &newPos2, CSGVertex &startVertex, CSGVertex &endVertex);
+	void breakFaceInThree(int facePos, const CSGVector &newPos1, const CSGVector &newPos2, int splitEdge);
+	void breakFaceInThree(int facePos, const CSGVector &newPos, CSGVertex &endVertex);
+	void breakFaceInThree(int facePos, const CSGVector &newPos);
+
+	void breakFaceInFour(int facePos, const CSGVector &newPos1, const CSGVector &newPos2, CSGVertex &endVertex);
+	
+	void breakFaceInFive(int facePos, const CSGVector &newPos1, const CSGVector &newPos2, int linedVertex);
+	
+	void classifyFaces(CSGShape &pObject);
+	
+	void invertInsideFaces();
+
+
+	void accum(CSGShape & pObject, int faceStatus1, int faceStatus2);
+
+};
+
+
+
+class CSGShapeCombiner
+{
+public:
+
+	CSGShape * m_pObject1;
+	CSGShape * m_pObject2;
+	
+	CSGShapeCombiner(CSGShape * io1, CSGShape * io2);
+
+	void getUnion(CSGShape &output);
+	void getIntersection(CSGShape &output);
+	void getDifference(CSGShape &output);
+
+private:
+	
+	void compose(int faceStatus1, int faceStatus2, int faceStatus3, CSGShape &output);
+	
+	// Need IntSet
+	// Need ColorSet
+	//void groupObjectComponents(CSGShape & pObject, VertexSet & vertices, IntSet & indices, ColorSet & colors, int faceStatus1, int faceStatus2);
+};
+

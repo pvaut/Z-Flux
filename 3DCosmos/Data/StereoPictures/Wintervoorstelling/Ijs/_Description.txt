@@ -1,0 +1,4 @@
+ACTION=BrowsePictures;[CurrentFolder]
+THUMBNAIL=[DATADIR]\StereoPictures\Wintervoorstelling\ijs\001.THB
+TITLE=Ijs
+DESCRIPTION=Dit gaat over ijs

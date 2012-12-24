@@ -1,0 +1,61 @@
+
+
+function integer trim(string *st)
+{
+   while substring(st,1,1)=" " do splitstring(st," ");
+   while substring(st,length(st),length(st))=" " do st=substring(st,1,length(st)-1);
+}
+
+string planname,filename,outputfilename,line;
+file fp,fpo;
+string curtermtype,curorder,stA,stB,stC;
+integer processed;
+
+planname="NEPTUNE";
+
+filename="C:\SourceCode\miscprojects\3DCosmos\3DCosmos\AstroData\";
+outputfilename=filename;
+
+filename=filename+planname+"_LBR.data";
+outputfilename=outputfilename+planname+"_cycl.tab";
+
+fileopenread(fp,filename);
+fileopenwrite(fpo,outputfilename);
+
+curtermtype="";curorder="";
+
+integer ct;
+
+while not(fileisend(fp)) do {
+   ct=ct+1;
+   if ct/50=floor(ct/50) then setbusy(str(ct,0,0));
+   line=fileread(fp,0);
+   processed=0;
+   if substring(line,1,6)="VSOP87" then {
+      curtermtype=substring(line,8,8);
+      curorder=substring(line,9,9);
+      processed=1;
+   }
+   if length(line)<=0 then {
+      curtermtype=substring(line,8,8);
+      curorder=substring(line,9,9);
+      processed=1;
+   }
+   if substring(line,1,5)="Total" then {
+      processed=1;
+   }
+   if not(processed) then {
+      stA=splitstring(line,"|");
+      stB=splitstring(line,"|");splitstring(line,"|");
+      stC=line;
+      trim(stA);trim(stB);trim(stC);
+      if curtermtype="" then throw("Invalid term");
+      filewrite(fpo,curtermtype+"	"+curorder+"	"+stA+"	"+stB+"	"+stC);
+      filewriteline(fpo);
+   }
+}
+
+fileclose(fp);
+fileclose(fpo);
+
+setbusy("");

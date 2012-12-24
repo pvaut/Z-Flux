@@ -1,0 +1,3 @@
+THUMBNAIL=[CurrentFolder]\_thumbnail.THB
+TITLE=Models
+DESCRIPTION=3D models of space vehicles

@@ -1,0 +1,4 @@
+ACTION=RunScript;[CurrentFolder]\neptunus.SCI
+THUMBNAIL=[CurrentFolder]\_thumbnail.THB
+TITLE=Neptunus
+DESCRIPTION=Animation of Neptunus and moons

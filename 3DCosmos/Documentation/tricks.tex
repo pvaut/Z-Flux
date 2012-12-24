@@ -1,0 +1,33 @@
+\chapter{Some tricks}
+
+\section{Co-moving the camera with a suframe}
+
+
+
+
+
+One way of achieving this is by inverting the total transformation of the subframe, and applying it to the total scene.
+For example, suppose
+\begin{itemize}
+\item root.SC is the scene
+\item root.SC.Universe.SolarSystem.Earth.Inclin.Globe is the object the camera should track
+\item root.viewports.main is the viewport that needs to be adjusted
+\end{itemize}
+
+In the render loop, do:\\
+\sourcecode{
+root.SC.Universe.transf.reset;\\
+tf1=root.SC.Universe.SolarSystem.Earth.Inclin.Globe.obj.totaltransformation;\\
+tf2=tf1;tf2.invert;\\
+root.viewports.main.transf=tf2;//apply the inverse transformation to the viewport-> object becomes positioned in the origin\\
+}
+
+
+ALTERNATIVE:
+for added accuracy (e.g. in case of zooming in on small objects in large scenes, such as the earth in the solar system),
+you can apply the inverse transformation on the deepest subframe:
+
+\sourcecode{
+root.sc.universe.transf=tf2;\\
+root.sc.light0pos=tf2*point(0,0,0);\\
+}

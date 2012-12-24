@@ -1,0 +1,4 @@
+ACTION=RunScript;[CurrentFolder]\uranus.SCI
+THUMBNAIL=[CurrentFolder]\_thumbnail.THB
+TITLE=Uranus
+DESCRIPTION=Animation of Uranus and moons

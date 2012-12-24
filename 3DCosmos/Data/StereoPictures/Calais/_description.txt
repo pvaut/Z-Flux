@@ -1,0 +1,4 @@
+ACTION=BrowsePictures;[CurrentFolder]
+THUMBNAIL=[DATADIR]\StereoPictures\Calais\calaisbliksem1.THB
+TITLE=Bliksem
+DESCRIPTION=Enkele stereofoto's van bliksems!

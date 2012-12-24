@@ -1,0 +1,3 @@
+THUMBNAIL=[DATADIR]\StereoPictures\Folder 1\screendump4.THB
+TITLE=Planeten
+DESCRIPTION=Iets over planeten

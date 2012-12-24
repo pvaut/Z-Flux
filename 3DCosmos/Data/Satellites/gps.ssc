@@ -1,0 +1,655 @@
+# NAVSTAR GPS Constellation for Celestia
+# Version 1.2
+
+
+# Installation Instructions
+# =========================
+# Copy the files from the 'extras', 'models' and 'textures' folder into the existing folders of your Celestia installation. (Create a new 'extras' folder if one doesn't already exist.) Then start Celestia.
+
+
+# Background and acknowledgement
+# ================
+# This file contains the orbital elements for the 30 satellites of the NAVSTAR GPS (Global Positioning System) constellation orbiting around the Earth at an altitude of 20,200 km.
+
+# Steps I took to obtain data:
+
+# 1) Installed GPS program from http://www.movingsatellites.com
+
+# 2) Used GPS program to retrieve information from http://celestrak.com/NORAD/elements/gps-ops.txt .
+
+# 3) Used Datas>satellitedatas to view numbers from fields.
+
+# 4.1) Period = 1/revolutions per day
+# 4.2) Period = 2 (pi) x square root (a^3/mu) [Formula to find SemiMajorAxis]
+
+# Period is in seconds. mu = 398,601, a=SemiMajorAxis
+
+# Source: http://www.j-bradford-delong.net/movable_type/2004-2_archives/000086.html
+
+# 4.3) ArgOfPericenter = Argument of Perigee
+
+# 4.4) Epoch: Julian Date calculations from http://quasar.as.utexas.edu/BillInfo/JulianDateCalc.html and http://www.fourmilab.ch/documents/calendar/ .
+
+# References:
+# Data Field Guides from http://www.celestiamotherlode.net/catalog/documentation.html .
+# CelesTrak Two-Line Element FAQ http://celestrak.com/columns/v04n03/#FAQ02
+# US Naval Observatory (USNO) at http://tycho.usno.navy.mil/gpscurr.html .
+
+# The objects of this file are considered as "moons" in order to be able to see their orbits into Celestia (press "o" to see their orbits and "m" for their names). The PRN numbers are the ones shown on handheld GPS systems.
+
+# My thanks to Thomas Guilpain (http://members.fortunecity.com/guilpain/) for permission to use his nice 'imaginary' 3D satellite model in this package.
+
+# Latest Epoch: 14 December, 2006
+
+
+# Jeffrey Yen
+# jeffreyyen@gmail.com
+
+
+
+
+"NAVSTAR GPS IIA-11 PRN-24" "Sol/Earth"
+{
+        
+	Mesh "satellite.3ds"
+	Radius 0.005
+
+	EllipticalOrbit
+	{
+		Period		0.4991000950781
+		SemiMajorAxis	26578.29673
+		Eccentricity	0.008945
+		Inclination	54.8738
+		AscendingNode	257.8414
+		ArgOfPericenter	314.1909
+		MeanAnomaly	45.1188
+		Epoch		2454097.32404117000
+	}
+}
+
+
+"NAVSTAR GPS IIA-12 PRN-25" "Sol/Earth"
+{
+        
+	Mesh "satellite.3ds"
+	Radius 0.005
+
+	EllipticalOrbit
+	{
+		Period		0.4986025740448
+		SemiMajorAxis	26560.63099
+		Eccentricity	0.0130906
+		Inclination	54.8293
+		AscendingNode	69.4889
+		ArgOfPericenter	284.6683
+		MeanAnomaly	73.9059
+		Epoch		2454097.77655667000
+
+	}
+}
+
+
+"NAVSTAR GPS IIA-14 PRN-26" "Sol/Earth"
+{
+        
+	Mesh "satellite.3ds"
+	Radius 0.005
+
+	EllipticalOrbit
+	{
+		Period		0.4985733348951
+		SemiMajorAxis	26559.5926
+		Eccentricity	0.0173786
+		Inclination	56.8141
+		AscendingNode	16.6721
+		ArgOfPericenter	46.8413
+		MeanAnomaly	314.6548
+		Epoch		2454097.51750073000
+	}       
+}
+
+
+"NAVSTAR GPS IIA-15 PRN-27" "Sol/Earth"
+{
+        
+	Mesh "satellite.3ds"
+	Radius 0.005
+
+	EllipticalOrbit
+	{
+		Period		0.4986300886260
+
+		SemiMajorAxis	26561.60812
+
+		Eccentricity	0.0205465
+
+		Inclination	55.089
+		AscendingNode	71.3978
+		ArgOfPericenter	253.1694
+		MeanAnomaly	104.59
+		Epoch		2454096.93536484
+
+	}
+}
+
+
+"NAVSTAR GPS IIA-16 PRN-01" "Sol/Earth"
+{
+        
+	Mesh "satellite.3ds"
+	Radius 0.005
+
+	EllipticalOrbit
+	{
+		Period		0.4986077599891
+		SemiMajorAxis	26560.81516
+		Eccentricity	0.0068744
+		Inclination	56.6866
+		AscendingNode	17.4286
+		ArgOfPericenter	258.7781
+		MeanAnomaly	100.5068
+		Epoch		2454097.71813042000
+	}
+}
+
+
+"NAVSTAR GPS IIA-17 PRN-29" "Sol/Earth"
+{
+        
+	Mesh "satellite.3ds"
+	Radius 0.005
+
+	EllipticalOrbit
+	{
+		Period		0.4985734691258
+		SemiMajorAxis	26559.59737
+		Eccentricity	0.0100506
+		Inclination	56.6159
+		AscendingNode	14.6926
+		ArgOfPericenter	312.584
+		MeanAnomaly	46.6242
+		Epoch		2454096.50079943
+	}       
+}
+
+
+"NAVSTAR GPS IIA-20 PRN-07" "Sol/Earth"
+{
+        
+	Mesh "satellite.3ds"
+	Radius 0.005
+
+	EllipticalOrbit
+	{
+		Period		0.4981409504265
+		SemiMajorAxis	26544.23462
+		Eccentricity	0.011086
+		Inclination	53.5775
+		AscendingNode	191.3999
+		ArgOfPericenter	262.244
+		MeanAnomaly	96.5675
+		Epoch		2454097.37619287
+	}
+}
+
+
+"NAVSTAR GPS IIA-21 PRN-09" "Sol/Earth"
+{
+        
+	Mesh "satellite.3ds"
+	Radius 0.005
+
+	EllipticalOrbit
+	{
+		Period		0.4986102063206
+		SemiMajorAxis	26560.90204
+		Eccentricity	0.0182993
+		Inclination	55.2032
+		AscendingNode	72.6894
+		ArgOfPericenter	74.4552
+		MeanAnomaly	287.5739
+		Epoch		2454097.62187607000
+	}      
+}
+
+
+"NAVSTAR GPS IIA-22 PRN-05" "Sol/Earth"
+{
+        
+	Mesh "satellite.3ds"
+	Radius 0.005
+
+	EllipticalOrbit
+	{
+		Period		0.4986180924223
+		SemiMajorAxis	26561.1821
+		Eccentricity	0.0074741
+		Inclination	53.7979
+		AscendingNode	130.0625
+		ArgOfPericenter	65.1593
+		MeanAnomaly	295.5842
+		Epoch		2454097.21567137000
+	}
+}
+
+
+"NAVSTAR GPS IIA-23 PRN-04" "Sol/Earth"
+{
+        
+	Mesh "satellite.3ds"
+	Radius 0.005
+
+	EllipticalOrbit
+	{
+		Period		0.4986056368713
+		SemiMajorAxis	26560.73976
+		Eccentricity	0.007651
+		Inclination	54.2861
+		AscendingNode	255.7886
+		ArgOfPericenter	10.5744
+		MeanAnomaly	349.6333
+		Epoch		2454097.26132042000
+	}
+}
+
+
+"NAVSTAR GPS IIA-24 PRN-06" "Sol/Earth"
+{
+        
+	Mesh "satellite.3ds"
+	Radius 0.005
+
+	EllipticalOrbit
+	{
+		Period		0.4985828828579
+		SemiMajorAxis	26559.93169
+		Eccentricity	0.0059692
+		Inclination	53.4888
+		AscendingNode	192.8831
+		ArgOfPericenter	259.171
+		MeanAnomaly	100.2346
+ 		Epoch		2454097.34390870000
+	}
+}
+
+
+"NAVSTAR GPS IIA-25 PRN-03" "Sol/Earth"
+{
+        
+	Mesh "satellite.3ds"
+	Radius 0.005
+
+	EllipticalOrbit
+	{
+		Period		0.4986071036604
+		SemiMajorAxis	26560.79185
+		Eccentricity	0.0088154
+		Inclination	53.0546
+		AscendingNode	189.4346
+		ArgOfPericenter	40.3892
+		MeanAnomaly	320.3295
+		Epoch		2454097.47940567
+	}
+}
+
+
+"NAVSTAR GPS IIA-26 PRN-10" "Sol/Earth"
+{
+        
+	Mesh "satellite.3ds"
+	Radius 0.005
+
+	EllipticalOrbit
+	{
+		Period		0.4986089657491
+		SemiMajorAxis	26560.85798
+		Eccentricity	0.0088154
+		Inclination	53.0546
+		AscendingNode	189.4346
+		ArgOfPericenter	40.3892
+		MeanAnomaly	320.3295
+		Epoch		2454097.4042765
+	}
+}
+
+
+"NAVSTAR GPS IIA-27 PRN-30" "Sol/Earth"
+{
+        
+	Mesh "satellite.3ds"
+	Radius 0.005
+
+	EllipticalOrbit
+	{
+		Period		0.4985928662270
+		SemiMajorAxis	26560.28623
+		Eccentricity	0.0088154
+		Inclination	53.0546
+		AscendingNode	189.4346
+		ArgOfPericenter	40.3892
+		MeanAnomaly	320.3295
+		Epoch		2454097.25960081000
+	}
+}
+
+
+"NAVSTAR GPS IIR-02 PRN-13" "Sol/Earth"
+{
+        
+	Mesh "satellite.3ds"
+	Radius 0.005
+
+	EllipticalOrbit
+	{
+		Period		0.4985957151402
+		SemiMajorAxis	26560.38741
+		Eccentricity	0.0088154
+		Inclination	53.0546
+		AscendingNode	189.4346
+		ArgOfPericenter	40.3892
+		MeanAnomaly	320.3295
+		Epoch		2454097.35436279000
+	}
+}
+
+
+"NAVSTAR GPS IIA-28 PRN-08" "Sol/Earth"
+{
+        
+	Mesh "satellite.3ds"
+	Radius 0.005
+
+	EllipticalOrbit
+	{
+		Period		0.4985700139502
+		SemiMajorAxis	26559.47466
+		Eccentricity	0.0097935
+		Inclination	55.9131
+		AscendingNode	77.4279
+		ArgOfPericenter	157.0299
+		MeanAnomaly	203.4235
+		Epoch		2454096.97722407000
+	}
+}
+
+
+"NAVSTAR GPS IIR-03 PRN-11" "Sol/Earth"
+{
+        
+	Mesh "satellite.3ds"
+	Radius 0.005
+
+	EllipticalOrbit
+	{
+		Period		0.4986052937931
+		SemiMajorAxis	26560.72758
+		Eccentricity	0.0061941
+		Inclination	51.2945
+		AscendingNode	245.7893
+		ArgOfPericenter	22.925
+		MeanAnomaly	337.4107
+		Epoch		2454097.62434057000
+	}
+}
+
+
+"NAVSTAR GPS IIR-04 PRN-20" "Sol/Earth"
+{
+        
+	Mesh "satellite.3ds"
+	Radius 0.005
+
+	EllipticalOrbit
+	{
+		Period		0.4985828033107
+		SemiMajorAxis	26559.92886
+		Eccentricity	0.0026142
+		Inclination	54.7151
+		AscendingNode	314.2783
+		ArgOfPericenter	72.9889
+		MeanAnomaly	287.2972
+		Epoch		2454097.22733182000
+	}
+}
+
+
+"NAVSTAR GPS IIR-05 PRN-28" "Sol/Earth"
+{
+        
+	Mesh "satellite.3ds"
+	Radius 0.005
+
+	EllipticalOrbit
+	{
+		Period		0.4985982682515
+		SemiMajorAxis	26560.47808
+		Eccentricity	0.0120789
+		Inclination	55.0641
+		AscendingNode	136.1222
+		ArgOfPericenter	232.7034
+		MeanAnomaly	126.1793
+		Epoch		2454097.06289622000
+	}
+}
+
+
+"NAVSTAR GPS IIR-06 PRN-14" "Sol/Earth"
+{
+        
+	Mesh "satellite.3ds"
+	Radius 0.005
+
+	EllipticalOrbit
+	{
+		Period		0.4986038469032
+		SemiMajorAxis	26560.6762
+		Eccentricity	0.00316
+		Inclination	56.5849
+		AscendingNode	15.833
+		ArgOfPericenter	241.9443
+		MeanAnomaly	117.7883
+		Epoch		2454097.66244421000
+	}
+}
+
+
+"NAVSTAR GPS IIR-07 PRN-18" "Sol/Earth"
+{
+        
+	Mesh "satellite.3ds"
+	Radius 0.005
+
+	EllipticalOrbit
+	{
+		Period		0.4986120833493
+		SemiMajorAxis	26560.9687
+		Eccentricity	0.0079263
+		Inclination	54.7428
+		AscendingNode	317.3082
+		ArgOfPericenter	212.6642
+		MeanAnomaly	146.8404
+		Epoch		2454097.53271239000
+	}       
+}
+
+
+"NAVSTAR GPS IIR-08 PRN-16" "Sol/Earth"
+{
+        
+	Mesh "satellite.3ds"
+	Radius 0.005
+
+	EllipticalOrbit
+	{
+		Period		0.4985608890370
+		SemiMajorAxis	26559.15059
+		Eccentricity	0.0036494
+		Inclination	55.1722
+		AscendingNode	135.5949
+		ArgOfPericenter	314.2326
+		MeanAnomaly	45.4551
+		Epoch		2454096.88719063000
+	}
+}
+
+
+"NAVSTAR GPS IIR-09 PRN-21" "Sol/Earth"
+{
+        
+	Mesh "satellite.3ds"
+	Radius 0.005
+
+	EllipticalOrbit
+	{
+		Period		0.4985963043174
+		SemiMajorAxis	26560.40833
+		Eccentricity	0.0118427
+		Inclination	53.92
+		AscendingNode	256.8683
+		ArgOfPericenter	195.0791
+		MeanAnomaly	164.6129
+		Epoch		2454097.45202559000
+	}
+}
+
+
+"NAVSTAR GPS IIR-10 PRN-22" "Sol/Earth"
+{
+        
+	Mesh "satellite.3ds"
+	Radius 0.005
+
+	EllipticalOrbit
+	{
+		Period		0.4985977809956
+		SemiMajorAxis	26560.46077
+		Eccentricity	0.0052267
+		Inclination	54.6045
+		AscendingNode	317.7457
+		ArgOfPericenter	265.5822
+		MeanAnomaly	93.8183
+		Epoch		2454097.57717084000
+	}
+}
+
+
+"NAVSTAR GPS IIR-11 PRN-19" "Sol/Earth"
+{
+        
+	Mesh "satellite.3ds"
+	Radius 0.005
+
+	EllipticalOrbit
+	{
+		Period		0.4985967468228
+		SemiMajorAxis	26560.42405
+		Eccentricity	0.0036828
+		Inclination	54.8786
+		AscendingNode	198.4939
+		ArgOfPericenter	299.561
+		MeanAnomaly	60.1471
+		Epoch		2454097.02102460000
+	}
+}
+
+
+"NAVSTAR GPS IIR-12 PRN-23" "Sol/Earth"
+{
+        
+	Mesh "satellite.3ds"
+	Radius 0.005
+
+	EllipticalOrbit
+	{
+		Period		0.4986048512726
+		SemiMajorAxis	26560.71186
+		Eccentricity	0.0046118
+		Inclination	55.5679
+		AscendingNode	14.8532
+		ArgOfPericenter	150.6197
+		MeanAnomaly	209.6944
+		Epoch		2454097.81135388
+	}
+}
+
+
+"NAVSTAR GPS IIR-13 PRN-02" "Sol/Earth"
+{
+        
+	Mesh "satellite.3ds"
+	Radius 0.005
+
+	EllipticalOrbit
+	{
+		Period		0.4986183435286
+		SemiMajorAxis	26561.19102
+		Eccentricity	0.0086138
+		Inclination	54.3181
+		AscendingNode	254.669
+		ArgOfPericenter	125.9047
+		MeanAnomaly	234.9431
+		Epoch		2454097.3094704
+	}
+}
+
+
+"NAVSTAR GPS IIR-14M PRN-17" "Sol/Earth"
+{
+        
+	Mesh "satellite.3ds"
+	Radius 0.005
+
+	EllipticalOrbit
+	{
+		Period		0.4986196786230
+		SemiMajorAxis	26561.23843
+		Eccentricity	0.002341
+		Inclination	54.999
+		AscendingNode	195.1179
+		ArgOfPericenter	180.6233
+		MeanAnomaly	179.4455
+		Epoch		2454097.16387268000
+	}
+}
+
+
+"NAVSTAR GPS IIR-15M PRN-31" "Sol/Earth"
+{
+        
+	Mesh "satellite.3ds"
+	Radius 0.005
+
+	EllipticalOrbit
+	{
+		Period		0.4985725618269
+		SemiMajorAxis	26559.56514
+		Eccentricity	0.006305
+		Inclination	55.0126
+		AscendingNode	74.6581
+		ArgOfPericenter	278.3402
+		MeanAnomaly	80.9606
+		Epoch		2454097.27211938000
+	}
+}
+
+
+"NAVSTAR GPS IIR-16M PRN-12" "Sol/Earth"
+{
+        
+	Mesh "satellite.3ds"
+	Radius 0.005
+
+	EllipticalOrbit
+	{
+		Period		0.5015205702473
+		SemiMajorAxis	26664.15823
+		Eccentricity	0.0030175
+		Inclination	55.0538
+		AscendingNode	134.98
+		ArgOfPericenter	245.5042
+		MeanAnomaly	114.156
+		Epoch		2454090.22902936000
+	}
+}
+
+

@@ -1,0 +1,4 @@
+ACTION=BrowsePictures;[CurrentFolder]
+THUMBNAIL=[DATADIR]\StereoPictures\Full size wolken beelden\0001.THB
+TITLE=Wolkenbeelden
+DESCRIPTION=Dit zijn enkele beelden van wolken

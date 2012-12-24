@@ -1,0 +1,118 @@
+\documentclass[10pt]{book}
+\usepackage{hyperref}
+
+\usepackage[pdftex]{graphicx}
+%\usepackage{calc}
+%\usepackage{wrapfig}
+
+\usepackage{mathpazo}
+\usepackage{url}
+
+\usepackage{listings}
+
+\setlength\topmargin{0in}
+%\setlength\headheight{0in}
+%\setlength\headsep{0in}
+\setlength\textheight{8.5in}
+\setlength\textwidth{6.5in}
+\setlength\oddsidemargin{0in}
+\setlength\evensidemargin{0in}
+
+\setlength\parindent{0in}
+\setlength\parskip{0.1in} 
+
+
+\renewcommand{\rmdefault}{\sfdefault}
+%\renewcomcmand{\familydefault}{\sfdefault}
+
+
+\usepackage[margin=0.5cm,font=small,labelfont=bf,justification=raggedright,singlelinecheck=false]{caption}
+
+
+\hypersetup{colorlinks=true,linkcolor=blue}
+
+\newcommand{\figref}[1]{Figure \ref{#1}}
+
+\newcommand{\linkitem}[1]{\hyperref[#1]{\nameref{#1} (\ref{#1})}}
+\newcommand{\sourcecode}[1]{\texttt{#1}}
+\newcommand{\filename}[1]{\texttt{#1}}
+\newcommand{\var}[1]{\textit{#1}}
+\newcommand{\term}[1]{\textit{#1}}
+
+\newcommand{\dispsourcecode}[1]{\makebox[0.05\linewidth]{}\begin{minipage}{0.95\linewidth}{\linewidth}\texttt{#1}\end{minipage}\\}
+
+%for animations
+\newcommand{\animation}[1]{\textit{#1}}
+\newcommand{\sep}{$\triangleright\,$}
+
+
+
+%\newcommand{\dispsourcecode2}[1]{\begin{verbatim}#1\end{verbatim}}
+
+\newcommand{\softwarename}{\textit{Z--Flux}}
+\newcommand{\scriptlang}{\textit{FluxScript}}
+\newcommand{\sourcewin}{\textit{source code window}}
+\newcommand{\renderwin}{\textit{rendering window}}
+\newcommand{\renderwins}{\textit{rendering windows}}
+\newcommand{\datadir}{\textit{data directory}}
+\newcommand{\objecttree}{\textit{Object Tree}}
+\newcommand{\functionspanel}{\textit{Functions Panel}}
+\newcommand{\objectspanel}{\textit{Objects Panel}}
+\newcommand{\sourcecodepanel}{\textit{Source Code Panel}}
+\newcommand{\varspanel}{\textit{Variables Panel}}
+\newcommand{\outputpanel}{\textit{Output Panel}}
+
+%\newcommand{\wrapbitmap}[2]{\begin{wrapfigure}{r}{0pt}%\includegraphics[scale=0.5]{bitmaps/#1.png}\caption{\label{#1}\textbf{#2}}\end{wrapfigure}}
+
+
+\newcommand{\important}[1]
+{
+\hspace{-1.0cm}
+\makebox[0.7cm]{\large{\textbf{\colorbox{yellow}{{!}}}}}
+\vline \ 
+\begin{minipage}{0.95\linewidth}
+#1
+\end{minipage}
+\\
+}
+
+
+
+%\author{The \softwarename\ development team}
+\title{\softwarename\ Manual (version 0.6)}
+\date{2010-09-08}
+
+\begin{document}
+
+\definecolor{stringgreen}{rgb}{0,0.7,0}
+\definecolor{lstnumcolor}{rgb}{0.6,0.6,0.6}
+
+\lstset{language=C++,basicstyle=\ttfamily,stringstyle=\color{stringgreen},showstringspaces=false}
+
+\lstset{numberstyle=\color{lstnumcolor},stepnumber=1,numbersep=8pt}
+
+\maketitle
+
+
+\frontmatter
+\tableofcontents
+
+
+\mainmatter
+
+
+
+\include{fundamentals}
+%\include{stereorendering}
+
+\include{userinterface}
+
+\include{stereopictures}
+
+\include{scriptdevelopment}
+
+\include{scriptdoc}
+
+
+
+\end{document}

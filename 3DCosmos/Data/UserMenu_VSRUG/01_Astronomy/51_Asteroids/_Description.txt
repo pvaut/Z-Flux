@@ -1,0 +1,4 @@
+ACTION=RunScript;[CurrentFolder]\asteroids.SCI
+THUMBNAIL=[CurrentFolder]\_thumbnail.THB
+TITLE=Planetoïds
+DESCRIPTION=Animation of the planetoïd belt in our solar system

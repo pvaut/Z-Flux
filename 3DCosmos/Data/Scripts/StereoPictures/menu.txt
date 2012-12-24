@@ -1,0 +1,8 @@
+LoadExternalStereoPictures;Browse for Stereo Pictures...
+StereoPictures;Show Stereo Pictures
+SlideShows;Play Slide Show
+StereoPanoramas;Show Stereo Panoramas
+StereoVideos;Show Stereo Videos
+-
+CreateThumbNails;Create Stereo Thumbnails
+StereoPictureSettings;Stereo Picture Settings...

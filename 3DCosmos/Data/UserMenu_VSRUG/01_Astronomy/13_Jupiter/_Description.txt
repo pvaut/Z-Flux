@@ -1,0 +1,4 @@
+ACTION=RunScript;[CurrentFolder]\jupiter.SCI
+THUMBNAIL=[CurrentFolder]\_thumbnail.THB
+TITLE=Jupiter
+DESCRIPTION=Animation of Jupiter and moons

@@ -1,0 +1,3 @@
+THUMBNAIL=[CurrentFolder]\_thumbnail.THB
+TITLE=Courses
+DESCRIPTION=Course animations of some important space vehicles

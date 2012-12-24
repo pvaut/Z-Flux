@@ -1,0 +1,147 @@
+\chapter{Stereo pictures}
+
+\softwarename\ comes with a number of pre--defined animations that make it a powerful software for browsing stereo pictures and for making beautiful slideshows of stereo pictures, using real 3D transition effects, sounds and text overlays.
+
+Stereo pictures have to be in jpeg format, and the left and right eye picture should be stored side by side in a single image file, with the same resolution. The actual resolution (number of pixels) and the aspect ratio can be chosen freely for each picture, and does not have to correspond to the resolution and aspect ratio of the 3D display system. \softwarename\ will automatically rescale everything to the correct dimensions.
+
+\important{Creating good-looking stereo pictures in an art by itself. Look on the web for recommendations on how to create proper stereo pictures, and for software that assists in this.}
+
+\section{Stereo foto browser}
+
+\begin{figure}
+\includegraphics[width=120mm]{bitmaps/stereobrowser.jpg}
+\caption{A screen view of the stereobrowser (in monoscopic representation).}
+\label{stereobrowser}
+\end{figure}
+
+
+The script \animation{Stereo pictures \sep Browse Stereo pictures} can be used as a fancy browser for stereo pictures. On the proper hardware (see \ref{stereorendering} for more details), the stereo pictures as well as the thumbnails will be displayed in 3D.
+
+
+\subsection{Setting up the browser}
+
+Th script \animation{Stereo pictures \sep Stereo picture settings} can be used to set some basic properties of the stereo browser. The browser will automatically look for stereo foto content in subfolders of a specific \term{stereo pictures folder}. Default (if nothing is filled in), the subdirectory \filename{StereoPictures} of the \datadir\ is used, but you can specify any other folder on your system.
+
+A second parameter is the number of rows that will be shown by the browser when the thumbnails are previewed. This number can range between 2 and 6.
+
+Before using the browser, you should create stereo thumbnails for each stereo picture in your stereo picture folder. You can do this with the script \animation{Stereo pictures \sep Create Thumbnails}. When you launch this script, it will automatically scan all subdirectories of the current stereo picture folder, and create thumbnails for new pictures or for pictures that have been modified since the last thumbnail generation. Note that, for large sets of pictures, this may take a while.
+
+\subsection{Using the browser}
+
+When you launch the browser (\animation{Stereo pictures \sep Browse Stereo pictures}), it will first display a menu with all the subdirectories of the \term{stereo pictures folder} (subdirectories of subdirectories will appear as submenu items). You can select any folder and press Enter to start browsing through the thumbnails of the stereo pictures in this folder. To navigate through the thumbnails, you can use the arrow keys, or you can move the mouse.
+
+At any time, there is an active picture that is highlighted and surrounded by an orange triangle. The active picture will automatically change if you navigate through the thumbnails. You can show the active picture in full screen by pressing the Enter key, or by clicking the left mouse button. In this full screen view, you can jump to the next or previous image with the Down and Up arrow keys, or return to the thumbnail overview by pressing Enter, Escape or by clicking the left mouse button. To exit the browser, press Escape while in thumbnail mode.
+
+\section{Stereo photo slideshows}
+\softwarename can be used to create fancy slideshows for stereo pictures that can be rendered in 3D, including 3D transition effects, sounds and text overlays. This functionality is provided in the pre--installed script \animation{Stereo pictures \sep Slide shows}.
+
+A slide show is created by the user a as a very simple version of a \scriptlang script file (see chapter \ref{scriptdevelopment}). All slide show scripts should be placed in the subdirectory \filename{SlideShows} of the \datadir, and have the file extension \filename{.SCI}. Such a slide show script file contains all the directives to build up a show. When \animation{Stereo pictures \sep Slide shows} is launched, it will show a menu with an overview of all slide show scripts in the \filename{SlideShows} subdirectory. The user can pick one and press Enter to start it.
+
+Below is the listing of a sample slide show script:
+
+\begin{lstlisting}[numbers=left]
+Picturefolder(datadir+"\StereoPictures\Sample set");
+Transition("Curtain",2);
+SoundFolder(datadir+"\sounds");
+
+PlaySound("sound3.mp3",1000);
+Delay(1);
+
+ShowStereoPic("0001");
+Delay(2);
+ShowText("This is the first picture",point(-0.25,-0.2,0.1),
+         "Size":0.05,"Color":color(1,0.7,0));
+Delay(10);
+
+ShowStereoPic("0002");
+Delay(2);
+ShowText("And this is the second",point(-0.25,-0.2,0.1),
+         "Size":0.05,"Color":color(1,0.7,0));
+Delay(10);
+
+ShowStereoPic("0003");
+Delay(10);
+
+ShowStereoPic("0004");
+Delay(10);
+
+ShowStereoPic("0005");
+FadeSound("sound3.mp3",0,10);
+Delay(10);
+
+end;
+\end{lstlisting}
+
+Lines 1--6 contain some initial setup. In line 1, the directory is specified where the stereo pictures are to be looked for. Note that \sourcecode{datadir} is a script function that automatically returns the \datadir\ (see \ref{F:DataDir}). In line 2, the current transition effect is specified and the duration of each transition. Line 3 sets the directory where sound files will be loaded from. Line 5 starts a music.
+
+The remainder of the file describes the sequence of pictures. For example, line 8 shows the stereo picture \filename{0001}. Line 10 adds some text in overlay, and line 12 introduces a delay of 10 seconds. Line 27 fades out the music and line 30 ends the show.
+
+\subsection{List of slide show commands}
+
+\subsubsection{PictureFolder(Foldername)}
+Sets the current location where the script will look for the stereo pictures. Note that you can repeat this command at any time in the slide show script to take pictures from a different location.
+
+\subsubsection{VideoFolder(Foldername)}
+Sets the current location where the script will look for the stereo videos. Note that you can repeat this command at any time in the slide show script to take videos from a different location.
+
+\subsubsection{Transition(Type, Delay)}
+Specifies the current transition type and duration of the transition (in seconds). Current transitions effects include the following options:
+\begin{description}
+\item[Fade] fades previous to black and then fades next in
+\item[Curtain] applies a 3D curtain--like effect to move prevous out and next in
+\item[Transient] cross-fades previous and next simultaneously
+\item[Zoom] Zoom and fade out of previous, and zoom and fade in of next
+\end{description}
+
+\subsubsection{ShowStereoPic(Imagename, \textit{optional extra arguments})}
+Shows a new stereo picture. The extra arguments can take the form of
+\begin{description}
+\item["Size":value] specifies the size of the picture on the screen (``1'' is full--screen).
+\item["Position":point(x,y,z)] specifies the 3D position where the picture should be shown. Default is $(0,0,0)$. The $Z$--dimension corresponds to the distance from the viewer.
+\end{description}
+Note that you can show more than one stereo picture simultaneously. You can use the optional Size and Position arguments to arrange several pictures on the screen.
+
+\subsubsection{HideStereoPic(Imagename)}
+Removes a visible stereo picture.
+
+\subsubsection{panstereopic(imagename, \textit{optional extra arguments}))}
+Pans a stereo picture to a new position. The extra arguments can take the form of
+\begin{description}
+\item["Duration":value] specifies the duration of the panning action in seconds.
+\item["Position":point(x,y,z)] specifies the new target 3D position where the picture should be panned to.
+\end{description}
+
+\subsubsection{AutoHidePrevious(NewStatus)}
+Determines whether or not the previous picture will automatically be removed when the next is shown. \sourcecode{NewStatus} can be \sourcecode{True} or \sourcecode{False}. (default is \sourcecode{True}).
+
+\subsubsection{showstereovideo(filename)}
+Plays a stereo video.
+
+
+\subsubsection{ShowText(Content, Position, \textit{optional extra arguments})}
+Shows the string \sourcecode{Content} on top of the current picture, at the specified position (provided as \sourcecode{Point(x,y,z)}. Optional arguments include:
+\begin{description}
+\item["Size":value] specifies the size of the text.
+\item["Color":Color(r,g,b)] specifies the color of the text, using the Red (r), Green (g) and Blue (b) values, each one ranging between $0$ and $1$.
+\end{description}
+
+\subsubsection{SoundFolder(Foldername)}
+Sets the current location where script will look for the sound files. Note that you can repeat this command at any time in the slide show script to take sound files from a different location.
+
+\subsubsection{PlaySound(Filename, Volume)}
+Plays a sound file at a specific volume
+
+\subsubsection{StopSound(Filename)}
+Stops the playing of a sound file.
+
+\subsubsection{FadeSound(Filename, NewVolume, Duration)}
+Fades in or out a playing sound file to a new volume, over a specific period of time (in seconds).
+
+\subsubsection{Delay(Duration)}
+Tells the script to wait for a specified number of seconds.
+
+\subsubsection{End}
+Indicates the end of the show. \softwarename\ will return to the start menu.
+
+\subsubsection{Loop}
+Indicates that the show should continue from the top of the script. This can be used to create slide shows that run in an auto repeat mode.

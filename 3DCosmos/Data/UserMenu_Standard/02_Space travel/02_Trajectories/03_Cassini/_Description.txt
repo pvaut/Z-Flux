@@ -1,0 +1,4 @@
+ACTION=RunScript;[DATADIR]\Scripts\Space\Trajectories\cassini overview.sci
+THUMBNAIL=[CurrentFolder]\_thumbnail.THB
+TITLE=Cassini
+DESCRIPTION=Traject of Cassini to Saturnus

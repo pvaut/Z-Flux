@@ -1,0 +1,4 @@
+ACTION=RunScript;[CurrentFolder]\saturnus.SCI
+THUMBNAIL=[CurrentFolder]\_thumbnail.THB
+TITLE=Saturnus
+DESCRIPTION=Animation of Saturnus and moons

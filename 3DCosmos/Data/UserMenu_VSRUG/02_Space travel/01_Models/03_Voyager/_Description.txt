@@ -1,0 +1,4 @@
+ACTION=RunScript;[CurrentFolder]\voyager.SCI
+THUMBNAIL=[CurrentFolder]\_thumbnail.THB
+TITLE=Voyager II
+DESCRIPTION=3D model of Voyager II

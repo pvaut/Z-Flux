@@ -1,0 +1,4 @@
+ACTION=RunScript;[DATADIR]\Scripts\Space\Trajectories\Voyager 2 zoom jupiter.sci
+THUMBNAIL=[CurrentFolder]\_thumbnail.THB
+TITLE=Voyager II & Jupiter
+DESCRIPTION=Passage of Voyager II close by Jupiter

@@ -1,0 +1,27 @@
+// Polygon.cpp: implementation of the CPolygon class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+#include "MFCTess.h"
+#include "Polygon.h"
+
+#ifdef _DEBUG
+#undef THIS_FILE
+static char THIS_FILE[]=__FILE__;
+#define new DEBUG_NEW
+#endif
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+CPolygon::CPolygon()
+{
+
+}
+
+CPolygon::~CPolygon()
+{
+
+}

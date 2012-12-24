@@ -1,0 +1,3 @@
+THUMBNAIL=[DATADIR]\StereoPictures\Wintervoorstelling\sneeuw\0001.THB
+TITLE=Winter
+DESCRIPTION=Diverse aspecten van de winter...

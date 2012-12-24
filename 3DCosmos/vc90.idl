@@ -1,0 +1,208 @@
+import "docobj.idl";
+
+#line 16 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+interface IVector3D;
+#line 18 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+interface _ISensorEvents;
+#line 21 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+interface ISensor;
+#line 23 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+interface _IKeyboardEvents;
+#line 26 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+interface IKeyboard;
+#line 28 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+interface _ISimpleDeviceEvents;
+#line 31 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+interface ISimpleDevice;
+#line 34 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+interface ITDxInfo;
+[
+	uuid(1ef2baff-54e9-4706-9f61-078f7134fd35),
+	dual
+] 
+#line 60 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+interface IAngleAxis : IDispatch {
+#line 66 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	[propget,id(1)] HRESULT  X([out,retval] double *pVal);
+#line 68 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	[propput,id(1)] HRESULT  X([in] double pVal);
+#line 70 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	[propget,id(2)] HRESULT  Y([out,retval] double *pVal);
+#line 72 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	[propput,id(2)] HRESULT  Y([in] double pVal);
+#line 74 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	[propget,id(3)] HRESULT  Z([out,retval] double *pVal);
+#line 76 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	[propput,id(3)] HRESULT  Z([in] double pVal);
+#line 78 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	[propget,id(4)] HRESULT  Angle([out,retval] double *pVal);
+#line 80 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	[propput,id(4)] HRESULT  Angle([in] double pVal);
+};
+
+[
+	uuid(8c2aa71d-2b23-43f5-a6ed-4df57e9cd8d5),
+	dual
+] 
+#line 89 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+interface IVector3D : IDispatch {
+#line 95 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	[propget,id(1)] HRESULT  X([out,retval] double *pVal);
+#line 97 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	[propput,id(1)] HRESULT  X([in] double pVal);
+#line 99 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	[propget,id(2)] HRESULT  Y([out,retval] double *pVal);
+#line 101 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	[propput,id(2)] HRESULT  Y([in] double pVal);
+#line 103 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	[propget,id(3)] HRESULT  Z([out,retval] double *pVal);
+#line 105 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	[propput,id(3)] HRESULT  Z([in] double pVal);
+#line 107 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	[propget,id(4)] HRESULT  Length([out,retval] double *pVal);
+#line 109 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	[propput,id(4)] HRESULT  Length([in] double pVal);
+};
+
+[
+	uuid(f3a6775e-6fa1-4829-bf32-5b045c29078f),
+	dual
+] 
+#line 130 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+interface ISensor : IDispatch {
+#line 136 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	[propget,id(1)] HRESULT  Translation([out,retval] IVector3D **pVal);
+#line 138 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	[propget,id(2)] HRESULT  Rotation([out,retval] IAngleAxis **pVal);
+#line 140 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	[propget,id(3)] HRESULT  Device([out,retval] IDispatch **pVal);
+#line 142 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	[propget,id(4)] HRESULT  Period([out,retval] double *pVal);
+};
+
+[
+	uuid(d6f968e7-2993-48d7-af24-8b602d925b2c),
+	dual
+] 
+#line 166 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+interface IKeyboard : IDispatch {
+#line 172 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	[propget,id(1)] HRESULT  Keys([out,retval] long *pVal);
+#line 174 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	[propget,id(2)] HRESULT  ProgrammableKeys([out,retval] long *pVal);
+#line 176 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	[id(3)] HRESULT  GetKeyLabel([in] long key, [out,retval] BSTR *label);
+#line 179 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	[id(4)] HRESULT  GetKeyName([in] long key, [out,retval] BSTR *name);
+#line 182 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	[propget,id(5)] HRESULT  Device([out,retval] IDispatch **pVal);
+#line 184 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	[id(6)] HRESULT  IsKeyDown([in] long key, [out,retval] VARIANT_BOOL *isDown);
+#line 187 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	[id(7)] HRESULT  IsKeyUp([in] long key, [out,retval] VARIANT_BOOL *isUp);
+};
+
+[
+	uuid(cb3bf65e-0816-482a-bb11-64af1e837812),
+	dual
+] 
+#line 210 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+interface ISimpleDevice : IDispatch {
+#line 216 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	[id(1)] HRESULT  Connect();
+	[id(2)] HRESULT  Disconnect();
+	[propget,id(3)] HRESULT  Sensor([out,retval] ISensor **pVal);
+#line 220 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	[propget,id(4)] HRESULT  Keyboard([out,retval] IKeyboard **pVal);
+#line 222 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	[propget,id(5)] HRESULT  Type([out,retval] long *pVal);
+#line 224 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	[propget,id(6)] HRESULT  IsConnected([out,retval] VARIANT_BOOL *pVal);
+#line 226 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	[id(7)] HRESULT  LoadPreferences([in] BSTR PreferencesName);
+};
+
+[
+	uuid(00612962-8fb6-47b2-bf98-4e8c0ff5f559),
+	dual
+] 
+#line 235 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+interface ITDxInfo : IDispatch {
+#line 241 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	[id(1)] HRESULT  RevisionNumber([out,retval] BSTR *revision);
+};
+
+
+[ version(1.0), uuid(a81093ac-8a5e-3615-b089-d8c6d605cb09) ]
+library Zflux
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		uuid(e6929a4a-6f41-46c6-9252-a8cc53472cb1)
+	] 
+#line 114 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	dispinterface _ISensorEvents {
+	properties:
+
+	methods:
+#line 121 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+		[id(1)] HRESULT  SensorInput();
+	};
+
+	[
+		uuid(6b6bb0a8-4491-40cf-b1a9-c15a801fe151)
+	] 
+#line 147 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	dispinterface _IKeyboardEvents {
+	properties:
+
+	methods:
+#line 154 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+		[id(1)] HRESULT  KeyDown([in] int keyCode);
+#line 156 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+		[id(2)] HRESULT  KeyUp([in] int keyCode);
+	};
+
+	[
+		uuid(8fe3a216-e235-49a6-9136-f9d81fdadef5)
+	] 
+#line 193 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+	dispinterface _ISimpleDeviceEvents {
+	properties:
+
+	methods:
+#line 200 "d:\\sourcecode\\z-flux\\3dcosmos\\tdxinput.tlh"
+		[id(1)] HRESULT  DeviceChange([in] long reserved);
+	};
+
+	[
+		uuid(5BB1322E-5E07-33DA-A587-159FF87EE376),
+		version(1.0),
+		noncreatable
+	] 
+	coclass __Impl__ISimpleDeviceEvents {
+		[default] interface IUnknown;
+	};
+
+	[
+		uuid(79E329DD-66A0-3299-A46D-17C76E7BD580),
+		version(1.0),
+		noncreatable
+	] 
+	coclass __Impl__ISensorEvents {
+		[default] interface IUnknown;
+	};
+
+	[
+		uuid(DFE48A04-131B-3D9F-8536-BA63D874CB8A),
+		version(1.0),
+		noncreatable
+	] 
+	coclass __Impl__IKeyboardEvents {
+		[default] interface IUnknown;
+	};
+
+}
+

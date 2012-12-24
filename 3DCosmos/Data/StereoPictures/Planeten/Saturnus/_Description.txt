@@ -1,0 +1,4 @@
+ACTION=RunScript;[DATADIR]\Scripts\Astronomy\04_Saturnus\Saturnus + Moons.SCI
+THUMBNAIL=[DATADIR]\StereoPictures\Folder 1\screendump4.THB
+TITLE=Saturnus
+DESCRIPTION=De planeet saturnus

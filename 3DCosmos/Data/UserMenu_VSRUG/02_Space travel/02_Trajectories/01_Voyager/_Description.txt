@@ -1,0 +1,4 @@
+ACTION=RunScript;[DATADIR]\Scripts\Space\Trajectories\Voyager 2 overview.sci
+THUMBNAIL=[CurrentFolder]\_thumbnail.THB
+TITLE=Voyager II
+DESCRIPTION=Traject of Voyager II through the solar system

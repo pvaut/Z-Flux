@@ -1,0 +1,18 @@
+Z-Flux is almost entirely script driven. Scripts are text files with the extension \filename{.sci}, and contain source code written in a special, simple but powerful rendering language, called \scriptlang. The software comes with a number of \textbf{ready--to--use} sample scripts, but you are free to write your own script, or adapt the existing ones. An introduction on programming in \scriptlang\ can be found in chapter \ref{scriptdevelopment}.
+
+Everything in the software is driven by a script: the animations itself, but also the startup screen and the tool for changing the settings. \softwarename\ comes with a set of pre--defined scripts, but nothing prevents you from modifying these scripts, and overrule the default behaviour. In this way, \softwarename\ can be completely adapted to your desires.
+
+The software has two types of windows, the \sourcewin\ and the \renderwin. There is always exactly one \sourcewin\ present when the software starts, and this window is used for the development and testing of animation scripts. During an animation, this window is not visible.
+
+There can be zero, one or more \renderwins, depending on the current state of the software. These are the windows where the actual renderings are visualised. Typically, there will be one \renderwin\ that fills the entire display of the computer, and the \sourcewin\ is obscured behind this \renderwin. Should you want to pop op the \sourcewin\ in order to start editing scripts, you can activate it with the standard Windows tools (such as the Alt+TAB keyboard combination).
+
+\section{Data organisation and settings}
+
+Settings in \softwarename\ are specified in the scripts. There is only one setting that is optionally is stored in the registry: the \datadir\ where \softwarename\ looks for its data. This directory is stored in the registry in \filename{HKEY CURRENT USER/Software/Z-Flux/Z-Flux/Settings/DataDirectory}. It can also be set in the settings dialog box, accessible from the  \sourcewin. If no \datadir\ is specified in the registry, the software looks in the default location, which is the "Data" subdirectory of the folder where the executable was started from.
+
+
+The \datadir\ contains a large amount of data files that are crucial for the correct functioning of the software. These files are organised into a number of subdirectories. It also contains a subdirectory ``Scripts'', where all the animation scripts are stored. Note that \softwarename\ should have read and write privileges on this directory, without the need to become an administrator. This is particularly important for Windows Vista or Windows 7, because the Program Files directory is read--only for a normal user. On these operating  systems, you should make sure that the \datadir\ is not under this directory.
+
+Each time the software starts, it looks for a script called \filename{\_init.sci} in the ``Scripts'' subdirectory of the \datadir\ and executes it automatically. This script is responsible for the initialisation and configuration of the rendering window. 
+
+After completion of the script \filename{\_init.sci}, the software automatically looks in the same location for a second script called  \filename{\_autorun.sci}. This script is be used to automatically start an animation. The default implementation of \filename{\_autorun.sci} is to start the pre--installed animation script \filename{\_menu.sci}, which shows a menu on the screen that allows the user to navigate through all the animation scripts that are currently present, and start them.

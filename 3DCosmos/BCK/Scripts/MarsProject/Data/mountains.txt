@@ -1,0 +1,24 @@
+Mountain Name  	North latitude	West longitude	Feature diameter	Peak elevation
+Albor Tholus	19.0	209.6	170.0	  4.5
+Arsia Mons	-8.4	121.1	475.0	16.0
+Ascraeus Mons	11.9	104.5	460.0	18.0
+Ausonia Montes	-27.7	261.2	158.0	
+Ceraunius Tholus	24.2	  97.4	130.0	
+Charitum Montes	-58.3	  40.2	850.0  	
+Elysium Mons	25.0	213.1	410.0	12.5
+Geryon Montes	-7.8	  82.0	359.0	
+Gonnus Mons	41.6	91.0	  57.0	
+Hecates Tholus	32.4	209.8	183.0	
+Hellas Montes	-37.9	262.3	153.0	
+Hellespontus Montes	-44.7	317.2	729.6	
+Hibes Montes	  3.7	188.7	137.0	
+Issedon Tholus	36.3	95.0	  52.0	
+Libya Montes	  2.8	271.1	1,170.0	
+Nereidum Montes	-38.9  	  44.0	1,130.0	
+Olympus Mons	18.6	134.0	648.0	27.0
+Pavonis Mons	  0.8	113.4	375.0	  8.7
+Phlegra Montes	41.1	194.8	1,352.0	
+Tanaica Montes	39.8	91.1	177.0	
+Tharsis Tholus	13.5	  90.8	158.0	
+Tyrrhena Mons	-21.57	253.57	143.0	
+Uranius Tholus	26.4	97.7	62.0  	

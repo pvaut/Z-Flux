@@ -1,0 +1,122 @@
+\chapter{User interface}
+
+\section{Introduction}
+
+\important{
+An animation script may disable and/or override the default UI actions. The following sections describe the default behaviour.
+}
+
+The software supports four different types of input devices: the keyboard, the mouse, a 3D mouse (SpaceNavigator or equivalent) or a gamepad (or joystick). Generally spoken, the user can interact with an animation in three possible ways:
+\begin{description}
+\item[Position.] The scene is viewed through a fictitious ``camera''. The user can change the position and direction of that camera.
+\item[Time.] For animations that evolve over time (e.g. the movement of the Planets around the Sun), the script often applies an artificial time speedup factor in order to visuale phenomenons that would take too long to show up in real time. The user can change this time speedup factor, pauze the time evolution or even reverse the direction of time.
+\item[UI Controls.] Some scripts display additional controls, such as check boxes, buttons or menu's. These controls can be used to change the behaviour of an animation.
+\end{description}
+
+\section{Keyboard shortcut keys}
+Several important actions are only available through keyboard shortcuts. The following table gives an overview of the default keyboard shortcuts that are of general use in most scripts. Note that a specific script may override, disable or add specific keyboard shortcuts.
+
+\begin{tabular}{ l p{1.5cm} p{11cm} }
+\hline
+Keyboard & Gamepad key nr. & Function
+\\ \hline
+
+F1 & 1 & Show or hide cursor 
+\\
+F2 & 2 & Show or hide user interface controls
+\\
+F3 & 3 & Pauze or resume the animation
+\\
+Shift+F3 & 8+3 & Reverse the time direction of the animation
+\\
+Enter & 5 & Execute a menu item, presses a UI button or changes the state of an UI checkbox
+\\
+Escape & 7 & Stop the animation
+\\
+Ctrl+Z & & Force the animation to stop (interrupt script)
+\\
+Ctrl+S & & Switch between mono and stereo view
+\\
+Ctrl+L & & Show or hide colored depth layers
+\\
+Ctrl+G & & Show or hide stereo align grid
+\\
+Ctrl+I & & Show or hide status line
+\\
+ctrl+P & & Copy the camera position to the clipboard
+\\
+ctrl+Shift+P & & Copy the cursor position to the clipboard
+\\
+ctrl+E & & Saves the current scene image to \filename{screendump.jpg} in the \datadir.
+\\
+\hline
+\end{tabular}
+
+
+\section{User navigation}
+
+Navigating both in space and time is an important aspect of the interaction between the user and an animation. \softwarename\ uses the metaphor of a virtual camera through which the scene of the animation is seen. There is a variety of ways in which the user can control space and time through one or more of the input devices attached to the computer. To understand the logic behind this, two concepts are crucial: Axes and Modifiers. The activation of an Axis, accompanied by a Modifier, triggers a specific effect.
+
+The following table gives a list of all available Axes, and how they can be activated using the keyboard, mouse or gamepad:
+
+\begin{tabular}{l l l l}
+\hline
+Axis & Keyboard & Mouse & Gamepad \\ \hline
+X & Arrow Left/Right & Move left/right  & Joystick 2 left/right \\
+Y & Arrow Up/Down & Move up/down & Joystick 2 up/down \\
+Z & Page Up/Down & Mouse wheel & Joystick 1 up/down\\
+\hline
+\end{tabular}
+
+The following table gives a list of all modifiers, and how they can be activated on the keyboard, mouse or gamepad:
+
+\begin{tabular}{l l l}
+\hline
+Modifier & Keyboard and Mouse & Gamepad \\ \hline
+M0 & Press shift key & \textit{no extra button} \\
+M1 & Press control key & Press button 6 \\
+M2 & \textit{no extra key} & Press button 8 \\
+\hline
+\end{tabular}
+
+Finally, the following table enumerates the effects of the activation of an axis, combined with a modifier:
+
+\begin{tabular}{l l l l}
+\hline
+Modifier & Axis & Effect \\ \hline
+M0 & X & Rotate camera horizontal \\
+M0 & Y & Rotate camera vertical \\
+M0 & Z & Move camera foward/back \\
+M1 & X & Rotate scene horizontal \\
+M1 & Y & Rotate scene vertical \\
+M1 & Z & Zoom scene \\
+M2 & X & No effect \\
+M2 & Y & No effect \\
+M2 & Z & Modify time speed  \\
+\hline
+\end{tabular}
+
+NOTE: If the cursor is displayed (e.g. by pressing the F1 key), the M2 modifier combined with an axis moves the cursor over the scene (see \ref{thecursor}).
+
+In order to further illustrate how the combination of an axis and a modifier gives a specific effect, the following list gives some examples:
+\begin{itemize}
+\item Rotate the camera to the right: press the Shift key + Right arrow (Shift triggers Modifier M0 and the Right arrow triggers the X axis). You can also press the Shift key while moving the mouse to the right. The same effect can be obtained by moving the Joystick 2 to the right on a gamepad.
+\item Increase the time speed: press the Page Up key (triggering the Z axis; Modifier M2 corresponds to pressing no extra key on the keyboard). On the gamepad, you can move joystick 1 up while pressing button 8.
+\end{itemize}
+
+Note that, if present, \softwarename also supports the usage of a 3D mouse (SpaceNavigator), which provides the most powerful and flexible way of navigating through the 3D space.
+
+\section{User interface controls}
+Some scripts show special UI controls on top of the animation, allowing the user to control certain aspects of the animation. While the animation is running, the user can chose to hide or display these controls by pressing the F2 key (sometimes, it may be preferrable to have an uncluttered view on the scene by temporarily hiding these controls). When controls are displayed, there is always one control active, and surrounded by a green rectangle. The status of the active control can be modified by the user. Switching the active control can be done using the keyboard by pressing the TAB key, the Left/Right arrow keys. On the gamepad, the Left/Right buttons of the rocker pad have the same effect.
+
+\begin{description}
+\item[Editbox.] Used to enter text. When active, the user can type text using the keyboard, and erase with the Back key. 
+\item[Valuebox.] Used to enter a numerical value. The control displays both the value and a graphic visualisation on a slider. When active, the value is modified using the Up/Down arrow keys.
+\item[Checkbox.] Used to enter a boolean (yes/no) status. When active, pressing the Enter key changes the status.
+\item[Listbox.] Used to pick a value from a list of choices. When active, using the Up and Down arrow keys changes the selection.
+\item[Menu.] Used to present a menu with optional submenu's. The items are arranged vertically, and optional submenu's are displayed on the right of the parent item (with an arrow indicating that this item contains a submenu). When active, the Up/Down arrow keys navigate through a list of menu items at the same level, the Right arrow key enters a submenu (if any), and the Left arrow key jumps to the parent menu item of the current submenu (if applicable). Enter executes the selected menu item. Some menu items may have a checked/unchecked state.
+\item[Button.] Represents an action button. When active, pressing the Enter key executes the associated action.
+\end{description}
+
+\section{The cursor \label{thecursor}}
+In almost every animation, it is possible to show a cursor in order to point to specific aspects of the scene. This cursor is displayed as a yellow arrow. Pressing the F1 key (or button 1 on the gamepad) toggles the presence or absense of the cursor. When the cursor is active, it can be moved by the mouse (with the scroll wheel acting as the third dimension), or with the gamepad using joystick 2 while pressing button 8.
