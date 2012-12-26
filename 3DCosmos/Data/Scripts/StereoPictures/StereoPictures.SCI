@@ -1,5 +1,6 @@
 
 codeblock readtextfile(ScriptDir+"\_TOOLS.sci");
+codeblock readtextfile(ScriptFilePath+"\_StereoPicTools.sci");
 
 
 ###############################################################################################
@@ -10,39 +11,51 @@ ycount=ReadSetting("StereoBrowserRows",3);
 currentfolder=DataDir+"\StereoPictures";
 
 
-
-
-
 ###############################################################################################
 # SHOW ZOOMED IMAGE FUNCTION AND RENDER LOOP
 ###############################################################################################
 
 
+function CreateStereoPair(info,bmp) {
+   pair=map;
+   if info.tpe=='side' then {
+      pair.xr=bmp.xres/2;
+      pair.yr=bmp.yres;
+      pair.bmp1=bmp.crop(0,0,pair.xr,pair.yr);
+      pair.bmp2=bmp.crop(pair.xr,0,pair.xr,pair.yr);
+   }
+   if info.tpe=='anaglyph' then {
+      pair.xr=bmp.xres;
+      pair.yr=bmp.yres;
+      pair.bmp1=bmp.ConvertGray(1);
+      pair.bmp2=bmp.ConvertGray(3);
+   }
+   return(pair);
+}
+
 function loadimage(picname)
 {
+   info=GetPicInfo(currentfolder,picname);
    bmp=loadbitmap(currentfolder+"\"+picname+".jpg");
-   xr=bmp.xres/2;
-   yr=bmp.yres;
-   bmp1=bmp.crop(0,0,xr,yr);
-   bmp2=bmp.crop(xr,0,xr,yr);
+   pair=CreateStereoPair(info,bmp);
    
-   frx=vp.aspectratio/xr;
-   fry=1/yr;
+   frx=vp.aspectratio/pair.xr;
+   fry=1/pair.yr;
    fr=min(frx,fry);
    fr=fr*2*tan(vp.Aperture/2);
       
    imageframe=sss.Universe.addsubframe("ImageFrame");
-   tx1=imageframe.CreateBitmapTexture("tx1",bmp1);
-   tx2=imageframe.CreateBitmapTexture("tx2",bmp2);
+   tx1=imageframe.CreateBitmapTexture("tx1",pair.bmp1);
+   tx2=imageframe.CreateBitmapTexture("tx2",pair.bmp2);
    
-   sizex=fr*xr;
-   sizey=fr*yr;
+   sizex=fr*pair.xr;
+   sizey=fr*pair.yr;
    
    b=imageframe.add("Rectangle","Axis1":vector(sizex,0,0),"Axis2":vector(0,sizey,0),
       "position":point(-0.5*sizex,-0.5*sizey,-0.0001),"EnableLight":false,
       "Texture":tx1.name,
       "TextureRight":tx2.name,
-      "color":color(1,1,1));
+      "color":info.col);
    return(b);
 }
 
@@ -229,20 +242,22 @@ foreach picfile in piclist do {
    thumbframe=columnframe.addsubframe(picname);thumbframes.add(thumbframe);
    thumbframe.transf.origin=point(0,-1*(yps-ycount/2+0.5)*thbsize);
    thumbfilename=currentfolder+"\"+picname+".THB";
-   if not(fileispresent(thumbfilename)) then thumbfilename=datadir+"\textures\questionstereo.jpg";
+   info=GetPicInfo(currentfolder,picname);
+   if not(fileispresent(thumbfilename)) then {
+       thumbfilename=datadir+"\textures\questionstereo.jpg";
+       info.tpe='side';
+       info.col=color(1,1,1);
+   }
    bmpthumbnail=LoadBitmap(thumbfilename);
-   xr=bmpthumbnail.xres/2;
-   yr=bmpthumbnail.yres;
-   bmp1=bmpthumbnail.crop(0,0,xr,yr);
-   bmp2=bmpthumbnail.crop(xr,0,xr,yr);
-   tx1=thumbframe.CreateBitmapTexture("tx1",bmp1);
-   tx2=thumbframe.CreateBitmapTexture("tx2",bmp2);
-   fr=thbsize2/max(xr,yr*1.1);
-   thbsizex=xr*fr;
-   thbsizey=yr*fr;
+   pair=CreateStereoPair(info,bmpthumbnail);
+   tx1=thumbframe.CreateBitmapTexture("tx1",pair.bmp1);
+   tx2=thumbframe.CreateBitmapTexture("tx2",pair.bmp2);
+   fr=thbsize2/max(pair.xr,pair.yr*1.1);
+   thbsizex=pair.xr*fr;
+   thbsizey=pair.yr*fr;
    thumbframe.add("Rectangle","Axis1":vector(thbsizex,0,0),"Axis2":vector(0,thbsizey,0),
                   "position":point(-0.5*thbsizex,-0.5*thbsizey+0.02*thbsize,-0.0001),
-                  "Texture":tx1.name,"TextureRight":tx2.name,"EnableLight":false
+                  "Texture":tx1.name,"TextureRight":tx2.name,"EnableLight":false,"Color":info.col
                   );
    txt=thumbframe.add("Text3D","Content":picname,"Color":color(0.5,0.5,0.5),"EnableLight":false,
                     "UnitX":vector(thbsize/15,0,0),"UnitY":vector(0,thbsize/15,0));

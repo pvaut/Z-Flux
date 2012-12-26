@@ -1,4 +1,5 @@
 codeblock readtextfile(ScriptDir+"\_TOOLS.sci");
+codeblock readtextfile(ScriptFilePath+"\_StereoPicTools.sci");
 
 T_scene_create;
 sc=T_getscene;
@@ -47,8 +48,13 @@ while todofolderlist.size>0 do {
          if FileModifiedTime(picfilename)-FileModifiedTime(thumbfilename)<10 then needcreate=false;
       }
       if needcreate then {
+         info=GetPicInfo(currentfolder,picname);
          bmp=LoadBitmap(picfilename);
-         fc=round(max(bmp.XRes/2,bmp.Yres)/thumbresol);
+         createvar(fc);
+         if info.tpe=='side' then
+             fc=round(max(bmp.XRes/2,bmp.Yres)/thumbresol);
+         if info.tpe=='anaglyph' then
+             fc=round(max(bmp.XRes,bmp.Yres)/thumbresol);
          thumbbmp=bmp.Reduce(fc);
          thumbbmp.savejpg(thumbfilename,90);
       }

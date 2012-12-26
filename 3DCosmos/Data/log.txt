@@ -1,164 +1,152 @@
-2012-12-26 12h11m36s | Data directory: d:\SourceCode\Z-Flux\3DCosmos/Data
-2012-12-26 12h11m36s | Fetching MAC address
-2012-12-26 12h11m36s | 00-24-D6-29-0D-3.
-2012-12-26 12h11m36s | Loading settings
-2012-12-26 12h11m36s |  | ShowStereo:False
-2012-12-26 12h11m36s |  | SwapLeftRight:False
-2012-12-26 12h11m36s |  | MirrorLeftH:False
-2012-12-26 12h11m36s |  | MirrorLeftV:False
-2012-12-26 12h11m36s |  | MirrorRightH:False
-2012-12-26 12h11m36s |  | MirrorRightV:False
-2012-12-26 12h11m36s |  | HorizontalStretch:1
-2012-12-26 12h11m36s |  | EyeSepFactor:0.025
-2012-12-26 12h11m36s |  | DisplayName:
-2012-12-26 12h11m36s |  | FullScreen:False
-2012-12-26 12h11m36s |  | WinOffsetX:
-2012-12-26 12h11m36s |  | WinOffsetY:
-2012-12-26 12h11m36s |  | WinSizeX:
-2012-12-26 12h11m36s |  | WinSizeY:
-2012-12-26 12h11m36s |  | FrameRate:60
-2012-12-26 12h11m36s |  | SyncFactor:1
-2012-12-26 12h11m36s |  | Language:English
-2012-12-26 12h11m36s |  | Longitude:20
-2012-12-26 12h11m36s |  | Lattitude:70
-2012-12-26 12h11m36s |  | StereoFolder:
-2012-12-26 12h11m36s |  | StereoBrowserRows:4
-2012-12-26 12h11m36s |  | ColorMatrixLeft00:1
-2012-12-26 12h11m36s |  | ColorMatrixLeft01:0
-2012-12-26 12h11m36s |  | ColorMatrixLeft02:0
-2012-12-26 12h11m36s |  | ColorMatrixLeft10:0
-2012-12-26 12h11m36s |  | ColorMatrixLeft11:1
-2012-12-26 12h11m36s |  | ColorMatrixLeft12:0
-2012-12-26 12h11m36s |  | ColorMatrixLeft20:0
-2012-12-26 12h11m36s |  | ColorMatrixLeft21:0
-2012-12-26 12h11m36s |  | ColorMatrixLeft22:1
-2012-12-26 12h11m36s |  | ColorMatrixRight00:1
-2012-12-26 12h11m36s |  | ColorMatrixRight01:0
-2012-12-26 12h11m36s |  | ColorMatrixRight02:0
-2012-12-26 12h11m36s |  | ColorMatrixRight10:0
-2012-12-26 12h11m36s |  | ColorMatrixRight11:1
-2012-12-26 12h11m36s |  | ColorMatrixRight12:0
-2012-12-26 12h11m36s |  | ColorMatrixRight20:0
-2012-12-26 12h11m36s |  | ColorMatrixRight21:0
-2012-12-26 12h11m36s |  | ColorMatrixRight22:1
-2012-12-26 12h11m36s | Settings loaded
-2012-12-26 12h11m36s | Loading stock cyclic orbits
-2012-12-26 12h11m36s |  | Loading stock cyclic orbit d:\SourceCode\Z-Flux\3DCosmos/Data/AstroData/MERCURIUS_cycl.tab
-2012-12-26 12h11m36s |  | Loading stock cyclic orbit d:\SourceCode\Z-Flux\3DCosmos/Data/AstroData/VENUS_cycl.tab
-2012-12-26 12h11m36s |  | Loading stock cyclic orbit d:\SourceCode\Z-Flux\3DCosmos/Data/AstroData/EARTH_cycl.tab
-2012-12-26 12h11m36s |  | Loading stock cyclic orbit d:\SourceCode\Z-Flux\3DCosmos/Data/AstroData/MARS_cycl.tab
-2012-12-26 12h11m36s |  | Loading stock cyclic orbit d:\SourceCode\Z-Flux\3DCosmos/Data/AstroData/JUPITER_cycl.tab
-2012-12-26 12h11m36s |  | Loading stock cyclic orbit d:\SourceCode\Z-Flux\3DCosmos/Data/AstroData/SATURNUS_cycl.tab
-2012-12-26 12h11m36s |  | Loading stock cyclic orbit d:\SourceCode\Z-Flux\3DCosmos/Data/AstroData/URANUS_cycl.tab
-2012-12-26 12h11m36s |  | Loading stock cyclic orbit d:\SourceCode\Z-Flux\3DCosmos/Data/AstroData/NEPTUNUS_cycl.tab
-2012-12-26 12h11m36s | Stock cyclic orbits loaded
-2012-12-26 12h11m36s | Reading settings
-2012-12-26 12h11m36s | Reading settings completed
-2012-12-26 12h11m36s | Initialising UI decorations
-2012-12-26 12h11m36s | UI decorations initialised
-2012-12-26 12h11m36s | Loading languages
-2012-12-26 12h11m36s | Loaded languages
-2012-12-26 12h11m36s | Creating source code window
-2012-12-26 12h11m36s |  | Loading display adaptor information
-2012-12-26 12h11m36s |  |  | Loading display device \\.\DISPLAY1
-2012-12-26 12h11m36s |  |  |  |    Found monitor \\.\DISPLAY1\Monitor0,Algemeen PnP-beeldscherm,MONITOR\SEC314A\{4d36e96e-e325-11ce-bfc1-08002be10318}\0001
-2012-12-26 12h11m36s |  |  | Display device loaded
-2012-12-26 12h11m36s |  |  | Loading display device \\.\DISPLAY2
-2012-12-26 12h11m36s |  |  | Display device loaded
-2012-12-26 12h11m36s |  |  | Loading display device \\.\DISPLAYV1
-2012-12-26 12h11m36s |  |  | Display device loaded
-2012-12-26 12h11m36s |  |  | Loading display device \\.\DISPLAYV2
-2012-12-26 12h11m36s |  |  | Display device loaded
-2012-12-26 12h11m36s |  |  | Loading display device \\.\DISPLAYV3
-2012-12-26 12h11m36s |  |  | Display device loaded
-2012-12-26 12h11m36s |  | Display information loaded
-2012-12-26 12h11m36s |  | Creating views
-2012-12-26 12h11m36s |  |  | Creating object tree view
-2012-12-26 12h11m36s |  |  | Creating object properties view
-2012-12-26 12h11m36s |  |  | Creating script source view
-2012-12-26 12h11m36s |  |  | Creating variables view
-2012-12-26 12h11m36s |  |  | Creating output view
-2012-12-26 12h11m36s |  |  | Creating function tree tools
-2012-12-26 12h11m36s |  |  | Building function tree
-2012-12-26 12h11m36s |  |  | Function tree built
-2012-12-26 12h11m36s |  |  | Building function index
-2012-12-26 12h11m36s |  |  | Loading ENV descriptions
-2012-12-26 12h11m36s |  |  | ENV Function descriptions loaded
-2012-12-26 12h11m36s |  |  | Creating function tree view
-2012-12-26 12h11m36s |  |  | Creating function description view
-2012-12-26 12h11m36s |  | Views created
-2012-12-26 12h11m36s |  | Building window definition
-2012-12-26 12h11m36s |  | Window definition built
-2012-12-26 12h11m36s |  | Opening active scripts
-2012-12-26 12h11m36s |  | Active scripts opened
-2012-12-26 12h11m36s |  | Looking up _init script
-2012-12-26 12h11m36s |  | Running _init script
-2012-12-26 12h11m36s |  |  | Execute script d:\SourceCode\Z-Flux\3DCosmos/Data\Scripts\_init.sci
-2012-12-26 12h11m36s |  |  |  | Loading display adaptor information
-2012-12-26 12h11m36s |  |  |  |  | Loading display device \\.\DISPLAY1
-2012-12-26 12h11m36s |  |  |  |  |  |    Found monitor \\.\DISPLAY1\Monitor0,Algemeen PnP-beeldscherm,MONITOR\SEC314A\{4d36e96e-e325-11ce-bfc1-08002be10318}\0001
-2012-12-26 12h11m36s |  |  |  |  | Display device loaded
-2012-12-26 12h11m36s |  |  |  |  | Loading display device \\.\DISPLAY2
-2012-12-26 12h11m36s |  |  |  |  | Display device loaded
-2012-12-26 12h11m36s |  |  |  |  | Loading display device \\.\DISPLAYV1
-2012-12-26 12h11m36s |  |  |  |  | Display device loaded
-2012-12-26 12h11m36s |  |  |  |  | Loading display device \\.\DISPLAYV2
-2012-12-26 12h11m36s |  |  |  |  | Display device loaded
-2012-12-26 12h11m36s |  |  |  |  | Loading display device \\.\DISPLAYV3
-2012-12-26 12h11m36s |  |  |  |  | Display device loaded
-2012-12-26 12h11m36s |  |  |  | Display information loaded
-2012-12-26 12h11m36s |  |  |  | Constructing viewport
-2012-12-26 12h11m36s |  |  |  |  | Name: Viewport_1
-2012-12-26 12h11m36s |  |  |  | Completed constructing viewport
-2012-12-26 12h11m36s |  |  |  | Start display device \\.\DISPLAY1
-2012-12-26 12h11m36s |  |  |  |  | Creating display window
-2012-12-26 12h11m36s |  |  |  |  |  | On device: {NVIDIA GeForce GT 230M    ,PCI\VEN_10DE&DEV_0A28&SUBSYS_7001103C&REV_A2;0,0,1920,1080}
-2012-12-26 12h11m36s |  |  |  |  |  | TopLeft: 0,0
-2012-12-26 12h11m36s |  |  |  |  |  | BottomRight: 1920,1080
-2012-12-26 12h11m36s |  |  |  |  | Display window created
-2012-12-26 12h11m36s |  |  |  | Display device started
-2012-12-26 12h11m36s |  |  |  | Start viewport
-2012-12-26 12h11m36s |  |  |  |  | Left display: \\.\DISPLAY1
-2012-12-26 12h11m36s |  |  |  |  | Right display: \\.\DISPLAY1
-2012-12-26 12h11m36s |  |  |  |  | Use stereo: 0
-2012-12-26 12h11m36s |  |  |  |  | Using RenderSingle
-2012-12-26 12h11m36s |  |  |  |  | Init Render window on device {NVIDIA GeForce GT 230M    ,PCI\VEN_10DE&DEV_0A28&SUBSYS_7001103C&REV_A2;0,0,1920,1080}
-2012-12-26 12h11m36s |  |  |  |  |  | Constructing render window
-2012-12-26 12h11m36s |  |  |  |  |  | Render window constructed
-2012-12-26 12h11m36s |  |  |  |  |  | Creating render window
-2012-12-26 12h11m36s |  |  |  |  |  | Render window created
-2012-12-26 12h11m36s |  |  |  |  |  | Setup of render window context
-2012-12-26 12h11m37s |  |  |  |  |  |  | Setting render defaults
-2012-12-26 12h11m37s |  |  |  |  |  |  | Completed setting render defaults
-2012-12-26 12h11m37s |  |  |  |  |  |  | Setting render fonts
-2012-12-26 12h11m37s |  |  |  |  |  |  | Completed setting render fonts
-2012-12-26 12h11m37s |  |  |  |  |  |  | Start setup of RenderContect
-2012-12-26 12h11m37s |  |  |  |  |  |  | Completed setup of RenderContect
-2012-12-26 12h11m37s |  |  |  |  |  |  | OpenGL version 3.0
-2012-12-26 12h11m37s |  |  |  |  |  | Completed setup of render window context
-2012-12-26 12h11m37s |  |  |  |  | Render window initialised
-2012-12-26 12h11m37s |  |  |  | Viewport started
-2012-12-26 12h11m37s |  |  | Script executed
-2012-12-26 12h11m37s |  | _init script completed
-2012-12-26 12h11m37s |  | Running _autorun script
-2012-12-26 12h11m37s |  |  | Start animation of d:\SourceCode\Z-Flux\3DCosmos/Data\Scripts\_autorun.sci
-2012-12-26 12h11m37s |  | _autorun script completed
-2012-12-26 12h11m37s | Source code window created
-2012-12-26 12h11m37s | 
-2012-12-26 12h11m37s | 
-2012-12-26 12h11m37s | Execute script d:\SourceCode\Z-Flux\3DCosmos/Data\Scripts\_menu.sci
-2012-12-26 12h11m39s | Script executed
-2012-12-26 12h11m47s | Start animation of D:\SourceCode\Z-Flux\3DCosmos\Data\Scripts\StereoPictures\StereoPictures.SCI
-2012-12-26 12h12m25s | Destroying source code window
-2012-12-26 12h12m25s |  | Cleaning up 3DC
-2012-12-26 12h12m25s |  | 3DC cleaned
-2012-12-26 12h12m25s | Source code window destroyed
-2012-12-26 12h12m25s | Destroying all existing display windows
-2012-12-26 12h12m25s |  | Destroying display window
-2012-12-26 12h12m25s |  |  | Destroying render window
-2012-12-26 12h12m25s |  |  | Render window destroyed
-2012-12-26 12h12m25s |  | Display window destroyed
-2012-12-26 12h12m25s | All existing display windows are destroyed
-2012-12-26 12h12m25s | Saving open scripts list
-2012-12-26 12h12m25s | Open scripts list saved
-2012-12-26 12h12m25s | Closing log file
+2012-12-26 15h47m21s | Data directory: D:\SourceCode\Z-Flux\3DCosmos/Data
+2012-12-26 15h47m21s | Fetching MAC address
+2012-12-26 15h47m21s | 00-24-D6-29-0D-3.
+2012-12-26 15h47m21s | Loading settings
+2012-12-26 15h47m21s |  | ShowStereo:True
+2012-12-26 15h47m21s |  | SwapLeftRight:False
+2012-12-26 15h47m21s |  | MirrorLeftH:False
+2012-12-26 15h47m21s |  | MirrorLeftV:False
+2012-12-26 15h47m21s |  | MirrorRightH:False
+2012-12-26 15h47m21s |  | MirrorRightV:False
+2012-12-26 15h47m21s |  | HorizontalStretch:1
+2012-12-26 15h47m21s |  | EyeSepFactor:0.025
+2012-12-26 15h47m21s |  | DisplayName:
+2012-12-26 15h47m21s |  | FullScreen:False
+2012-12-26 15h47m21s |  | WinOffsetX:0
+2012-12-26 15h47m21s |  | WinOffsetY:0
+2012-12-26 15h47m21s |  | WinSizeX:2048
+2012-12-26 15h47m21s |  | WinSizeY:768
+2012-12-26 15h47m21s |  | FrameRate:60
+2012-12-26 15h47m21s |  | SyncFactor:1
+2012-12-26 15h47m21s |  | Language:English
+2012-12-26 15h47m21s |  | Longitude:20
+2012-12-26 15h47m21s |  | Lattitude:70
+2012-12-26 15h47m21s |  | StereoFolder:
+2012-12-26 15h47m21s |  | StereoBrowserRows:4
+2012-12-26 15h47m21s |  | ColorMatrixLeft00:1
+2012-12-26 15h47m21s |  | ColorMatrixLeft01:0
+2012-12-26 15h47m21s |  | ColorMatrixLeft02:0
+2012-12-26 15h47m21s |  | ColorMatrixLeft10:0
+2012-12-26 15h47m21s |  | ColorMatrixLeft11:1
+2012-12-26 15h47m21s |  | ColorMatrixLeft12:0
+2012-12-26 15h47m21s |  | ColorMatrixLeft20:0
+2012-12-26 15h47m21s |  | ColorMatrixLeft21:0
+2012-12-26 15h47m21s |  | ColorMatrixLeft22:1
+2012-12-26 15h47m21s |  | ColorMatrixRight00:1
+2012-12-26 15h47m21s |  | ColorMatrixRight01:0
+2012-12-26 15h47m21s |  | ColorMatrixRight02:0
+2012-12-26 15h47m21s |  | ColorMatrixRight10:0
+2012-12-26 15h47m21s |  | ColorMatrixRight11:1
+2012-12-26 15h47m21s |  | ColorMatrixRight12:0
+2012-12-26 15h47m21s |  | ColorMatrixRight20:0
+2012-12-26 15h47m21s |  | ColorMatrixRight21:0
+2012-12-26 15h47m21s |  | ColorMatrixRight22:1
+2012-12-26 15h47m21s | Settings loaded
+2012-12-26 15h47m21s | Loading stock cyclic orbits
+2012-12-26 15h47m21s |  | Loading stock cyclic orbit D:\SourceCode\Z-Flux\3DCosmos/Data/AstroData/MERCURIUS_cycl.tab
+2012-12-26 15h47m22s |  | Loading stock cyclic orbit D:\SourceCode\Z-Flux\3DCosmos/Data/AstroData/VENUS_cycl.tab
+2012-12-26 15h47m22s |  | Loading stock cyclic orbit D:\SourceCode\Z-Flux\3DCosmos/Data/AstroData/EARTH_cycl.tab
+2012-12-26 15h47m22s |  | Loading stock cyclic orbit D:\SourceCode\Z-Flux\3DCosmos/Data/AstroData/MARS_cycl.tab
+2012-12-26 15h47m22s |  | Loading stock cyclic orbit D:\SourceCode\Z-Flux\3DCosmos/Data/AstroData/JUPITER_cycl.tab
+2012-12-26 15h47m22s |  | Loading stock cyclic orbit D:\SourceCode\Z-Flux\3DCosmos/Data/AstroData/SATURNUS_cycl.tab
+2012-12-26 15h47m22s |  | Loading stock cyclic orbit D:\SourceCode\Z-Flux\3DCosmos/Data/AstroData/URANUS_cycl.tab
+2012-12-26 15h47m22s |  | Loading stock cyclic orbit D:\SourceCode\Z-Flux\3DCosmos/Data/AstroData/NEPTUNUS_cycl.tab
+2012-12-26 15h47m22s | Stock cyclic orbits loaded
+2012-12-26 15h47m22s | Reading settings
+2012-12-26 15h47m22s | Reading settings completed
+2012-12-26 15h47m22s | Initialising UI decorations
+2012-12-26 15h47m22s | UI decorations initialised
+2012-12-26 15h47m22s | Loading languages
+2012-12-26 15h47m22s | Loaded languages
+2012-12-26 15h47m22s | Creating source code window
+2012-12-26 15h47m22s |  | Loading display adaptor information
+2012-12-26 15h47m22s |  |  | Loading display device \\.\DISPLAY1
+2012-12-26 15h47m22s |  |  |  |    Found monitor \\.\DISPLAY1\Monitor0,Algemeen PnP-beeldscherm,MONITOR\SEC314A\{4d36e96e-e325-11ce-bfc1-08002be10318}\0001
+2012-12-26 15h47m22s |  |  | Display device loaded
+2012-12-26 15h47m22s |  |  | Loading display device \\.\DISPLAY2
+2012-12-26 15h47m22s |  |  | Display device loaded
+2012-12-26 15h47m22s |  |  | Loading display device \\.\DISPLAYV1
+2012-12-26 15h47m22s |  |  | Display device loaded
+2012-12-26 15h47m22s |  |  | Loading display device \\.\DISPLAYV2
+2012-12-26 15h47m22s |  |  | Display device loaded
+2012-12-26 15h47m22s |  |  | Loading display device \\.\DISPLAYV3
+2012-12-26 15h47m22s |  |  | Display device loaded
+2012-12-26 15h47m22s |  | Display information loaded
+2012-12-26 15h47m22s |  | Creating views
+2012-12-26 15h47m22s |  |  | Creating object tree view
+2012-12-26 15h47m22s |  |  | Creating object properties view
+2012-12-26 15h47m22s |  |  | Creating script source view
+2012-12-26 15h47m22s |  |  | Creating variables view
+2012-12-26 15h47m22s |  |  | Creating output view
+2012-12-26 15h47m22s |  |  | Creating function tree tools
+2012-12-26 15h47m22s |  |  | Building function tree
+2012-12-26 15h47m22s |  |  | Function tree built
+2012-12-26 15h47m22s |  |  | Building function index
+2012-12-26 15h47m22s |  |  | Loading ENV descriptions
+2012-12-26 15h47m22s |  |  | ENV Function descriptions loaded
+2012-12-26 15h47m22s |  |  | Creating function tree view
+2012-12-26 15h47m22s |  |  | Creating function description view
+2012-12-26 15h47m22s |  | Views created
+2012-12-26 15h47m22s |  | Building window definition
+2012-12-26 15h47m22s |  | Window definition built
+2012-12-26 15h47m22s |  | Opening active scripts
+2012-12-26 15h47m22s |  | Active scripts opened
+2012-12-26 15h47m22s |  | Looking up _init script
+2012-12-26 15h47m22s |  | Running _init script
+2012-12-26 15h47m22s |  |  | Execute script D:\SourceCode\Z-Flux\3DCosmos/Data\Scripts\_init.sci
+2012-12-26 15h47m22s |  |  |  | Loading display adaptor information
+2012-12-26 15h47m22s |  |  |  |  | Loading display device \\.\DISPLAY1
+2012-12-26 15h47m22s |  |  |  |  |  |    Found monitor \\.\DISPLAY1\Monitor0,Algemeen PnP-beeldscherm,MONITOR\SEC314A\{4d36e96e-e325-11ce-bfc1-08002be10318}\0001
+2012-12-26 15h47m22s |  |  |  |  | Display device loaded
+2012-12-26 15h47m22s |  |  |  |  | Loading display device \\.\DISPLAY2
+2012-12-26 15h47m22s |  |  |  |  | Display device loaded
+2012-12-26 15h47m22s |  |  |  |  | Loading display device \\.\DISPLAYV1
+2012-12-26 15h47m22s |  |  |  |  | Display device loaded
+2012-12-26 15h47m22s |  |  |  |  | Loading display device \\.\DISPLAYV2
+2012-12-26 15h47m22s |  |  |  |  | Display device loaded
+2012-12-26 15h47m22s |  |  |  |  | Loading display device \\.\DISPLAYV3
+2012-12-26 15h47m22s |  |  |  |  | Display device loaded
+2012-12-26 15h47m22s |  |  |  | Display information loaded
+2012-12-26 15h47m22s |  |  |  | Constructing viewport
+2012-12-26 15h47m22s |  |  |  |  | Name: Viewport_1
+2012-12-26 15h47m22s |  |  |  | Completed constructing viewport
+2012-12-26 15h47m22s |  |  |  | Start display device \\.\DISPLAY1
+2012-12-26 15h47m22s |  |  |  |  | Creating display window
+2012-12-26 15h47m22s |  |  |  |  |  | On device: {NVIDIA GeForce GT 230M    ,PCI\VEN_10DE&DEV_0A28&SUBSYS_7001103C&REV_A2;0,0,2048,768}
+2012-12-26 15h47m22s |  |  |  |  |  | TopLeft: 0,0
+2012-12-26 15h47m22s |  |  |  |  |  | BottomRight: 2048,768
+2012-12-26 15h47m22s |  |  |  |  | Display window created
+2012-12-26 15h47m22s |  |  |  | Display device started
+2012-12-26 15h47m22s |  |  |  | Start viewport
+2012-12-26 15h47m22s |  |  |  |  | Left display: \\.\DISPLAY1
+2012-12-26 15h47m22s |  |  |  |  | Right display: \\.\DISPLAY1
+2012-12-26 15h47m22s |  |  |  |  | Use stereo: 1
+2012-12-26 15h47m22s |  |  |  |  | Using RenderSingle
+2012-12-26 15h47m22s |  |  |  |  | Init Render window on device {NVIDIA GeForce GT 230M    ,PCI\VEN_10DE&DEV_0A28&SUBSYS_7001103C&REV_A2;0,0,2048,768}
+2012-12-26 15h47m22s |  |  |  |  |  | Constructing render window
+2012-12-26 15h47m22s |  |  |  |  |  | Render window constructed
+2012-12-26 15h47m22s |  |  |  |  |  | Creating render window
+2012-12-26 15h47m22s |  |  |  |  |  | Render window created
+2012-12-26 15h47m22s |  |  |  |  |  | Setup of render window context
+2012-12-26 15h47m22s |  |  |  |  |  |  | Setting render defaults
+2012-12-26 15h47m22s |  |  |  |  |  |  | Completed setting render defaults
+2012-12-26 15h47m22s |  |  |  |  |  |  | Setting render fonts
+2012-12-26 15h47m23s |  |  |  |  |  |  | Completed setting render fonts
+2012-12-26 15h47m23s |  |  |  |  |  |  | Start setup of RenderContect
+2012-12-26 15h47m23s |  |  |  |  |  |  | Completed setup of RenderContect
+2012-12-26 15h47m23s |  |  |  |  |  |  | OpenGL version 3.0
+2012-12-26 15h47m23s |  |  |  |  |  | Completed setup of render window context
+2012-12-26 15h47m23s |  |  |  |  | Render window initialised
+2012-12-26 15h47m23s |  |  |  | Viewport started
+2012-12-26 15h47m23s |  |  | Script executed
+2012-12-26 15h47m23s |  | _init script completed
+2012-12-26 15h47m23s |  | Running _autorun script
+2012-12-26 15h47m23s |  |  | Start animation of D:\SourceCode\Z-Flux\3DCosmos/Data\Scripts\_autorun.sci
+2012-12-26 15h47m23s |  | _autorun script completed
+2012-12-26 15h47m23s | Source code window created
+2012-12-26 15h47m23s | 
+2012-12-26 15h47m23s | 
+2012-12-26 15h47m23s | Execute script D:\SourceCode\Z-Flux\3DCosmos/Data\Scripts\_menu.sci
+2012-12-26 15h47m26s |  | Execute script D:\SourceCode\Z-Flux\3DCosmos/Data\Scripts\StereoPictures\StereoPictures.SCI
+2012-12-26 15h48m34s |  | Script executed
+2012-12-26 15h48m36s |  | Execute script D:\SourceCode\Z-Flux\3DCosmos/Data\Scripts\Exit.SCI
