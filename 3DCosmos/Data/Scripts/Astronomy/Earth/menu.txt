@@ -4,3 +4,4 @@ SkyDome;Sky Dome
 SolarEclipses;Solar Eclipses
 Sundial;Sun Dial
 Planetarium;Planetarium
+StarYearVariation;Daily & Yearly movement

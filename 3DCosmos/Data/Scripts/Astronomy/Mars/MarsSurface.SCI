@@ -303,7 +303,7 @@ while true do {
       oldcameradir=myviewport.cameradir;
       oldcameraupdir=myviewport.cameraupdir;
       globeframe.visible=false;PanelContentMain.visible=false;
-      rs1=300;rs2=300;
+      rs1=400;rs2=400;
       sss.Universe.StarBackFrame.visible=false;
       SUB_RenderMarsSurface(rootframe,longit,lattit,rs1,rs2);
       sss.Universe.StarBackFrame.visible=true;

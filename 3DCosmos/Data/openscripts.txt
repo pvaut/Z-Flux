@@ -1,7 +1,5 @@
-5
-D:\SourceCode\Z-Flux\3DCosmos\Data\Scripts\StereoPictures\StereoPictures.SCI
-D:\SourceCode\Z-Flux\3DCosmos\Data\Scripts\StereoSettings.SCI
-D:\SourceCode\Z-Flux\3DCosmos\Data\Scripts\_Sub\ColorSettings.SCI
-D:\SourceCode\Z-Flux\3DCosmos\Data\Scripts\StereoPictures\CreateThumbnails.SCI
-D:\SourceCode\Z-Flux\3DCosmos\Data\Scripts\StereoPictures\_StereoPicTools.SCI
-D:\SourceCode\Z-Flux\3DCosmos\Data\Scripts\StereoPictures\MergeLeftRight.SCI
+0
+D:\SourceCode\Z-Flux\3DCosmos\Data\Scripts\Astronomy\Earth\StarYearVariation.SCI
+D:\SourceCode\Z-Flux\3DCosmos\Data\Scripts\Astronomy\Earth\_SUB\_PlanetariumTools.SCI
+D:\SourceCode\Z-Flux\3DCosmos\Data\Scripts\Astronomy\Earth\_SUB\_AnimateTools.SCI
+D:\SourceCode\Z-Flux\3DCosmos\Data\Scripts\Astronomy\Earth\SunDial.SCI
