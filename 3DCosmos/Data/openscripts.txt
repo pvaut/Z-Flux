@@ -1,2 +1,6 @@
-0
-D:\3DCosmos\3DCosmos\Data\Scripts\_InternalUsage\CreateDistribution.SCI
+2
+D:\SourceCode\Z-Flux\3DCosmos\Data\Scripts\Samples\Sphere.sci
+D:\SourceCode\Z-Flux\3DCosmos\Data\Scripts\Samples\Test.SCI
+D:\SourceCode\Z-Flux\3DCosmos\Data\Scripts\StereoPictures\StereoPictures.SCI
+D:\SourceCode\Z-Flux\3DCosmos\Data\Scripts\StereoSettings.SCI
+D:\SourceCode\Z-Flux\3DCosmos\Data\Scripts\_Sub\ColorSettings.SCI

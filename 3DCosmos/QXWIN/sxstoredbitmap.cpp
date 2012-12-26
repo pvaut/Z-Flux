@@ -797,6 +797,9 @@ void Tbmp::mirrorvert()
 	}
 }
 
+//void Tbmp::extractcolor(double rfac, double gfac, double bfac);
+
+
 void Tbmp::convertgray(int channel)
 {
 	int i;
@@ -806,16 +809,13 @@ void Tbmp::convertgray(int channel)
 	int pixcount=xres*yres;
 	if (channel==0)
 		for (i=0; i<pixcount; i++)
-			val8[i]=255-((int)val8r[i]+(int)val8g[i]+(int)val8b[i])/3;
+			val8[i]=((int)val8r[i]+(int)val8g[i]+(int)val8b[i])/3;
 	if (channel==1)
-		for (i=0; i<pixcount; i++)
-			val8[i]=255-val8r[i];
+		memcpy(val8,val8r,pixcount);
 	if (channel==2)
-		for (i=0; i<pixcount; i++)
-			val8[i]=255-val8g[i];
+		memcpy(val8,val8g,pixcount);
 	if (channel==3)
-		for (i=0; i<pixcount; i++)
-			val8[i]=255-val8b[i];
+		memcpy(val8,val8b,pixcount);
 	free(val8r);free(val8g);free(val8b);
 	val8r=NULL;val8g=NULL;val8b=NULL;
 }

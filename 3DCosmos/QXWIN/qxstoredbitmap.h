@@ -47,6 +47,7 @@ public:
 	void convertgray(int channel);
 	void invert();
 	void expandluminosityrange();
+	void extractcolor(double rfac, double gfac, double bfac);
 
 public:
 	void tostring(QString &str, int tpe);

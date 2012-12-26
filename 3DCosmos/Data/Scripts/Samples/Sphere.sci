@@ -20,7 +20,7 @@ if true then {
    bol.resolution=30;
 }
 
-obj=sf.add("Pie");
+#obj=sf.add("Pie");
 
 
 while true do {

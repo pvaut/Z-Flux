@@ -214,3 +214,23 @@ void execute_implement(TSC_funcarglist *arglist, TSC_value *retval, TSC_value *a
 	targetbmp->reducefrom(sourcebmp,redfac);
 }
 ENDFUNCTION(func_bitmap_reduce)
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
+FUNCTION(func_bitmap_convertgray,ConvertGray)
+{
+	setmemberfunction(SC_valname_bitmap);
+	setreturntype(SC_valname_bitmap);
+	addvar(_qstr("channel"),SC_valname_scalar);
+}
+void execute_implement(TSC_funcarglist *arglist, TSC_value *retval, TSC_value *assigntoval, TSC_value *owner)
+{
+	Tbmp *sourcebmp=G_valuecontent<Tbmp>(owner);
+	Tbmp *targetbmp=G_valuecontent<Tbmp>(retval);
+	targetbmp->copyfrom(sourcebmp);
+	int channel=arglist->get(0)->G_content_scalar()->G_intval();
+	targetbmp->convertgray(channel);
+}
+ENDFUNCTION(func_bitmap_convertgray)
