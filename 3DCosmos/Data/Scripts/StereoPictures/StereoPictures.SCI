@@ -224,12 +224,19 @@ columnframes=list;
 thumbframes=list;
 
 
-piclist=GetFileList(currentfolder+"\*.jpg");
+piclist0=GetFileList(currentfolder+"\*.jpg");
+piclist=List;
+foreach picfile in piclist0 do {
+   picname=picfile;picname.invert;picname.split(".");picname.invert;
+   if (picname.substring(picname.length-2,picname.length)!='_R') and (picname.substring(picname.length-2,picname.length)!='_L') then
+      piclist.add(picname);
+   }
+
 xps=-1;
 yps=9999;
 maxposx=0;
 createvar(columnframe);
-foreach picfile in piclist do {
+foreach picname in piclist do {
    yps=yps+1;
    if yps>=ycount then {
       xps=xps+1;
@@ -238,7 +245,6 @@ foreach picfile in piclist do {
       columnframe.transf.origin=point(xps*thbsize,0);
       maxposx=max(maxposx,columnframe.transf.origin.x);
    }
-   picname=picfile;picname.invert;picname.split(".");picname.invert;
    thumbframe=columnframe.addsubframe(picname);thumbframes.add(thumbframe);
    thumbframe.transf.origin=point(0,-1*(yps-ycount/2+0.5)*thbsize);
    thumbfilename=currentfolder+"\"+picname+".THB";

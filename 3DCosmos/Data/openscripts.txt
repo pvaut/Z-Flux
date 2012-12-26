@@ -1,6 +1,7 @@
-0
+5
 D:\SourceCode\Z-Flux\3DCosmos\Data\Scripts\StereoPictures\StereoPictures.SCI
 D:\SourceCode\Z-Flux\3DCosmos\Data\Scripts\StereoSettings.SCI
 D:\SourceCode\Z-Flux\3DCosmos\Data\Scripts\_Sub\ColorSettings.SCI
 D:\SourceCode\Z-Flux\3DCosmos\Data\Scripts\StereoPictures\CreateThumbnails.SCI
 D:\SourceCode\Z-Flux\3DCosmos\Data\Scripts\StereoPictures\_StereoPicTools.SCI
+D:\SourceCode\Z-Flux\3DCosmos\Data\Scripts\StereoPictures\MergeLeftRight.SCI
