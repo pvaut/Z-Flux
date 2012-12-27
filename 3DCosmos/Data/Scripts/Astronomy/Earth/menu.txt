@@ -5,3 +5,4 @@ SolarEclipses;Solar Eclipses
 Sundial;Sun Dial
 Planetarium;Planetarium
 StarYearVariation;Daily & Yearly movement
+FoucaultPendulum;Foucault Pendulum

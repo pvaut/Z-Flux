@@ -20,3 +20,28 @@ function CreateFigure(figframe,figsize)
    return(ob);
 }
 
+function CreateEarthFrame() {
+   radius=root.SC.Universe.SolarSystem.Earth.Inclin.Globe.GlobeRendering.Earth.Radius*1.005;
+   eglobe=root.SC.Universe.SolarSystem.Earth.Inclin.Globe.GlobeRendering;
+#   eglobe.add("cylinder","Position":point(0,0,-1.3*radius),"Axis":vector(0,0,2.6*radius),"Radius":(0.05*radius),"IsClosed":true,
+#       "color":color(0.5,0.5,0.5));
+   gridframe=eglobe.addsubframe("grid");
+   for i=-8 to 8 do {
+      a=deg2rad(10*i);
+      crv=gridframe.add("Curve");
+      crv.makecircle(point(0,0,radius*sin(a)),vector(0,0,1),radius*cos(a),200);
+      crv.CurveRenderType=CurveRenderSmooth;
+      crv.Size=0.005*radius;
+      crv.color=color(1,0,0,0.5);
+      if i==0 then { crv.Size=0.01*radius; crv.color=color(1,0,0,1); }
+   }
+   for i=0 to 17 do {
+      a=deg2rad(10*i);
+      crv=gridframe.add("Curve");
+      crv.makecircle(point(0,0,0),vector(cos(a),sin(a),0),radius,200);
+      crv.CurveRenderType=CurveRenderSmooth;
+      crv.Size=0.005*radius;
+      crv.color=color(1,0,0,0.5);
+      if (i==0) or (i==9) then { crv.Size=0.01*radius; crv.color=color(1,0,0,1); }
+   }
+}

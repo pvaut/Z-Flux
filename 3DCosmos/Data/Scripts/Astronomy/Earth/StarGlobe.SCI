@@ -56,10 +56,10 @@ lst_position.SelectIdx=0;
 yps=yps-ysep;
 
 bt_jumptime=dialogframe.add("ButtonControl");
-bt_jumptime.content='Jump to next point';
+bt_jumptime.content='Next time point';
 bt_jumptime.position=point(0.025,yps);
 bt_jumptime.size=0.03;
-bt_jumptime.sizex=0.30;
+bt_jumptime.sizex=0.20;
 yps=yps-ysep;
 
 

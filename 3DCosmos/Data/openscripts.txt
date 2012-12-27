@@ -1,5 +1,2 @@
 0
-D:\SourceCode\Z-Flux\3DCosmos\Data\Scripts\Astronomy\Earth\StarYearVariation.SCI
-D:\SourceCode\Z-Flux\3DCosmos\Data\Scripts\Astronomy\Earth\_SUB\_PlanetariumTools.SCI
-D:\SourceCode\Z-Flux\3DCosmos\Data\Scripts\Astronomy\Earth\_SUB\_AnimateTools.SCI
-D:\SourceCode\Z-Flux\3DCosmos\Data\Scripts\Astronomy\Earth\SunDial.SCI
+D:\SourceCode\Z-Flux\3DCosmos\Data\Scripts\Astronomy\Earth\StarGlobe.SCI

@@ -4,6 +4,7 @@ codeblock readtextfile(ScriptFilePath+"\_SUB\_PlanetariumTools.sci");
 codeblock readtextfile(ScriptFilePath+"\_SUB\_Figure.sci");
 
 
+
 ###########################################################################################################
 ###########################################################################################################
 ###############                                          START                              ###############
@@ -106,6 +107,7 @@ figobj.position.x=-0.1*earthradius;
 
 
 ctr=0;
+lastposindex=-1;
 function CustomAnimateStepPre()
 {
    ctr=ctr+1;
@@ -124,8 +126,9 @@ function CustomAnimateStepPre()
       }
    }
    
-   if lst_position.WasModified then {
+   if lst_position.SelectIdx!=lastposindex then {
       SetLattit(positions(lst_position.SelectIdx));
+      lastposindex=lst_position.SelectIdx;
    }
 }
 
@@ -198,6 +201,7 @@ ActivateControl(lst_position);
 
 root.TimeSpeedFactor=0;
 
+
 #=================================================================================
 # ANIMATION
 #=================================================================================
@@ -207,76 +211,3 @@ root.time=time(2011,3,21,19,0,0);
 root.TimeSpeedFactor=5000;
 while true do
    AnimateStep();
-
-
-
-stop;
-####################################################################################################
-#   THE END   
-####################################################################################################
-
-
-if true then {
-#show daily variation in southern hemisphere
-root.TimeSpeedFactor=0;
-animate(1);
-SetLattit(-51);
-root.time=time(2011,3,21,19,0,0);
-SetHorizonMask("Exotic");
-animate(1);
-ConstellHighlight_Start("CRU",GetColor("Red"));
-animate(3);
-
-root.TimeSpeedFactor=3000;
-animate(17);
-ConstellHighlight_Stop("CRU");
-}
-
-
-
-#Show yearly variation in northern hemisphere
-root.TimeSpeedFactor=0;
-animate(2);
-SetLattit(51);
-root.TimeSpeedFactor=0;
-root.time=time(2011,3,21,0,0,0);
-SetHorizonMask("Gent");
-animate(2);
-for i=1 to 365 do {
-   if i==90 then {
-      ConstellHighlight_Start("CYG",GetColor("Red"));
-   }
-   if i==115 then {
-      ConstellHighlight_Stop("CYG");
-   }
-   if i==120 then {
-      PointHighlight_Start("sa1",color(1,0.5,0),  C_RA(18,36),C_DE(38,47));
-      PointHighlight_Start("sa2",color(1,0.5,0),  C_RA(20,41),C_DE(45,16));
-      PointHighlight_Start("sa3",color(1,0.5,0),  C_RA(19,50),C_DE(8,52));
-      ArcHighlight_Start("sarc1",GetColor("Red"),  C_RA(18,36),C_DE(38,47),C_RA(20,41),C_DE(45,16),  false);
-      ArcHighlight_Start("sarc2",GetColor("Red"),  C_RA(20,41),C_DE(45,16),C_RA(19,50),C_DE(8,52),  false);
-      ArcHighlight_Start("sarc3",GetColor("Red"),  C_RA(19,50),C_DE(8,52),C_RA(18,36),C_DE(38,47),  false);
-   }
-   if i==150 then {
-      ConstellHighlight_Stop("sa1");
-      ConstellHighlight_Stop("sa2");
-      ConstellHighlight_Stop("sa3");
-      ConstellHighlight_Stop("sarc1");
-      ConstellHighlight_Stop("sarc2");
-      ConstellHighlight_Stop("sarc3");
-   }
-   
-   if i==170 then 
-      ConstellHighlight_Start("ORI",GetColor("Red"));
-   if i==320 then 
-      ConstellHighlight_Stop("ORI");
-      
-   Animate(0.15);
-   root.time=root.time+24*60*60;
-}
-
-#root.TimeSpeedFactor=2000;
-animate(2);
-
-FadeViewPortsOut;
-stop;
