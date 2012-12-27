@@ -179,7 +179,7 @@ function InitPlanetarium(mydata)
    mydata.atm2.resolution=60;
    mydata.atm2.canbuffer=true;
    
-   gridthick=mydata.starsizefrac*mydata.scfac;
+   gridthick=mydata.starsizefrac*mydata.scfac*1.5;
    #azimuth grid
    gridrd=mydata.scfac;
    if true then {

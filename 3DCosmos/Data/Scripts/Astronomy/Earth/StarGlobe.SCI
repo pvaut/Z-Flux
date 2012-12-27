@@ -46,7 +46,7 @@ yps=yps-ysep;
 
 lst_position=dialogframe.add("ListControl","Size":0.03,"Position":point(0.02,yps),"CountY":1,"SizeX":0.25);
 positionslattit=list;positionslongit=list;
-lst_position.List.add('Home');                positionslattit.add(homelattitude);   positionslongit.add(homelongitude);
+#lst_position.List.add('Home');                positionslattit.add(homelattitude);   positionslongit.add(homelongitude);
 lst_position.List.add('North Pole');          positionslattit.add(deg2rad(89.9));   positionslongit.add(homelongitude);
 lst_position.List.add('Nortern hemisphere');  positionslattit.add(deg2rad(51.0));   positionslongit.add(homelongitude);
 lst_position.List.add('Equator');             positionslattit.add(deg2rad(0.0));    positionslongit.add(homelongitude);

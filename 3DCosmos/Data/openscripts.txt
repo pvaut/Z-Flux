@@ -1,2 +1,8 @@
-0
+6
 D:\SourceCode\Z-Flux\3DCosmos\Data\Scripts\Astronomy\Earth\StarGlobe.SCI
+D:\SourceCode\Z-Flux\3DCosmos\Data\Scripts\Astronomy\Earth\FoucaultPendulum.SCI
+D:\SourceCode\Z-Flux\3DCosmos\Data\Scripts\Astronomy\Earth\_SUB\_Figure.SCI
+D:\SourceCode\Z-Flux\3DCosmos\Data\Scripts\Astronomy\Earth\StarYearVariation.SCI
+D:\SourceCode\Z-Flux\3DCosmos\Data\Scripts\Astronomy\Earth\MorningEveningPlanets.SCI
+D:\SourceCode\Z-Flux\3DCosmos\Data\Scripts\Astronomy\Earth\_SUB\_PlanetariumTools.SCI
+D:\SourceCode\Z-Flux\3DCosmos\Data\Scripts\Astronomy\Earth\RetrogradePlanet.SCI

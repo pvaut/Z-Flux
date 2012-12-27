@@ -45,3 +45,20 @@ function CreateEarthFrame() {
       if (i==0) or (i==9) then { crv.Size=0.01*radius; crv.color=color(1,0,0,1); }
    }
 }
+
+
+function NextTimePoint() {
+   tm=root.time;tm1=time;
+   mindiff=10000000;
+   tm0=time(tm.year,3,21,0,0,0);
+   if (tm0-tm>0) and (tm0-tm<mindiff) then { mindiff=tm0-tm; tm1=tm0; }
+   tm0=time(tm.year,6,21,0,0,0);
+   if (tm0-tm>0) and (tm0-tm<mindiff) then { mindiff=tm0-tm; tm1=tm0; }
+   tm0=time(tm.year,9,21,0,0,0);
+   if (tm0-tm>0) and (tm0-tm<mindiff) then { mindiff=tm0-tm; tm1=tm0; }
+   tm0=time(tm.year,12,21,0,0,0);
+   if (tm0-tm>0) and (tm0-tm<mindiff) then { mindiff=tm0-tm; tm1=tm0; }
+   tm0=time(tm.year+1,3,21,0,0,0);
+   if (tm0-tm>0) and (tm0-tm<mindiff) then { mindiff=tm0-tm; tm1=tm0; }
+   root.time=tm1;
+}

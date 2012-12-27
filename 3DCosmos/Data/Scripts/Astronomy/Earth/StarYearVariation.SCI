@@ -130,6 +130,9 @@ function CustomAnimateStepPre()
       SetLattit(positions(lst_position.SelectIdx));
       lastposindex=lst_position.SelectIdx;
    }
+   
+   if bt_jumptime.WasModified then NextTimePoint();
+
 }
 
 function SetLattit(lattit)
@@ -195,6 +198,14 @@ chk_varyseason=dialogframe.add("CheckControl","Size":0.03,"Position":point(0.02,
 chk_varyseason.checked=false;
 dialogframe.add("TextControl","Size":0.03,"Position":point(0.06,yps),"Content":'Vary season');
 yps=yps-ysep;
+
+bt_jumptime=dialogframe.add("ButtonControl");
+bt_jumptime.content='Next time point';
+bt_jumptime.position=point(0.025,yps);
+bt_jumptime.size=0.03;
+bt_jumptime.sizex=0.20;
+yps=yps-ysep;
+
 
 ActivateControl(lst_position);
 

@@ -6,3 +6,5 @@ Sundial;Sun Dial
 Planetarium;Planetarium
 StarYearVariation;Daily & Yearly movement
 FoucaultPendulum;Foucault Pendulum
+MorningEveningPlanets;Morning & Evening planets
+RetrogradePlanet;Apparent retrograde motion
