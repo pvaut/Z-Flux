@@ -16,9 +16,9 @@
 *.img
 *.dmp
 *.tga
-3DCosmos/data/log.txt
-3DCosmos/data/openscripts.txt
+log.txt
 3DCosmos/data/StereoPictures
+openscripts.txt
 
 #################
 ## Eclipse
