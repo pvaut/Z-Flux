@@ -1,4 +1,4 @@
-ACTION=RunScript;[DATADIR]\Scripts\Astronomy\Solar System.SCI
+ACTION=RunScript;[DATADIR]\Scripts\Astronomy\SolarSystem.SCI
 THUMBNAIL=[CurrentFolder]\_thumbnail.THB
 TITLE=Solar system
 DESCRIPTION=Animation of the solar system

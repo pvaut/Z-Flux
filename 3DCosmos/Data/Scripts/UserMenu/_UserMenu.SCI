@@ -33,7 +33,7 @@ function initscene()
    vp.FarClipPlane=20;
    vp.enableusernavigation=false;
    vp.EnableUserStop=false;
-#   vp.UserNavigationAxisLevelRotate=2;
+   vp.UserNavigationAxisLevelRotate=2;
 #   vp.UserNavigationAxisLevelTime=0;
    root.MouseDampingFactor=0.9;
    
@@ -113,13 +113,13 @@ function handle_enter(folder)
    actarg.Replace("[DATADIR]",DataDir);
    
    if myaction=="BrowsePictures" then {
-      returnstring=ExecuteScript(datadir+"\scripts\Stereo Pictures\_ShowStereoPictures.SCI",actarg);
+      returnstring=ExecuteScript(datadir+"\scripts\StereoPictures\_ShowStereoPictures.SCI",actarg);
       if (returnstring=="timeout") and isinsub then stop("timeout");
       processed=true;
    }
 
    if myaction=="BrowseThumbnails" then {
-      returnstring=ExecuteScript(datadir+"\scripts\Stereo Pictures\01_Browse stereo pictures.SCI",actarg);
+      returnstring=ExecuteScript(datadir+"\scripts\StereoPictures\StereoPictures.SCI",actarg);
       if (returnstring=="timeout") and isinsub then stop("timeout");
       processed=true;
    }
