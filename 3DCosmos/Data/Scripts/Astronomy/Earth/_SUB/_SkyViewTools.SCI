@@ -86,8 +86,8 @@ function InitSkyView(mydata)
 #   edir=mydata.earthoverlayframe.add("Curve","Size":600000,"Color":color(0,0.5,1),"CurveRenderType":CurveRenderSmooth);
 #   edir.makeline(point(0,0,-1.5*mydata.earthradius),point(0,0,1.5*mydata.earthradius));
    edir=mydata.earthoverlayframe.add("Cylinder",
-      "Position":point(0,0,-1.7*mydata.earthradius),"Axis":vector(0,0,3.4*mydata.earthradius),
-      "Radius":600000,"Color":color(0.6,0.6,0.6));
+      "Position":point(0,0,-1.3*mydata.earthradius),"Axis":vector(0,0,2.6*mydata.earthradius),
+      "Radius":120000,"Color":color(0.6,0.6,0.6));
    redcol1=GetColor("Red");redcol1.a=0.5;
    
    ecirc=mydata.earthoverlayframe.add("Curve","Size":2,"Color":redcol1,"BlendType":BlendTranslucent,"Name":"equator");
@@ -213,8 +213,18 @@ function SetViewPosition(longit,lattit)
    mydata.refposframe.transf.Xaxis=mydata.refposframe.transf.Yaxis*mydata.refposframe.transf.Zaxis;
 }
 
+tracenr=0;
+tracename="";
+suntracenames=list;
+
 function CreateSunTrace(name,col)
 {
+   if name=='' then {
+      tracenr=tracenr+1;
+      tracename="tr"+str(tracenr);
+      name=tracename;
+   }
+   suntracenames.add(name);
    vframebk=root.SC.Universe.SolarSystem.Earth.Inclin.Globe.ViewerFrame.ViewFrameBK;
    crv_suntrace=vframebk.add("Curve","Name":name,"EnableLight":false,"Color":col,
          "Size":3,"BlendType":BlendTransparent,"CurveRenderType":CurveRenderDot);
@@ -224,6 +234,7 @@ function CreateSunTrace(name,col)
 
 function FreezeSunTrace(name)
 {
+   if name=='' then name=tracename;
    vframebk=root.SC.Universe.SolarSystem.Earth.Inclin.Globe.ViewerFrame.ViewFrameBK;
    crv_suntrace=vframebk.get(name);
    crv_suntrace.StopTrack;
@@ -233,6 +244,12 @@ function DelSunTrace(name)
 {
    vframebk=root.SC.Universe.SolarSystem.Earth.Inclin.Globe.ViewerFrame.ViewFrameBK;
    crv_suntrace=vframebk.drop(name);
+}
+
+function DelAllSunTraces()
+{
+   vframebk=root.SC.Universe.SolarSystem.Earth.Inclin.Globe.ViewerFrame.ViewFrameBK;
+   foreach name in suntracenames do crv_suntrace=vframebk.drop(name);
 }
 
 
@@ -292,6 +309,7 @@ function AdjustSkyView(mydata)
 function AnimateStep()
 {
    incrtime;
+   if isfunctiondefined("CustomAnimateStepPre") then CustomAnimateStepPre;
    Cam_Adjust(mydata.viewport_sun);
    Cam_Adjust(root.Viewports.Sky);
    AdjustSkyView(ref(mydata));
@@ -301,7 +319,7 @@ function AnimateStep()
 function ZoomIn()
 {
    chr=chrono;chr.Start;
-   dur=3;
+   dur=1;
    while chr.elapsed<=dur do {
       ps=chr.elapsed/dur;
       ps=SmoothRamp1(ps,0.5);
@@ -313,7 +331,7 @@ function ZoomIn()
 function ZoomOut()
 {
    chr=chrono;chr.Start;
-   dur=3;
+   dur=1;
    while chr.elapsed<=dur do {
       ps=chr.elapsed/dur;
       ps=SmoothRamp1(ps,0.5);
@@ -345,7 +363,7 @@ function SkyFrameVisible(status)
 function SkyFrameAppear()
 {
    chr=chrono;chr.Start;
-   dur=2;
+   dur=1;
    root.Viewports.Sky.Active=true;
    while chr.elapsed<=dur do {
       ps=chr.elapsed/dur;
@@ -378,7 +396,7 @@ function SkyFrameDisAppear()
    mydata.refposframe.blinkperiod=0;
    mydata.refposframe.visible=false;
    chr=chrono;chr.Start;
-   dur=2;
+   dur=1;
    while chr.elapsed<=dur do {
       ps=chr.elapsed/dur;
       ps=ps*ps;ps=1-(1-ps)*(1-ps);

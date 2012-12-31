@@ -9,3 +9,4 @@ StarYearVariation;Daily & Yearly movement
 FoucaultPendulum;Foucault Pendulum
 MorningEveningPlanets;Morning & Evening planets
 RetrogradePlanet;Apparent retrograde motion
+SiderealTime;Sidereal time
