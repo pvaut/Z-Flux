@@ -36,6 +36,7 @@
 #define IDB_SETTINGS                    148
 #define IDB_BACK                        149
 #define IDB_FORWARD                     150
+#define IDB_BITMAP1                     151
 #define IDC_SCRIPTSDIR                  1002
 #define IDC_BUTTON1                     1003
 #define IDC_BUTTON2                     1004
@@ -49,7 +50,7 @@
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NO_MFC                     1
-#define _APS_NEXT_RESOURCE_VALUE        146
+#define _APS_NEXT_RESOURCE_VALUE        152
 #define _APS_NEXT_COMMAND_VALUE         32771
 #define _APS_NEXT_CONTROL_VALUE         1009
 #define _APS_NEXT_SYMED_VALUE           110

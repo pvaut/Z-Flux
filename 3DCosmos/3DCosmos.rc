@@ -197,9 +197,16 @@ FONT 9, "Courier New", 400, 0, 0x0
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,450,276,50,14
     PUSHBUTTON      "Cancel",IDCANCEL,450,297,50,14
-    CONTROL         "",IDC_EDIT1,"RichEdit20W",ES_MULTILINE | ES_WANTRETURN | WS_BORDER | WS_VSCROLL | WS_TABSTOP,7,7,493,259
+    CONTROL         "",IDC_EDIT1,"RichEdit20W",WS_BORDER | WS_VSCROLL | WS_TABSTOP | 0x1004,7,7,493,259
 END
 
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP                  "bmp00013.bmp"
 
 /////////////////////////////////////////////////////////////////////////////
 //
