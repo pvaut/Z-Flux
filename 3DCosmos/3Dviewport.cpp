@@ -99,8 +99,13 @@ T3DViewport::T3DViewport()
 	xmaxfrac=addparam(_qstr("XMaxFrac"),SC_valname_scalar)->content.G_content_scalar();
 	ymaxfrac=addparam(_qstr("YMaxFrac"),SC_valname_scalar)->content.G_content_scalar();
 
+	rightviewshiftX=addparam(_qstr("RightViewShiftX"),SC_valname_scalar)->content.G_content_scalar();
+	rightviewshiftY=addparam(_qstr("RightViewShiftY"),SC_valname_scalar)->content.G_content_scalar();
+
 	xmaxfrac->copyfrom(1.0);
 	ymaxfrac->copyfrom(1.0);
+	rightviewshiftX->copyfrom(0.5);
+	rightviewshiftY->copyfrom(0.0);
 	
 	
 

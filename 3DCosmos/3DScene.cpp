@@ -713,7 +713,7 @@ void T3DScene::renderall()
 				double ymaxfrac=rvp->viewport->G_ymaxfrac();
 				double mulfrac=1;
 				double ofsx=0;
-				if (rvp->viewport->G_isswappedstereo()) ofsx=0.5;
+				if (rvp->viewport->G_isswappedstereo()) ofsx=rvp->viewport->G_rightviewshiftX();
 				if (rvp->G_isstereo()) mulfrac=0.5;
 				G_globalrenderwindow()->render_begin(rvp->viewport,ofsx+xminfrac*mulfrac,yminfrac,ofsx+xmaxfrac*mulfrac,ymaxfrac,false);
 				renderobjects(&G_globalrenderwindow()->rendercontext);
@@ -721,9 +721,10 @@ void T3DScene::renderall()
 				if (rvp->G_isstereo())
 				{
 					G_globalrenderwindow()->Set_isrightwindow(true);
-					ofsx=0.5;
+					ofsx=rvp->viewport->G_rightviewshiftX();
 					if (rvp->viewport->G_isswappedstereo()) ofsx=0;
-					G_globalrenderwindow()->render_begin(rvp->viewport,ofsx+xminfrac*0.5,yminfrac,ofsx+xmaxfrac*0.5,ymaxfrac,true);
+					double ofsy = -rvp->viewport->G_rightviewshiftY();
+					G_globalrenderwindow()->render_begin(rvp->viewport,ofsx+xminfrac*0.5,ofsy+yminfrac,ofsx+xmaxfrac*0.5,ofsy+ymaxfrac,true);
 					renderobjects(&G_globalrenderwindow()->rendercontext);
 					G_globalrenderwindow()->render_end();
 					G_globalrenderwindow()->Set_isrightwindow(false);

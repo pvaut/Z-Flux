@@ -52,6 +52,8 @@ function T_scene_create_named(scenename)
    vp.Framesize=0;
    vp.XMinFrac=0;vp.XMaxFrac=1;
    vp.YMinFrac=0;vp.YMaxFrac=1;
+#   vp.RightViewShiftX=0.0;#!!!
+#   vp.RightViewShiftY=0.25;#!!!
    vp.camerapos=point(0,6,10);
    vp.cameradir=vecnorm(point(0,0,0)-vp.camerapos);
    vp.cameraupdir=vector(0,1,0);

@@ -25,6 +25,7 @@ private:
 	TSC_boolean *active,*enableusernavigation,*enableusertimecontrol,*enableuserstop,*usestereo,*erasebackground,*showcontrols;
 	TSC_scalar *usernavigation_axislevel_move,*usernavigation_axislevel_rotate,*usernavigation_axislevel_time;
 	TSC_scalar *xminfrac,*yminfrac,*xmaxfrac,*ymaxfrac;
+	TSC_scalar *rightviewshiftX,*rightviewshiftY;
 	TSC_color *fadecolor;
 	Taffinetransformation *transformation;
 	int winxres,winyres;//only stored for informative reason (e.g. in function G_aspectratio)
@@ -95,6 +96,9 @@ public:
 	double G_yminfrac() { return yminfrac->G_val(); }
 	double G_xmaxfrac() { return xmaxfrac->G_val(); }
 	double G_ymaxfrac() { return ymaxfrac->G_val(); }
+
+	double G_rightviewshiftX() { return rightviewshiftX->G_val(); }
+	double G_rightviewshiftY() { return rightviewshiftY->G_val(); }
 
 	TSC_color* G_fadecolor() { return fadecolor; }
 

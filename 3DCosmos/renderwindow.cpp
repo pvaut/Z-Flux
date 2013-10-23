@@ -1391,6 +1391,9 @@ void TRenderWindow::render_begin(T3DViewport *iviewport, double frxmin, double f
 	renderviewport.ly=(frymax-frymin)*imasizey;
 	screenratio=(renderviewport.lx/renderviewport.ly)/abs(viewport->G_hstretchfactor());
 
+	//if (i_isrightpart)
+	//	renderviewport.y0-=160;
+
 	if (viewport->RenderToTexture)
 	{
 		Tframebufferobject *renbuff=&viewport->RTT_fbo_left;
