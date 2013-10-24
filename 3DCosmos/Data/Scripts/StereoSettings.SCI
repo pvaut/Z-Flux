@@ -26,7 +26,16 @@ function MakeDefaultSettings(thesett)
    thesett.MirrorRightV=false;
    
    thesett.HorizontalStretch=1.0;
+   thesett.VerticalStretch=1.0;
    thesett.EyeSepFactor=0.025;
+   
+   thesett.RightViewShiftX=0.5;
+   thesett.RightViewShiftY=0;
+
+   sett.VPXMaxFrac=1;
+   sett.VPYMinFrac=0;
+   sett.VPYMaxFrac=1;
+
 
    thesett.DisplayName="";
    thesett.FullScreen=false;
@@ -60,7 +69,22 @@ sett.WinOffsetX="0";
 sett.WinOffsetY="0";
 sett.WinSizeX="1920";
 sett.WinSizeY="1080";
-addconfig("Presets",'3DHD Side-By-Side stereo (1920x1080)',sett);
+addconfig("Presets",'3DHD Side-By-Side stereo (Horizontal, 1920x1080)',sett);
+
+
+sett=map;
+MakeDefaultSettings(ref(sett));
+sett.HorizontalStretch=2;
+sett.WinOffsetX="0";
+sett.WinOffsetY="0";
+sett.WinSizeX="1920";
+sett.WinSizeY="1080";
+sett.RightViewShiftX=0.0;
+sett.RightViewShiftY=0.5;
+sett.VPXMaxFrac=2;
+sett.VPYMinFrac=0.5;
+sett.VPYMaxFrac=1.0;
+addconfig("Presets",'3DHD Side-By-Side stereo (Vertical, 1920x1080)',sett);
 
 sett=map;
 MakeDefaultSettings(ref(sett));

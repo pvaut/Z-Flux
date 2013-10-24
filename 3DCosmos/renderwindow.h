@@ -213,7 +213,7 @@ private:
 	TDisplayDevice *disp;
 	DECLARE_MESSAGE_MAP();
 	double viewmatrix[16];
-	double screenratio;
+	double screenratioX,screenratioY;
 	DWORD s_dwLastDraw;
 	HCURSOR emptycursor;
 	int centerposx,centerposy,mouseshiftx,mouseshifty,mouseshiftz;
@@ -261,7 +261,8 @@ public:
 
 	T3DFont* G_font(StrPtr iname);
 
-	double G_screenratio() { return screenratio; }
+	double G_screenratioX() { return screenratioX; }
+	double G_screenratioY() { return screenratioY; }
 
 	double G_mouseshiftx() { return mouseshiftx; }
 	double G_mouseshifty() { return mouseshifty; }

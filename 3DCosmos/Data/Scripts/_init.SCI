@@ -27,10 +27,19 @@ if tpe==1 then {
    vp.Usestereo=ReadSetting("ShowStereo",false);
    vp.SwapStereo=ReadSetting("SwapLeftRight",false);
    vp.StretchFactor=ReadSetting("HorizontalStretch",1);
+   vp.StretchFactorY=ReadSetting("VerticalStretch",1);
    vp.HMirrorLeft=ReadSetting("MirrorLeftH",false);
    vp.HMirrorRight=ReadSetting("MirrorRightH",false);
    vp.VMirrorLeft=ReadSetting("MirrorLeftV",false);
    vp.VMirrorRight=ReadSetting("MirrorRightV",false);
+
+   vp.RightViewShiftX=ReadSetting("RightViewShiftX",0.5);
+   vp.RightViewShiftY=ReadSetting("RightViewShiftY",0);
+
+   vp.XMinFrac=ReadSetting("VPXMinFrac",0);
+   vp.YMinFrac=ReadSetting("VPYMinFrac",0);
+   vp.XMaxFrac=ReadSetting("VPXMaxFrac",1);
+   vp.YMaxFrac=ReadSetting("VPYMaxFrac",1);
    
    vp.EyeSepFactor=ReadSetting("EyeSepFactor",0.025);
  

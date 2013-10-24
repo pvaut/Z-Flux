@@ -520,8 +520,8 @@ void T3DScene::renderobjects(Trendercontext *rc)
 		rc->set_color(backcolor->G_R(),backcolor->G_G(),backcolor->G_B(),backcolor->G_A());
 		glBegin(GL_QUADS);
 		glVertex2d(0.0,0.0);
-		glVertex2d(rc->G_renderwindow()->G_screenratio(),0.0);
-		glVertex2d(rc->G_renderwindow()->G_screenratio(),1.0);
+		glVertex2d(rc->G_renderwindow()->G_screenratioX(),0.0);
+		glVertex2d(rc->G_renderwindow()->G_screenratioX(),rc->G_renderwindow()->G_screenratioY());
 		glVertex2d(0.0,1.0);
 		glEnd();
 		rc->EnableDepthMask(true);
@@ -583,7 +583,8 @@ void T3DScene::renderobjects(Trendercontext *rc)
 	{
 		double framesize=viewport->G_framesize();
 
-		double xright=rc->G_renderwindow()->G_screenratio();
+		double xright=rc->G_renderwindow()->G_screenratioX();
+		double yright=rc->G_renderwindow()->G_screenratioY();
 
 		rc->start_viewportframe();
 		rc->enablelight(false);
@@ -618,8 +619,8 @@ void T3DScene::renderobjects(Trendercontext *rc)
 					glLineWidth(2.0f);
 					rc->set_color(cr,cg,cb,1);
 				}
-				glBegin(GL_LINES);glVertex2d(0.0,i/12.0);glVertex2d(xright,i/12.0);glEnd();
-				glBegin(GL_LINES);glVertex2d(i/12.0*xright,0);glVertex2d(i/12.0*xright,1);glEnd();
+				glBegin(GL_LINES);glVertex2d(0.0,i/12.0*xright);glVertex2d(xright,i/12.0*xright);glEnd();
+				glBegin(GL_LINES);glVertex2d(i/12.0*xright,0);glVertex2d(i/12.0*xright,yright);glEnd();
 			}
 		}
 
@@ -634,15 +635,15 @@ void T3DScene::renderobjects(Trendercontext *rc)
 			}
 			if (viewport->frameleft->G_val())
 			{
-				glBegin(GL_QUADS);	glVertex2d(0.0,0.0);	glVertex2d(framesize,0.0);	glVertex2d(framesize,1.0);	glVertex2d(0.0,1.0);	glEnd();
+				glBegin(GL_QUADS);	glVertex2d(0.0,0.0);	glVertex2d(framesize,0.0);	glVertex2d(framesize,yright);	glVertex2d(0.0,yright);	glEnd();
 			}
 			if (viewport->frametop->G_val())
 			{
-				glBegin(GL_QUADS);	glVertex2d(0.0,1.0-framesize);	glVertex2d(xright,1.0-framesize);	glVertex2d(xright,1.0);	glVertex2d(0.0,1.0);	glEnd();
+				glBegin(GL_QUADS);	glVertex2d(0.0,yright-framesize);	glVertex2d(xright,yright-framesize);	glVertex2d(xright,yright);	glVertex2d(0.0,yright);	glEnd();
 			}
 			if (viewport->frameright->G_val())
 			{
-				glBegin(GL_QUADS);	glVertex2d(xright-framesize,0.0);	glVertex2d(xright,0.0);	glVertex2d(xright,1.0);	glVertex2d(xright-framesize,1.0);	glEnd();
+				glBegin(GL_QUADS);	glVertex2d(xright-framesize,0.0);	glVertex2d(xright,0.0);	glVertex2d(xright,yright);	glVertex2d(xright-framesize,yright);	glEnd();
 			}
 		}
 
@@ -666,7 +667,7 @@ void T3DScene::renderobjects(Trendercontext *rc)
 			rc->EnableDepthTest(false);
 			rc->SetBlendType(BlendTranslucent);
 			rc->set_color(viewport->G_fadecolor()->G_R(),viewport->G_fadecolor()->G_G(),viewport->G_fadecolor()->G_B(),viewport->G_fadecolor()->G_A());
-			glBegin(GL_QUADS);	glVertex2d(0.0,0.0);	glVertex2d(xright,0.0);	glVertex2d(xright,1);	glVertex2d(0.0,1);	glEnd();
+			glBegin(GL_QUADS);	glVertex2d(0.0,0.0);	glVertex2d(xright,0.0);	glVertex2d(xright,yright);	glVertex2d(0.0,yright);	glEnd();
 			rc->EnableDepthTest(true);
 		}
 

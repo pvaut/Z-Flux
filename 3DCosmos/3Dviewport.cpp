@@ -76,7 +76,8 @@ T3DViewport::T3DViewport()
 	nearclipplane=addparam(_qstr("NearClipPlane"),SC_valname_scalar)->content.G_content_scalar();
 	farclipplane=addparam(_qstr("FarClipPlane"),SC_valname_scalar)->content.G_content_scalar();
 
-	hstretchfactor=addparam(_qstr("StretchFactor"),SC_valname_scalar)->content.G_content_scalar();
+	hstretchfactorX=addparam(_qstr("StretchFactor"),SC_valname_scalar)->content.G_content_scalar();
+	hstretchfactorY=addparam(_qstr("StretchFactorY"),SC_valname_scalar)->content.G_content_scalar();
 
 	swapstereo=addparam(_qstr("SwapStereo"),SC_valname_boolean)->content.G_content_boolean();
 	hmirrorleft=addparam(_qstr("HMirrorLeft"),SC_valname_boolean)->content.G_content_boolean();
@@ -160,7 +161,8 @@ void T3DViewport::resetparams()
 	aperture->copyfrom(3.1415927/4);
 	nearclipplane->copyfrom(0.1);
 	farclipplane->copyfrom(100);
-	hstretchfactor->copyfrom(1.0);
+	hstretchfactorX->copyfrom(1.0);
+	hstretchfactorY->copyfrom(1.0);
 	light0colorfactor->copyfrom(1.0);
 
 	swapstereo->copyfrom(false);
@@ -408,7 +410,7 @@ double T3DViewport::G_eyeseparation()
 
 double T3DViewport::G_aspectratio()
 {
-	double screenratio=(winxres*(xmaxfrac->G_val()-xminfrac->G_val())*1.0/(winyres*(ymaxfrac->G_val()-yminfrac->G_val())))/abs(G_hstretchfactor());
+	double screenratio=(winxres*(xmaxfrac->G_val()-xminfrac->G_val())*1.0/(winyres*(ymaxfrac->G_val()-yminfrac->G_val())))/abs(G_hstretchfactorX())*abs(G_hstretchfactorY());
 	return screenratio;
 }
 

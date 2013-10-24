@@ -52,7 +52,7 @@ public:
 	virtual void paramchanged(StrPtr iname);
 	virtual TObjectTreeItem *G_parent();
 private:
-	TSC_scalar *hstretchfactor,*focaldistance,*eyeseparation,*eyesepfactor,*aperture,*nearclipplane,*farclipplane,*xoffsetfrac,*light0colorfactor;//scalars
+	TSC_scalar *hstretchfactorX,*hstretchfactorY,*focaldistance,*eyeseparation,*eyesepfactor,*aperture,*nearclipplane,*farclipplane,*xoffsetfrac,*light0colorfactor;//scalars
 	TSC_boolean *swapstereo,*hmirrorleft,*hmirrorright,*vmirrorleft,*vmirrorright;
 public:
 	TSC_scalar *framesize;
@@ -79,7 +79,8 @@ public:
 	bool G_isswappedstereo() { return swapstereo->G_val(); }
 	bool G_isHmirrorred(bool isrightpart);
 	bool G_isVmirrorred(bool isrightpart);
-	double G_hstretchfactor() { return hstretchfactor->G_val(); }
+	double G_hstretchfactorX() { return hstretchfactorX->G_val(); }
+	double G_hstretchfactorY() { return hstretchfactorY->G_val(); }
 	double G_eyeseparation();
 	double G_focaldistance() { return focaldistance->G_val(); }
 	double G_aperture() { return aperture->G_val(); }

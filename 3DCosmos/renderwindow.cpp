@@ -542,8 +542,8 @@ void Trendercontext::create_subframe_screen()
 
 
 	double wd2=focaldistance*tan(rw->viewport->G_aperture()/2.0);
-	double left   = abs(rw->screenratio)*wd2 + fact*0.5*eyesep;
-	double bottom =  wd2;
+	double left   = abs(rw->screenratioX)*wd2 + fact*0.5*eyesep;
+	double bottom =  abs(rw->screenratioY)*wd2;
 
 	glMatrixMode(GL_MODELVIEW);
 	glPushMatrix();
@@ -558,9 +558,10 @@ void Trendercontext::create_subframe_viewport()
 {
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	double xl=fabs(rw->screenratio);
-	if (!G_isHmirrored()) glOrtho(0,xl,0,1,-1,2);
-	else glOrtho(xl,0,0,1,-1,2);
+	double xl=fabs(rw->screenratioX);
+	double yl=fabs(rw->screenratioX);
+	if (!G_isHmirrored()) glOrtho(0,xl,0,yl,-1,2);
+	else glOrtho(xl,0,0,yl,-1,2);
 
 	glMatrixMode(GL_MODELVIEW);
 	glPushMatrix();
@@ -588,9 +589,11 @@ void Trendercontext::start_viewportframe(bool preserveaspectratio)
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	double xl=1.0;
-	if (preserveaspectratio) xl=fabs(rw->screenratio);
-	if (!G_isHmirrored()) glOrtho(0,xl,0,1,-1,2);
-	else glOrtho(xl,0,0,1,-1,2);
+	if (preserveaspectratio) xl=fabs(rw->screenratioX);
+	double yl=1.0;
+	if (preserveaspectratio) yl=fabs(rw->screenratioY);
+	if (!G_isHmirrored()) glOrtho(0,xl,0,yl,-1,2);
+	else glOrtho(xl,0,0,yl,-1,2);
 
 	glMatrixMode(GL_MODELVIEW);
 	glPushMatrix();
@@ -1389,7 +1392,8 @@ void TRenderWindow::render_begin(T3DViewport *iviewport, double frxmin, double f
 	renderviewport.y0=frymin*imasizey;
 	renderviewport.lx=(frxmax-frxmin)*imasizex;
 	renderviewport.ly=(frymax-frymin)*imasizey;
-	screenratio=(renderviewport.lx/renderviewport.ly)/abs(viewport->G_hstretchfactor());
+	screenratioX=(renderviewport.lx/renderviewport.ly)/abs(viewport->G_hstretchfactorX());
+	screenratioY=1.0/abs(viewport->G_hstretchfactorY());
 
 	//if (i_isrightpart)
 	//	renderviewport.y0-=160;
@@ -1487,16 +1491,16 @@ void TRenderWindow::createfrustum(double nearplane, double farplane)
 	glLoadIdentity();
 	double offsetx=viewport->G_xoffsetfrac()*wd2*2;
 
-	double left   = -screenratio*wd2 - fact*0.5*(eyesep/focallength)*nearplane+offsetx;
-	double right  = +screenratio*wd2 - fact*0.5*(eyesep/focallength)*nearplane+offsetx;
+	double left   = -screenratioX*wd2 - fact*0.5*(eyesep/focallength)*nearplane+offsetx;
+	double right  = +screenratioX*wd2 - fact*0.5*(eyesep/focallength)*nearplane+offsetx;
 	if (rendercontext.Hmirrorred)
 	{
-		left   = +screenratio*wd2 - fact*0.5*(eyesep/focallength)*nearplane+offsetx;
-		right  = -screenratio*wd2 - fact*0.5*(eyesep/focallength)*nearplane+offsetx;
+		left   = +screenratioX*wd2 - fact*0.5*(eyesep/focallength)*nearplane+offsetx;
+		right  = -screenratioX*wd2 - fact*0.5*(eyesep/focallength)*nearplane+offsetx;
 	}
 
-	double top    = +wd2;
-	double bottom = -wd2;
+	double top    = +screenratioY*wd2;
+	double bottom = -screenratioY*wd2;
 	if (rendercontext.Vmirrorred)
 	{
 		top    = -wd2;
