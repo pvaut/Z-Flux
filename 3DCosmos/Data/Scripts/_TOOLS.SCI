@@ -198,6 +198,18 @@ function CreateNewViewPort(x0,y0,x1,y1)
    myviewport.HMirrorRight=root.Viewports.main.HMirrorRight;
    myviewport.VMirrorLeft=root.Viewports.main.VMirrorLeft;
    myviewport.VMirrorRight=root.Viewports.main.VMirrorRight;
+   
+   InterleavePattern = ReadSetting("InterleavePattern", 0);
+   if InterleavePattern>0 then {
+      warpx=matrix(2,2);
+      warpy=matrix(2,2);
+      warpx(0,0)=0;warpy(0,0)=0;
+      warpx(1,0)=1;warpy(1,0)=0;
+      warpx(0,1)=0;warpy(0,1)=1;
+      warpx(1,1)=1;warpy(1,1)=1;
+      myviewport.EnableWarped(1920*2,1080*2,warpx,warpy);
+   }
+   
    return(myviewport);
 }
 

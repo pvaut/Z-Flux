@@ -271,6 +271,8 @@ public:
 	bool G_mouse_rightbuttondown() { return mouse_rightbuttondown; }
 	void resetmouseshift() { mouseshiftx=0; mouseshifty=0; mouseshiftz=0; }
 
+	void UpdateStencil(int InterleavePattern, bool isrightpart);
+
 
 //////////////////////////////////////////////////////////////////////////////////////////
 // FOR 3DConnexion device

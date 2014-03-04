@@ -44,6 +44,9 @@ function MakeDefaultSettings(thesett)
    thesett.WinOffsetY="";
    thesett.WinSizeX="";
    thesett.WinSizeY="";
+   
+   thesett.InterleavePattern=0;
+   
 }
 
 
@@ -69,7 +72,7 @@ sett.WinOffsetX="0";
 sett.WinOffsetY="0";
 sett.WinSizeX="1920";
 sett.WinSizeY="1080";
-addconfig("Presets",'3DHD Side-By-Side stereo (Horizontal, 1920x1080)',sett);
+addconfig("Presets",'3DhD Side-By-Side (Hor, 1920x1080)',sett);
 
 
 sett=map;
@@ -84,7 +87,27 @@ sett.RightViewShiftY=0.5;
 sett.VPXMaxFrac=2;
 sett.VPYMinFrac=0.5;
 sett.VPYMaxFrac=1.0;
-addconfig("Presets",'3DHD Side-By-Side stereo (Vertical, 1920x1080)',sett);
+addconfig("Presets",'3DHD Side-By-Side (Vert, 1920x1080)',sett);
+
+sett=map;
+MakeDefaultSettings(ref(sett));
+sett.WinOffsetX="0";
+sett.WinOffsetY="0";
+sett.WinSizeX="1920";
+sett.WinSizeY="1080";
+sett.RightViewShiftX=0.0;
+sett.RightViewShiftY=0.0;
+sett.VPXMaxFrac=2;
+sett.VPYMinFrac=0.0;
+sett.VPYMaxFrac=1.0;
+sett.InterleavePattern=1;
+addconfig("Presets",'3DHD Interleaved (Vert 1, 1920x1080)',sett);
+sett.InterleavePattern=2;
+addconfig("Presets",'3DHD Interleaved (Vert 2, 1920x1080)',sett);
+sett.InterleavePattern=3;
+addconfig("Presets",'3DHD Interleaved (Hor 1, 1920x1080)',sett);
+sett.InterleavePattern=4;
+addconfig("Presets",'3DHD Interleaved (Hor 2, 1920x1080)',sett);
 
 sett=map;
 MakeDefaultSettings(ref(sett));

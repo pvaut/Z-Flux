@@ -30,7 +30,7 @@ function copyfileset(sourcepath,destpath,wildcard,copysubdirs,denyfolderlist,den
 
 
 sourcepath=ExecDir;
-destpath="D:\Z-Flux\Distribution";
+destpath="D:\Z-Flux\DistributionFull";
 
 
 
@@ -58,39 +58,19 @@ copyfileset(sourcepath+"\data\Languages",destpath+"\data\Languages","*.txt",true
 copyfileset(sourcepath+"\data\Paths",destpath+"\data\Paths","*.pth",false);
 copyfileset(sourcepath+"\data\Satellites",destpath+"\data\Satellites","*.*",false);
 
-copyfileset(sourcepath+"\data\Models\Voyager",destpath+"\data\Models\Voyager","*.*",true);
+copyfileset(sourcepath+"\data\Models",destpath+"\data\Models","*.*",true);
 
 CreateDirectory(destpath+"\data\StereoPictures\Samples");
 copyfileset(sourcepath+"\data\StereoPictures\Samples",destpath+"\data\StereoPictures\Samples","*.*",true);
 
 
-copyfileset(sourcepath+"\data\Textures",destpath+"\data\Textures","*.*",false,list,
-   list("MarsGeologic.jpg",
-        "MarsGeologicSP.jpg",
-        "MarsGeologicNP.jpg",
-        "koepel.jpg",
-        "koepel_mask.jpg",
-        "panovsrug.jpg",
-        "panovsrug_mask.jpg",
-        "earth_4.jpg",
-        "mars3.jpg",
-        "moon_3.jpg"));
+copyfileset(sourcepath+"\data\Textures",destpath+"\data\Textures","*.*",false);
 
 copyfileset(sourcepath+"\data\Scripts",destpath+"\data\Scripts","*.*",true,
    list("_InternalUsage",
         "_MarsProject",
         "_Movie"),
-   list("except.dmp",
-        "planetarium.sci",
-        "MarsSurface.sci",
-        "mars_hohman.sci",
-        "vsrug.sci",
-        "cassini.sci",
-        "iss.sci",
-        "ulysses.sci",
-        "CoriolisForce.sci",
-        "Orbitals.sci",
-        "Orbitals2.sci"
+   list("except.dmp"
    ));
 
 copyfileset(sourcepath+"\data\UserMenu_Standard",destpath+"\data\UserMenu_Standard","*.*",true,list,list);

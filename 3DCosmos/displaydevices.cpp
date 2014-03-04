@@ -239,6 +239,10 @@ TDisplayDevice::TDisplayDevice()
 	addparam(_qstr("Yres"),SC_valname_scalar,true);
 	addparam(_qstr("BitDepth"),SC_valname_scalar,true);
 	addparam(_qstr("Fullscreen"),SC_valname_boolean);
+	addparam(_qstr("InterleavePattern"),SC_valname_scalar,true);
+
+	G_param(_qstr("InterleavePattern"))->content.copyfrom(0);
+
 }
 
 TDisplayDevice::~TDisplayDevice()

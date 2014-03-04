@@ -73,9 +73,9 @@ void Tframebufferobject::create(Trendercontext *irc, int iresx, int iresy)
 	//create depth buffer
 	glGenRenderbuffers(1, &depthbuffer);
 	glBindRenderbuffer(GL_RENDERBUFFER, depthbuffer);
-	glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT24, resx, resy);
+	glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH32F_STENCIL8, resx, resy);
 	// Attach the depth render buffer to the FBO as it's depth attachment
-	glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, depthbuffer);
+	glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_RENDERBUFFER, depthbuffer);
 
 
 	//check status

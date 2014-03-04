@@ -42,20 +42,34 @@ if tpe==1 then {
    vp.YMaxFrac=ReadSetting("VPYMaxFrac",1);
    
    vp.EyeSepFactor=ReadSetting("EyeSepFactor",0.025);
+   
+   InterleavePattern = ReadSetting("InterleavePattern", 0);
+   if InterleavePattern>0 then {
+      warpx=matrix(2,2);
+      warpy=matrix(2,2);
+      warpx(0,0)=0;warpy(0,0)=0;
+      warpx(1,0)=1;warpy(1,0)=0;
+      warpx(0,1)=0;warpy(0,1)=1;
+      warpx(1,1)=1;warpy(1,1)=1;
+      vp.EnableWarped(1920*2,1080*2,warpx,warpy);
+   }
  
-# FOR WARPED RENDERING:  
-#   warpx=matrix(101,101);
-#   warpy=matrix(101,101);
-#   for ix=0 to 100 do
-#      for iy=0 to 100 do {
-#         x=ix/100;
-#         y=iy/100;
-#         warpx(ix,iy)=x/(1+y);
-#         warpy(ix,iy)=y*(0.5+0.5*x);
-#      }
-#   vp.EnableWarped(2000,1500,warpx,warpy);
+   # FOR WARPED RENDERING:  
+   if false then {
+      warpx=matrix(101,101);
+      warpy=matrix(101,101);
+      for ix=0 to 100 do
+         for iy=0 to 100 do {
+            x=ix/100;
+            y=iy/100;
+            warpx(ix,iy)=x/(1+y);
+            warpy(ix,iy)=y*(0.5+0.5*x);
+         }
+      vp.EnableWarped(1920,1080,warpx,warpy);
+      }
 
    disp1=root.displays.get(displayname);
+   disp1.InterleavePattern = InterleavePattern;
    
    st=ReadSetting("WinOffsetX","");if st!="" then disp1.Xoffset=ToScalar(st);
    st=ReadSetting("WinOffsetY","");if st!="" then disp1.Yoffset=ToScalar(st);
