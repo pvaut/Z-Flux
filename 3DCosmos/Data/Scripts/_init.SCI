@@ -9,6 +9,8 @@
 resetall;
 
 
+
+
 displayname=ReadSetting("DisplayName","");
 if displayname=="" then displayname="\\.\DISPLAY1";
 
@@ -109,4 +111,7 @@ for i1=0 to 2 do
       root.ColorMatrixRight.get(i1,i2)=ReadSetting("ColorMatrixRight"+str(i1)+str(i2),defval);
    }
    
+
+JoystickUseForNavigation(false);
+
 

@@ -203,6 +203,7 @@ private:
 	double timingtest_framerate;
 public:
 	TMatrix *colormatrixleft,*colormatrixright;
+	bool UseJoystickInput;
 
 public://star information
 	Tdoublearray stars_RA,stars_DEC,stars_E1,stars_E2,stars_MAG,stars_X,stars_Y,stars_Z,dir1_X,dir1_Y,dir1_Z,dir2_X,dir2_Y,dir2_Z;

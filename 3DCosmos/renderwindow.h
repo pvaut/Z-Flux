@@ -218,7 +218,7 @@ private:
 	HCURSOR emptycursor;
 	int centerposx,centerposy,mouseshiftx,mouseshifty,mouseshiftz;
 	Tarray<T3DFont> fonts;
-	bool mouse_leftbuttondown,mouse_rightbuttondown;
+	bool mouse_leftbuttondown,mouse_rightbuttondown,mouse_middlebuttondown;
 
 
 public:
@@ -251,6 +251,8 @@ public:
 	void OnLButtonDblClk(UINT nFlags, CPoint point);
 	void OnRButtonDown(UINT nFlags, CPoint point);
 	void OnRButtonUp(UINT nFlags, CPoint point);
+	void OnMButtonDown(UINT nFlags, CPoint point);
+	void OnMButtonUp(UINT nFlags, CPoint point);
 	void OnMouseMove(UINT nFlags, CPoint point);
 	BOOL OnMouseWheel(UINT nFlags, short zDelta, CPoint pt);
 	void CenterCursor();
@@ -269,6 +271,7 @@ public:
 	double G_mouseshiftz() { return mouseshiftz; }
 	bool G_mouse_leftbuttondown() { return mouse_leftbuttondown; }
 	bool G_mouse_rightbuttondown() { return mouse_rightbuttondown; }
+	bool G_mouse_middlebuttondown() { return mouse_middlebuttondown; }
 	void resetmouseshift() { mouseshiftx=0; mouseshifty=0; mouseshiftz=0; }
 
 	void UpdateStencil(int InterleavePattern, bool isrightpart);

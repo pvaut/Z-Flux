@@ -935,6 +935,8 @@ BEGIN_MESSAGE_MAP(TRenderWindow,CWnd)
   ON_WM_LBUTTONDBLCLK()
   ON_WM_RBUTTONDOWN()
   ON_WM_RBUTTONUP()
+  ON_WM_MBUTTONDOWN()
+  ON_WM_MBUTTONUP()
   ON_WM_MOUSEMOVE()
   ON_WM_MOUSEWHEEL()
 END_MESSAGE_MAP()
@@ -949,6 +951,7 @@ TRenderWindow::TRenderWindow(bool iisrightpart, TDisplayDevice *idisp) : renderc
 	s_dwLastDraw=0;
 	mouse_leftbuttondown=false;
 	mouse_rightbuttondown=false;
+	mouse_middlebuttondown=false;
 
 	mouseshiftx=0;
 	mouseshifty=0;
@@ -1054,6 +1057,18 @@ void TRenderWindow::OnRButtonDown(UINT nFlags, CPoint point)
 void TRenderWindow::OnRButtonUp(UINT nFlags, CPoint point)
 {
 	mouse_rightbuttondown=false;
+	ReleaseCapture();
+}
+
+void TRenderWindow::OnMButtonDown(UINT nFlags, CPoint point)
+{
+	mouse_middlebuttondown=true;
+	SetCapture();
+}
+
+void TRenderWindow::OnMButtonUp(UINT nFlags, CPoint point)
+{
+	mouse_middlebuttondown=false;
 	ReleaseCapture();
 }
 

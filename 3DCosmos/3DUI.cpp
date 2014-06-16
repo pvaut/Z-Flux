@@ -7,6 +7,7 @@
 
 #include "3DScene.h"
 //#include "3DUI.h"
+#include "3DScene.h"
 
 #include "opengl.h"
 
@@ -77,6 +78,19 @@ ENDFUNCTION(func_UI_isrightmousebuttondown)
 
 
 ///////////////////////////////////////////////////////////////////////////////////
+FUNCTION(func_UI_ismiddlemousebuttondown,UIIsMiddleMouseButtonDown)
+{
+	setreturntype(SC_valname_boolean);
+	setclasspath(PATH_UI);
+}
+void execute_implement(TSC_funcarglist *arglist, TSC_value *retval, TSC_value *assigntoval, TSC_value *owner)
+{
+	retval->G_content_boolean()->copyfrom(T3DCosmos::Get().G_scene(0)->GetMyFirstRenderWindow()->G_mouse_middlebuttondown());
+}
+ENDFUNCTION(func_UI_ismiddlemousebuttondown)
+
+
+///////////////////////////////////////////////////////////////////////////////////
 FUNCTION(func_UI_iskeydown,UIIsKeyDown)
 {
 	addvar(_qstr("key"),SC_valname_string);
@@ -139,6 +153,25 @@ void execute_implement(TSC_funcarglist *arglist, TSC_value *retval, TSC_value *a
 	*G_valuecontent<Tvector>(retval)=G_3DCosmos().G_selviewport()->currentmove.scenerot;
 }
 ENDFUNCTION(func_navigation_currentrotate)
+
+
+
+void Set_JoystickUseForNavigation(bool vl);
+
+///////////////////////////////////////////////////////////////////////////////////
+FUNCTION(func_JoystickUseForNavigation,JoystickUseForNavigation)
+{
+	setclasspath(PATH_JOYSTICK);
+	addvar(_qstr("status"),SC_valname_boolean);
+	setreturntype(SC_valname_scalar);
+}
+void execute_implement(TSC_funcarglist *arglist, TSC_value *retval, TSC_value *assigntoval, TSC_value *owner)
+{
+	Set_JoystickUseForNavigation(false/*arglist->get(0)->G_content_boolean()->G_val()*/);
+//	Tjoystickinfo &joystickinfo=G_3DCosmos().G_joystickinfo(arglist->get(0)->G_content_scalar()->G_intval());
+//	retval->G_content_scalar()->copyfrom(joystickinfo.G_axis(arglist->get(1)->G_content_scalar()->G_intval(),false));
+}
+ENDFUNCTION(func_JoystickUseForNavigation)
 
 
 ///////////////////////////////////////////////////////////////////////////////////

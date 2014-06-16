@@ -616,6 +616,7 @@ T3DCosmos::T3DCosmos()
 	showinfoline=false;
 	showdepthlayers=false;
 	showstereogrid=false;
+	UseJoystickInput = true;
 
 	prev_mouseshift_x=0;prev_mouseshift_y=0;prev_mouseshift_z=0;
 
@@ -623,6 +624,12 @@ T3DCosmos::T3DCosmos()
 	addlog(_text("3D Constructed"),-1);
 
 }
+
+
+void Set_JoystickUseForNavigation(bool vl) {
+	T3DCosmos::Get().UseJoystickInput = vl;
+}
+
 
 void T3DCosmos::init()
 {
@@ -1061,17 +1068,18 @@ void T3DCosmos::updateaxisposit()
 	if (IsKeyDown(VK_NEXT )) axisposit[UIA_Z][kblevel]=-1*stepfactor;
 
 	//from joystick
-	double joyspeedfactor=1.5;
-	int jlevel=0;
-	if (joysticks[0].G_buttondown(joysticks[0].G_button_control())) jlevel=1;
-	if (joysticks[0].G_buttondown(joysticks[0].G_button_shift())) jlevel=2;
-	axisposit[UIA_X][jlevel]+=joyspeedfactor*joysticks[0].G_xpcorr()*stepfactor;
-	axisposit[UIA_Y][jlevel]+=joyspeedfactor*joysticks[0].G_ypcorr()*stepfactor;
-	axisposit[UIA_Z][jlevel]+=joyspeedfactor*joysticks[0].G_zpcorr()*stepfactor;
-	axisposit[UIA_R][jlevel]+=joyspeedfactor*joysticks[0].G_rpcorr()*stepfactor;
-	axisposit[UIA_U][jlevel]+=joyspeedfactor*joysticks[0].G_upcorr()*stepfactor;
-	axisposit[UIA_V][jlevel]+=joyspeedfactor*joysticks[0].G_vpcorr()*stepfactor;
-
+	if (UseJoystickInput) {//J!!!
+		double joyspeedfactor=1.5;
+		int jlevel=0;
+		if (joysticks[0].G_buttondown(joysticks[0].G_button_control())) jlevel=1;
+		if (joysticks[0].G_buttondown(joysticks[0].G_button_shift())) jlevel=2;
+		axisposit[UIA_X][jlevel]+=joyspeedfactor*joysticks[0].G_xpcorr()*stepfactor;
+		axisposit[UIA_Y][jlevel]+=joyspeedfactor*joysticks[0].G_ypcorr()*stepfactor;
+		axisposit[UIA_Z][jlevel]+=joyspeedfactor*joysticks[0].G_zpcorr()*stepfactor;
+		axisposit[UIA_R][jlevel]+=joyspeedfactor*joysticks[0].G_rpcorr()*stepfactor;
+		axisposit[UIA_U][jlevel]+=joyspeedfactor*joysticks[0].G_upcorr()*stepfactor;
+		axisposit[UIA_V][jlevel]+=joyspeedfactor*joysticks[0].G_vpcorr()*stepfactor;
+	}
 }
 
 bool T3DCosmos::G_axisactive(int axisnr, int axislevel)
@@ -1457,19 +1465,21 @@ void T3DCosmos::dispatchjoysticks()
 		bool controlpressed=joysticks[0].G_buttondown(joysticks[0].G_button_control());
 		bool shiftpressed=joysticks[0].G_buttondown(joysticks[0].G_button_shift());
 
-		if (joysticks[0].G_buttonclicked(joysticks[0].G_button_F1())) UI_processkey(VK_F1,controlpressed,shiftpressed);
-		if (joysticks[0].G_buttonclicked(joysticks[0].G_button_F2())) UI_processkey(VK_F2,controlpressed,shiftpressed);
-		if (joysticks[0].G_buttonclicked(joysticks[0].G_button_F3())) UI_processkey(VK_F3,controlpressed,shiftpressed);
-		if (joysticks[0].G_buttonclicked(joysticks[0].G_button_F4())) UI_processkey(VK_F4,controlpressed,shiftpressed);
+		if (UseJoystickInput) {//J!!!
+			if (joysticks[0].G_buttonclicked(joysticks[0].G_button_F1())) UI_processkey(VK_F1,controlpressed,shiftpressed);
+			if (joysticks[0].G_buttonclicked(joysticks[0].G_button_F2())) UI_processkey(VK_F2,controlpressed,shiftpressed);
+			if (joysticks[0].G_buttonclicked(joysticks[0].G_button_F3())) UI_processkey(VK_F3,controlpressed,shiftpressed);
+			if (joysticks[0].G_buttonclicked(joysticks[0].G_button_F4())) UI_processkey(VK_F4,controlpressed,shiftpressed);
 
-		if (joysticks[0].G_buttonclicked(joysticks[0].G_button_return())) UI_processkey(VK_RETURN,controlpressed,shiftpressed);
-		if (joysticks[0].G_buttonclicked(joysticks[0].G_button_esc())) UI_processkey(VK_ESCAPE,controlpressed,shiftpressed);
+			if (joysticks[0].G_buttonclicked(joysticks[0].G_button_return())) UI_processkey(VK_RETURN,controlpressed,shiftpressed);
+			if (joysticks[0].G_buttonclicked(joysticks[0].G_button_esc())) UI_processkey(VK_ESCAPE,controlpressed,shiftpressed);
 
-		int rockerclicked=joysticks[0].G_rockerclicked();
-		if (rockerclicked==1) UI_processkey(VK_UP,false,false);
-		if (rockerclicked==2) UI_processkey(VK_RIGHT,false,false);
-		if (rockerclicked==3) UI_processkey(VK_DOWN,false,false);
-		if (rockerclicked==4) UI_processkey(VK_LEFT,false,false);
+			int rockerclicked=joysticks[0].G_rockerclicked();
+			if (rockerclicked==1) UI_processkey(VK_UP,false,false);
+			if (rockerclicked==2) UI_processkey(VK_RIGHT,false,false);
+			if (rockerclicked==3) UI_processkey(VK_DOWN,false,false);
+			if (rockerclicked==4) UI_processkey(VK_LEFT,false,false);
+		}
 	}
 
 }

@@ -25,19 +25,10 @@ sss.ambientlightcolor=color(0.05,0.05,0.05);
 
 rootframe=sss.Universe;
 
-JID=1;
-axiscount=6;
-buttoncount=32;
-axstrings=list;
+buttoncount=3;
 btstrings=list;
 
 yp=0;
-
-for i=0 to axiscount-1 do {
-   axstrings.add(rootframe.add("Text3D"));
-   axstrings(i).Position=point(0,yp,0);
-   yp=yp+0.75;
-}
 
 for i=0 to buttoncount-1 do {
    btstrings.add(rootframe.add("Text3D"));
@@ -45,23 +36,12 @@ for i=0 to buttoncount-1 do {
    yp=yp+0.75;
 }
 
-rkstring=rootframe.add("Text3D");
-rkstring.Position=point(0,yp,0);
-
-
 
 while true do {
 
-   for i=0 to axiscount-1 do {
-      axstrings(i).Content="Axis "+str(i,0)+" "+
-         str(round(JoystickGetAxis(JID,i),2))+" "+
-         str(round(JoystickGetAxisCorrected(JID,i),2));
-   }
-   for i=0 to buttoncount-1 do {
-      btstrings(i).Content="Button "+str(i,0)+" "+str(JoystickButtonDown(JID,i));
-   }
+   btstrings(0).Content="Left Button "+str(UIIsLeftMouseButtonDown);
+   btstrings(1).Content="Middle Button "+str(UIIsMiddleMouseButtonDown);
+   btstrings(2).Content="Right Button "+str(UIIsRightMouseButtonDown);
    
-   rkstring.Content="Rocker "+str(JoystickRockerPos(JID));
-
    render;
 }

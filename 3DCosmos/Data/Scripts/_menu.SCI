@@ -3,6 +3,8 @@ codeblock readtextfile(ScriptDir+"\_logo.sci");
 
 createvar(menu);
 
+JoystickUseForNavigation(false);
+
 function startup()
 {
    sf=T_scene_create;
