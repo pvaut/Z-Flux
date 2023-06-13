@@ -1,0 +1,11 @@
+import "docobj.idl";
+
+
+[ version(1.0), uuid(a81093ac-8a5e-3615-b089-d8c6d605cb09) ]
+library Zflux
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+}
+

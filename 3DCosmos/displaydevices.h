@@ -76,10 +76,7 @@ class TDisplayAdapterlist : public TObjectTreeItem
 private:
 	Tarray<TDisplayDevice> devices;
 public:
-	TDisplayAdapterlist()
-	{
-		param_readonly(_qstr("Name"),true);
-	}
+	TDisplayAdapterlist();
 public:
 	virtual StrPtr G_classname() { return _qstr("Displays"); }
 	void G_name(QString &str) { str=G_classname(); }
@@ -91,11 +88,7 @@ public:
 public:
 	void load();
 public:
-	static TDisplayAdapterlist& Get()
-	{
-		static TDisplayAdapterlist sset;
-		return sset;
-	}
+	static TDisplayAdapterlist& Get();
 };
 
 Tcopyarray<TDisplayWindow>* G_displaywindows();

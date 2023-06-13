@@ -36,20 +36,11 @@ private:
 	QString lasterror;
 	bool isrunning;
 public:
-	Tanimatethread()
-	{
-		threadhandle=NULL;
-		script=NULL;
-		isrunning=false;
-	}
+	Tanimatethread();
 protected:
 	void run();
 public:
-	static Tanimatethread& Get()
-	{
-		static Tanimatethread sset;
-		return sset;
-	}
+	static Tanimatethread& Get();
 	static void runthread(void *ptr)
 	{
 		((Tanimatethread*)ptr)->run();
@@ -65,6 +56,24 @@ public:
 		return isrunning;
 	}
 };
+
+static Tanimatethread *sset = nullptr;
+
+Tanimatethread& Tanimatethread::Get()
+{
+	if (sset == nullptr)
+		sset = new Tanimatethread();
+	return *sset;
+}
+
+Tanimatethread::Tanimatethread()
+{
+	if (sset == nullptr)
+		sset = this;
+	threadhandle = NULL;
+	script = NULL;
+	isrunning = false;
+}
 
 bool IsAnimationRunning()
 {

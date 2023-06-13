@@ -31,11 +31,7 @@ private:
 	void addpoint_trianglestrip(int nr);
 	void addtriangle(int nr1, int nr2, int nr3);
 public:
-	static Ttesselator& Get()
-	{
-		 static Ttesselator env;
-		 return env;
-	}
+	static Ttesselator& Get();
 	Ttesselator();
 	~Ttesselator();
 public:

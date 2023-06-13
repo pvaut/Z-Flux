@@ -53,11 +53,13 @@ public:
 		return enumtypes[nr];
 	}
 
+	/*
 	static TSC_env& Get()
 	{
 		 static TSC_env env;
 		 return env;
 	}
+	*/
 public:
 	int G_functioncount() { return functions.G_count(); }
 	TSC_func* G_function(int nr) { return functions[nr]; }

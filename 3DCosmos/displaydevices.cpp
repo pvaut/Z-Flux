@@ -6,10 +6,29 @@
 #include "3DScene.h"
 #include "3DCosmos.h"
 
+TDisplayWindow* uniquedisplaywindow = nullptr;
+
+
 int G_rendertype();
 
 Tcopyarray<TDisplayWindow> displaywindows;
 Tcopyarray<TDisplayWindow>* G_displaywindows() { return &displaywindows; }
+
+static TDisplayAdapterlist* sset = nullptr;
+
+TDisplayAdapterlist& TDisplayAdapterlist::Get()
+{
+	if(sset == nullptr)
+		sset = new TDisplayAdapterlist();
+	return *sset;
+}
+
+TDisplayAdapterlist::TDisplayAdapterlist()
+{
+	if (sset == nullptr)
+		sset = this;
+	param_readonly(_qstr("Name"), true);
+}
 
 TObjectTreeItem* G_treeobject_adapterlist()
 {
@@ -18,10 +37,13 @@ TObjectTreeItem* G_treeobject_adapterlist()
 
 TDisplayWindow* G_uniquedisplaywindow()
 {
+	return uniquedisplaywindow;
+	/*
 	ASSERT(displaywindows.G_count()==1);
 	if (displaywindows.G_count()<1) throw (_text("Query for unique display window failed because there are none"));
 	if (displaywindows.G_count()>1) throw (_text("Query for unique display window failed because there are more than one"));
 	return displaywindows[0];
+	*/
 }
 
 
@@ -111,6 +133,8 @@ void TDisplayWindow::createwin(TDisplayDevice *idevice, RECT &boundingbox)
 				boundingbox,NULL,
 				NULL,0
 		    );
+	if(uniquedisplaywindow == nullptr)
+		uniquedisplaywindow = this;
 	displaywindows.add(this);
 
 /*	m_hWnd=CreateWindowEx(

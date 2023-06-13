@@ -43,7 +43,9 @@
 #define IDC_COLORSCHEME                 1005
 #define IDC_EDIT1                       1006
 #define IDC_LANGUAGE                    1008
+#ifndef IDC_STATIC
 #define IDC_STATIC                      -1
+#endif
 
 // Next default values for new objects
 // 

@@ -124,35 +124,35 @@ void loadstockcyclorbits()
 
 	addlog(_text("Loading stock cyclic orbits"),+1);
 
-	filename=G_datadir();filename+=_text("/AstroData/MERCURIUS_cycl.tab");
+	filename=G_datadir();filename+=_text("\\AstroData\\MERCURIUS_cycl.tab");
 	orb=new Tcyclorbit2(filename,0.00001,au2km);
 	stockcyclorbits.add(orb);stockcyclorbitnames.add(new QString("MERCURIUS"));
 
-	filename=G_datadir();filename+=_text("/AstroData/VENUS_cycl.tab");
+	filename=G_datadir();filename+=_text("\\AstroData\\VENUS_cycl.tab");
 	orb=new Tcyclorbit2(filename,0.00001,au2km);
 	stockcyclorbits.add(orb);stockcyclorbitnames.add(new QString("VENUS"));
 
-	filename=G_datadir();filename+=_text("/AstroData/EARTH_cycl.tab");
+	filename=G_datadir();filename+=_text("\\AstroData\\EARTH_cycl.tab");
 	orb=new Tcyclorbit2(filename,0.00001,au2km);stockcyclorbitnames.add(new QString("EARTH"));
 	stockcyclorbits.add(orb);
 
-	filename=G_datadir();filename+=_text("/AstroData/MARS_cycl.tab");
+	filename=G_datadir();filename+=_text("\\AstroData\\MARS_cycl.tab");
 	orb=new Tcyclorbit2(filename,0.00001,au2km);
 	stockcyclorbits.add(orb);stockcyclorbitnames.add(new QString("MARS"));
 
-	filename=G_datadir();filename+=_text("/AstroData/JUPITER_cycl.tab");
+	filename=G_datadir();filename+=_text("\\AstroData\\JUPITER_cycl.tab");
 	orb=new Tcyclorbit2(filename,0.00001,au2km);
 	stockcyclorbits.add(orb);stockcyclorbitnames.add(new QString("JUPITER"));
 
-	filename=G_datadir();filename+=_text("/AstroData/SATURNUS_cycl.tab");
+	filename=G_datadir();filename+=_text("\\AstroData\\SATURNUS_cycl.tab");
 	orb=new Tcyclorbit2(filename,0.00001,au2km);
 	stockcyclorbits.add(orb);stockcyclorbitnames.add(new QString("SATURNUS"));
 
-	filename=G_datadir();filename+=_text("/AstroData/URANUS_cycl.tab");
+	filename=G_datadir();filename+=_text("\\AstroData\\URANUS_cycl.tab");
 	orb=new Tcyclorbit2(filename,0.00001,au2km);
 	stockcyclorbits.add(orb);stockcyclorbitnames.add(new QString("URANUS"));
 
-	filename=G_datadir();filename+=_text("/AstroData/NEPTUNUS_cycl.tab");
+	filename=G_datadir();filename+=_text("\\AstroData\\NEPTUNUS_cycl.tab");
 	orb=new Tcyclorbit2(filename,0.00001,au2km);
 	stockcyclorbits.add(orb);stockcyclorbitnames.add(new QString("NEPTUNUS"));
 
