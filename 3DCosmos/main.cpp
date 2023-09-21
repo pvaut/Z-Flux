@@ -85,7 +85,7 @@ void addlog(StrPtr content, int incrpos)
 
 void initlog()
 {
-	logfilename=datadir+_qstr("/log.txt");
+	logfilename=datadir+_qstr("\\log.txt");
 	FILE *fp=_wfopen(logfilename,_qstr("w"));
 	if (fp==NULL)
 	{
@@ -1151,18 +1151,19 @@ class myapp : public CWinApp
 {
 	ULONG_PTR gditoken;
 public:
-	myapp()
+	myapp() : gditoken(NULL)
 	{
-		Gdiplus::GdiplusStartupInput input;
-		Gdiplus::GdiplusStartup(&gditoken,&input,NULL);
-		SetUnhandledExceptionFilter(exceptfilter);
+
 	}
 	~myapp()
 	{
 		Gdiplus::GdiplusShutdown(gditoken);
 	}
-	virtual BOOL InitInstance()
-	{
+	virtual BOOL InitInstance()	{
+		Gdiplus::GdiplusStartupInput input;
+		Gdiplus::GdiplusStartup(&gditoken, &input, NULL);
+		SetUnhandledExceptionFilter(exceptfilter);
+
 		try{
 			SetRegistryKey(G_softwarename());
 
@@ -1194,7 +1195,7 @@ public:
 			StrChar locstartupdir[600];
 			GetCurrentDirectory(599,locstartupdir);
 			startupdir=locstartupdir;
-			datadir=startupdir+_qstr("/Data");
+			datadir=startupdir+_qstr("\\Data");
 			{
 				QString storeddatadir;
 				QParamRead(PARAMLOCATION_REGISTRY,_qstr("DataDirectory"),storeddatadir);
@@ -1211,6 +1212,8 @@ public:
 			addlog(_text("Fetching MAC address"));
 			GetMACaddress(MACaddr);
 			addlog(MACaddr);
+
+			//T3DCosmos::Get().LoadSettings();
 
 			G_3DCosmos().LoadSettings();
 			G_3DCosmos().init();

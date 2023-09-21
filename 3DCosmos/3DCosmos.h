@@ -277,11 +277,7 @@ public:
 	Tjoystickinfo& G_joystickinfo(int ID);
 
 public:
-	static T3DCosmos& Get()
-	{
-		static T3DCosmos sset;
-		return sset;
-	}
+	static T3DCosmos& Get();
 
 	void UI_OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags);
 	void UI_OnChar(UINT nChar, UINT nRepCnt, UINT nFlags);

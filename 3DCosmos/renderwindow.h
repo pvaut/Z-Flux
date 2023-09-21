@@ -37,7 +37,8 @@ class T3DTexture;
 class T3DFont;
 class Tbmp;
 
-#define _3DConnexion
+// outcommented for now, because the include file is alas... not available!
+//#define _3DConnexion
 
 #ifdef _3DConnexion
 #include "tdxinput.tlh"
@@ -87,7 +88,7 @@ public:
 	Trendertexture lightpoint1;
 	bool isrightpart;
 public:
-	static enum RenderPass { RP_SOLID,RP_TRANSPARENT };
+	enum RenderPass { RP_SOLID,RP_TRANSPARENT };
 	RenderPass currentrenderpass;
 	void SetBlendType(int blendtype);//of type SC_valname_blendtype
 	void EnableDepthTest(bool enabled);
@@ -200,7 +201,7 @@ public:
 
 
 //for 3DConnexion
-[ event_receiver(com)]
+//[ event_receiver(com)]
 class TRenderWindow : public CWnd
 {
 	friend class Trendercontext;

@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B51AC713-FE71-475B-AE70-BA503D4710B2}</ProjectGuid>
+    <RootNamespace>My3DCosmos</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25420.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>Z-Flux</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>Z-Flux</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)\QXWIN;$(ProjectDir)\OpenGL;$(ProjectDir)\CSG;$(ProjectDir)\CSG\Sub;$(ProjectDir)\Glew\include\GL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4101;4244;4838;4018;4305;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>gdiplus.lib;opengl32.lib;glu32.lib;winmm.lib;vfw32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)\Glew\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)\QXWIN;$(ProjectDir)\OpenGL;$(ProjectDir)\CSG;$(ProjectDir)\CSG\Sub;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4101;4244;4838;4018;4305;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>gdiplus.lib;opengl32.lib;glu32.lib;winmm.lib;vfw32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>%(OutputFile)</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="2DContour.cpp" />
+    <ClCompile Include="3dclock.cpp" />
+    <ClCompile Include="3DControls.cpp" />
+    <ClCompile Include="3DCosmos.cpp" />
+    <ClCompile Include="3DCurve.cpp" />
+    <ClCompile Include="3denums.cpp" />
+    <ClCompile Include="3DFont.cpp" />
+    <ClCompile Include="3DFormattedText.cpp" />
+    <ClCompile Include="3DGeoObjects.cpp" />
+    <ClCompile Include="3DMesh.cpp" />
+    <ClCompile Include="3DMeshObject.cpp" />
+    <ClCompile Include="3dmotion.cpp" />
+    <ClCompile Include="3DPEngine.cpp" />
+    <ClCompile Include="3DScene.cpp" />
+    <ClCompile Include="3DSpaceWarper.cpp" />
+    <ClCompile Include="3DSpecialObjects.cpp" />
+    <ClCompile Include="3dstarglobe.cpp" />
+    <ClCompile Include="3dstarmap.cpp" />
+    <ClCompile Include="3DSubframe.cpp" />
+    <ClCompile Include="3DSubframeObject.cpp" />
+    <ClCompile Include="3DSurface.cpp" />
+    <ClCompile Include="3Dtexture.cpp" />
+    <ClCompile Include="3DUI.cpp" />
+    <ClCompile Include="3dvideo.cpp" />
+    <ClCompile Include="3Dviewport.cpp" />
+    <ClCompile Include="3DVolShadow.cpp" />
+    <ClCompile Include="allBnScript.cpp" />
+    <ClCompile Include="animate.cpp" />
+    <ClCompile Include="astrotools.cpp" />
+    <ClCompile Include="astrotools_cyclorbit.cpp" />
+    <ClCompile Include="bezier.cpp" />
+    <ClCompile Include="Blob.cpp" />
+    <ClCompile Include="CSG_components.cpp" />
+    <ClCompile Include="CSG_face.cpp" />
+    <ClCompile Include="CSG_line.cpp" />
+    <ClCompile Include="CSG_object.cpp" />
+    <ClCompile Include="CSG_segment.cpp" />
+    <ClCompile Include="CSG_shape.cpp" />
+    <ClCompile Include="displaydevices.cpp" />
+    <ClCompile Include="FBO.cpp" />
+    <ClCompile Include="formattedstringview.cpp" />
+    <ClCompile Include="FormatText.cpp" />
+    <ClCompile Include="FormatTextEquation.cpp" />
+    <ClCompile Include="FormatTextTabular.cpp" />
+    <ClCompile Include="GetMacAddress.cpp" />
+    <ClCompile Include="ImplicitPolygonizer.cpp" />
+    <ClCompile Include="interp.cpp" />
+    <ClCompile Include="joystick.cpp" />
+    <ClCompile Include="l3ds.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="matrix.cpp" />
+    <ClCompile Include="numrecip_svd.cpp" />
+    <ClCompile Include="objectpropertyview.cpp" />
+    <ClCompile Include="objecttree.cpp" />
+    <ClCompile Include="objecttreeview.cpp" />
+    <ClCompile Include="opengl.cpp" />
+    <ClCompile Include="OpenGL\GLee.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="qxformattedstring.cpp" />
+    <ClCompile Include="QXWIN\qbintagfile.cpp" />
+    <ClCompile Include="QXWIN\Qerror.cpp" />
+    <ClCompile Include="QXWIN\qfile.cpp" />
+    <ClCompile Include="QXWIN\qstring.cpp" />
+    <ClCompile Include="QXWIN\qstringformat.cpp" />
+    <ClCompile Include="QXWIN\qtranslate.cpp" />
+    <ClCompile Include="QXWIN\qxbitmap.cpp" />
+    <ClCompile Include="QXWIN\qxbuttonbar.cpp" />
+    <ClCompile Include="QXWIN\qxcolor.cpp" />
+    <ClCompile Include="QXWIN\qxgrid.cpp" />
+    <ClCompile Include="QXWIN\qxpanelheader.cpp" />
+    <ClCompile Include="QXWIN\qxscrollbar.cpp" />
+    <ClCompile Include="QXWIN\qxtabbar.cpp" />
+    <ClCompile Include="QXWIN\qxwin.cpp" />
+    <ClCompile Include="QXWIN\sxstoredbitmap.cpp" />
+    <ClCompile Include="QXWIN\tobject.cpp" />
+    <ClCompile Include="QXWIN\tools.cpp" />
+    <ClCompile Include="RBO.cpp" />
+    <ClCompile Include="renderfunctions.cpp" />
+    <ClCompile Include="renderwindow.cpp" />
+    <ClCompile Include="scriptsourceview.cpp" />
+    <ClCompile Include="SC_bitmap.cpp" />
+    <ClCompile Include="SC_boolean.cpp" />
+    <ClCompile Include="SC_color.cpp" />
+    <ClCompile Include="SC_customfunc.cpp" />
+    <ClCompile Include="SC_datatype_enum.cpp" />
+    <ClCompile Include="SC_env.cpp" />
+    <ClCompile Include="SC_expr.cpp" />
+    <ClCompile Include="SC_forcefield.cpp" />
+    <ClCompile Include="SC_func.cpp" />
+    <ClCompile Include="SC_functor.cpp" />
+    <ClCompile Include="SC_functree.cpp" />
+    <ClCompile Include="SC_IOfunc.cpp" />
+    <ClCompile Include="SC_list.cpp" />
+    <ClCompile Include="SC_map.cpp" />
+    <ClCompile Include="SC_mathfunc.cpp" />
+    <ClCompile Include="SC_operator.cpp" />
+    <ClCompile Include="SC_script.cpp" />
+    <ClCompile Include="SC_scriptcomp.cpp" />
+    <ClCompile Include="SC_source.cpp" />
+    <ClCompile Include="SC_time.cpp" />
+    <ClCompile Include="SC_typecast.cpp" />
+    <ClCompile Include="SC_value.cpp" />
+    <ClCompile Include="settingsdialog.cpp" />
+    <ClCompile Include="shader.cpp" />
+    <ClCompile Include="sound.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="tesselator.cpp" />
+    <ClCompile Include="TestIntersect.cpp" />
+    <ClCompile Include="utils.cpp" />
+    <ClCompile Include="vecmath.cpp" />
+    <ClCompile Include="vec_transformation.cpp" />
+    <ClCompile Include="video.cpp" />
+    <ClCompile Include="WarpMesh.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="2DContour.h" />
+    <ClInclude Include="3dclock.h" />
+    <ClInclude Include="3DControls.h" />
+    <ClInclude Include="3DCosmos.h" />
+    <ClInclude Include="3DCurve.h" />
+    <ClInclude Include="3denums.h" />
+    <ClInclude Include="3dfont.h" />
+    <ClInclude Include="3DFormattedText.h" />
+    <ClInclude Include="3dgeoobjects.h" />
+    <ClInclude Include="3Dmesh.h" />
+    <ClInclude Include="3DMeshObject.h" />
+    <ClInclude Include="3dmotion.h" />
+    <ClInclude Include="3DPEngine.h" />
+    <ClInclude Include="3dscene.h" />
+    <ClInclude Include="3DSpaceWarper.h" />
+    <ClInclude Include="3DSpecialObjects.h" />
+    <ClInclude Include="3dstarglobe.h" />
+    <ClInclude Include="3dstarmap.h" />
+    <ClInclude Include="3dsubframe.h" />
+    <ClInclude Include="3DSurface.h" />
+    <ClInclude Include="3dtexture.h" />
+    <ClInclude Include="3dvideo.h" />
+    <ClInclude Include="3dviewport.h" />
+    <ClInclude Include="3DVolShadow.h" />
+    <ClInclude Include="astrotools.h" />
+    <ClInclude Include="astrotools_cyclorbit.h" />
+    <ClInclude Include="bezier.h" />
+    <ClInclude Include="Blob.h" />
+    <ClInclude Include="csg_components.h" />
+    <ClInclude Include="CSG_face.h" />
+    <ClInclude Include="CSG_line.h" />
+    <ClInclude Include="CSG_segment.h" />
+    <ClInclude Include="CSG_shape.h" />
+    <ClInclude Include="displaydevices.h" />
+    <ClInclude Include="FBO.h" />
+    <ClInclude Include="formattedstringview.h" />
+    <ClInclude Include="formattext.h" />
+    <ClInclude Include="formattextequation.h" />
+    <ClInclude Include="formattexttabular.h" />
+    <ClInclude Include="ImplicitPolygonizer.h" />
+    <ClInclude Include="interp.h" />
+    <ClInclude Include="joystick.h" />
+    <ClInclude Include="l3ds.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="matrix.h" />
+    <ClInclude Include="numrecip_svd.h" />
+    <ClInclude Include="objectpropertyview.h" />
+    <ClInclude Include="objecttree.h" />
+    <ClInclude Include="objecttreeview.h" />
+    <ClInclude Include="opengl.h" />
+    <ClInclude Include="qxformattedstring.h" />
+    <ClInclude Include="RBO.h" />
+    <ClInclude Include="renderwindow.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="scriptsourceview.h" />
+    <ClInclude Include="SC_boolean.h" />
+    <ClInclude Include="SC_color.h" />
+    <ClInclude Include="SC_customfunc.h" />
+    <ClInclude Include="SC_datatype_enum.h" />
+    <ClInclude Include="sc_env.h" />
+    <ClInclude Include="sc_expr.h" />
+    <ClInclude Include="SC_ExpressionCacher.h" />
+    <ClInclude Include="sc_forcefield.h" />
+    <ClInclude Include="sc_func.h" />
+    <ClInclude Include="SC_functor.h" />
+    <ClInclude Include="sc_functree.h" />
+    <ClInclude Include="SC_list.h" />
+    <ClInclude Include="SC_map.h" />
+    <ClInclude Include="sc_operator.h" />
+    <ClInclude Include="sc_script.h" />
+    <ClInclude Include="sc_scriptcomp.h" />
+    <ClInclude Include="sc_source.h" />
+    <ClInclude Include="SC_time.h" />
+    <ClInclude Include="SC_typecast.h" />
+    <ClInclude Include="sc_value.h" />
+    <ClInclude Include="settingsdialog.h" />
+    <ClInclude Include="shader.h" />
+    <ClInclude Include="sound.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="tesselator.h" />
+    <ClInclude Include="utils.h" />
+    <ClInclude Include="valnames.h" />
+    <ClInclude Include="vc80.h" />
+    <ClInclude Include="vc90.h" />
+    <ClInclude Include="vecmath.h" />
+    <ClInclude Include="vec_transformation.h" />
+    <ClInclude Include="video.h" />
+    <ClInclude Include="WarpMesh.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="3DCosmos.ico" />
+    <Image Include="add1.bmp" />
+    <Image Include="back1.bmp" />
+    <Image Include="bitmap1.bmp" />
+    <Image Include="bitmap2.bmp" />
+    <Image Include="bmp00001.bmp" />
+    <Image Include="bmp00002.bmp" />
+    <Image Include="bmp00003.bmp" />
+    <Image Include="bmp00004.bmp" />
+    <Image Include="bmp00005.bmp" />
+    <Image Include="bmp00006.bmp" />
+    <Image Include="bmp00007.bmp" />
+    <Image Include="bmp00008.bmp" />
+    <Image Include="bmp00009.bmp" />
+    <Image Include="bmp00010.bmp" />
+    <Image Include="bmp00011.bmp" />
+    <Image Include="bmp00012.bmp" />
+    <Image Include="bmp00013.bmp" />
+    <Image Include="clipboar.bmp" />
+    <Image Include="new1.bmp" />
+    <Image Include="proceed1.bmp" />
+    <Image Include="proceeda.bmp" />
+    <Image Include="stop1.bmp" />
+    <Image Include="undo1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="3DCosmos.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cursor1.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

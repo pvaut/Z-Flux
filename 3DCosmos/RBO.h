@@ -7,7 +7,7 @@ class Trendercontext;
 class Trenderbufferobject
 {
 public:
-	static enum DataType { BFD_VERTEXDATA,BDF_ELEMENTS };
+	enum DataType { BFD_VERTEXDATA,BDF_ELEMENTS };
 private:
 	bool ispresent;
 	GLuint buffID;

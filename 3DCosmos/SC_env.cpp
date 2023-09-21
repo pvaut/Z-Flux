@@ -16,9 +16,14 @@ StrPtr G_startupdir();
 
 StrPtr G_operatortypename(int opID);
 
+static TSC_env* env = nullptr;
+
 TSC_env& GetTSCenv()
 {
-	return TSC_env::Get();
+	if (env == nullptr)
+		env = new TSC_env();
+	return *env;
+	//return TSC_env::Get();
 }
 
 class TSC_datatype_any : public TSC_datatype
@@ -112,6 +117,8 @@ public:
 
 TSC_env::TSC_env()
 {
+	if (env == nullptr)
+		env = this;
 	addlog(_text("Constructing ENV"),+1);
 
 	adddatatype(new TSC_datatype_any)->classpath=SC_simpletypepath;

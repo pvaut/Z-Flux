@@ -39,6 +39,8 @@
 
 #include "astrotools.h"
 
+#include <iostream>
+
 void copyclipboard(StrPtr str);
 
 
@@ -64,8 +66,18 @@ class TSC_datatype_derived_objecttreeitem : public TSC_datatype_generic_withmemb
 {
 public:
 	TSC_datatype_derived_objecttreeitem(StrPtr iname)
-		: TSC_datatype_generic_withmemberfunctions<valuetype>(iname,false)
+		: TSC_datatype_generic_withmemberfunctions<valuetype>(iname, false)
 	{
+		if (iname == L"Scene" ||
+			iname == L"FrameControl" ||
+			iname == L"TextControl" ||
+			iname == L"EditControl" ||
+			iname == L"ListControl" ||
+			iname == L"CheckControl" ||
+			iname == L"ButtonControl" ||
+			iname == L"MenuControl")
+			return;
+
 		classpath=CLASSNAME_OBJTREE;
 		valuetype tp;
 		for (int i=0; i<tp.G_paramcount(); i++)
@@ -160,7 +172,7 @@ void create_externaltypes()
 
 	GetTSCenv().adddatatype(new TSC_datatype_derived_objecttreeitem<TObjectTreeItem>(SC_valname_object));
 
-	GetTSCenv().adddatatype(new TSC_datatype_derived_objecttreeitem<T3DCosmos>(SC_valname_objectroot));
+//	GetTSCenv().adddatatype(new TSC_datatype_derived_objecttreeitem<T3DCosmos>(SC_valname_objectroot));
 
 	GetTSCenv().adddatatype(new TSC_datatype_derived_objecttreeitem<T3DScene>(SC_valname_scene));
 
@@ -531,8 +543,22 @@ void T3DMotionlist::add(T3DMotion *imotion)
 //*********************************************************************
 
 
+static T3DCosmos* sset = nullptr;
+
+T3DCosmos& T3DCosmos::Get()
+{
+	if(sset == nullptr)
+		sset = new T3DCosmos();
+	return *sset;
+}
+
 T3DCosmos::T3DCosmos()
 {
+	if (sset == nullptr)
+		sset = this;
+	else
+		return;
+
 	addlog(_text("Constructing 3DC"),+1);
 
 	TObjectTreeItem::expanded=true;
@@ -620,6 +646,7 @@ T3DCosmos::T3DCosmos()
 
 	prev_mouseshift_x=0;prev_mouseshift_y=0;prev_mouseshift_z=0;
 
+	GetTSCenv().adddatatype(new TSC_datatype_derived_objecttreeitem<T3DCosmos>(SC_valname_objectroot));
 
 	addlog(_text("3D Constructed"),-1);
 
@@ -865,6 +892,8 @@ void T3DCosmos::cleanup()
 
 T3DCosmos::~T3DCosmos()
 {
+	if (this != sset)
+		return;
 	addlog(_text("Destroying 3DC"),+1);
 	cleanup();
 	addlog(_text("3DC destroyed"),-1);

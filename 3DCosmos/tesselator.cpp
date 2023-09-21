@@ -14,6 +14,15 @@
 
 #define tessclback void (__stdcall *) ()
 
+static Ttesselator* env = nullptr;
+
+Ttesselator& Ttesselator::Get()
+{
+	if(env == nullptr)
+		env = new Ttesselator();
+	return *env;
+}
+
 Ttesselator& G_tesselator()
 {
 	return Ttesselator::Get();

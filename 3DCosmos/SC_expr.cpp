@@ -21,30 +21,7 @@ private:
 		operatorids.add(iID);
 	}
 public:
-	TSC_operatordef()
-	{
-		add(_qstr("="),     2);
-		add(_qstr(" and "), 0);
-		add(_qstr(" or "),  1);
-		add(_qstr("=="),    3);
-		add(_qstr("!="),   14);
-		add(_qstr("<="),    6);
-		add(_qstr(">="),    7);
-		add(_qstr("<"),     4);
-		add(_qstr(">"),     5);
-		add(_qstr("+"),     8);
-		add(_qstr("-"),     9);
-		add(_qstr("*"),    10);
-		add(_qstr("/"),    11);
-		add(_qstr("^"),    12);
-		add(_qstr(":"),    15);
-		add(_qstr("."),    OPID_DOT);
-
-		invalids.add(new QString(" "));
-		invalids.add(new QString("("));invalids.add(new QString(")"));
-		invalids.add(new QString("["));invalids.add(new QString("]"));
-		invalids.add(new QString("{"));invalids.add(new QString("}"));
-	}
+	TSC_operatordef();
 	int G_operatorcount() { return operatornames.G_count(); }
 	StrPtr G_operatorname_byID(int opID)
 	{
@@ -72,12 +49,44 @@ public:
 	}
 
 public:
-	static TSC_operatordef& Get()
-	{
-		 static TSC_operatordef env;
-		 return env;
-	}
+	static TSC_operatordef& Get();
 };
+
+static TSC_operatordef* env;
+
+ TSC_operatordef& TSC_operatordef::Get()
+{
+	if(env == nullptr)
+		env = new TSC_operatordef();
+	return *env;
+}
+
+ TSC_operatordef::TSC_operatordef()
+ {
+	 if (env == nullptr)
+		 env = this;
+	 add(_qstr("="), 2);
+	 add(_qstr(" and "), 0);
+	 add(_qstr(" or "), 1);
+	 add(_qstr("=="), 3);
+	 add(_qstr("!="), 14);
+	 add(_qstr("<="), 6);
+	 add(_qstr(">="), 7);
+	 add(_qstr("<"), 4);
+	 add(_qstr(">"), 5);
+	 add(_qstr("+"), 8);
+	 add(_qstr("-"), 9);
+	 add(_qstr("*"), 10);
+	 add(_qstr("/"), 11);
+	 add(_qstr("^"), 12);
+	 add(_qstr(":"), 15);
+	 add(_qstr("."), OPID_DOT);
+
+	 invalids.add(new QString(" "));
+	 invalids.add(new QString("("));invalids.add(new QString(")"));
+	 invalids.add(new QString("["));invalids.add(new QString("]"));
+	 invalids.add(new QString("{"));invalids.add(new QString("}"));
+ }
 
 StrPtr G_operatortypename(int opID)
 {

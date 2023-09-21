@@ -1,0 +1,714 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\CSG">
+      <UniqueIdentifier>{80c8fc25-ec9e-4105-8269-70bfc9ce4cfb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FormatText">
+      <UniqueIdentifier>{22d1c005-b3ea-48a6-82d9-a3a77b4b8eb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="2DContour.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dclock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3DControls.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3DCosmos.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3DCurve.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3denums.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3DFont.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3DFormattedText.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3DGeoObjects.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3DMesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3DMeshObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dmotion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3DPEngine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3DScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3DSpaceWarper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3DSpecialObjects.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dstarglobe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dstarmap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3DSubframe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3DSubframeObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3DSurface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3Dtexture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3DUI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dvideo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3Dviewport.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3DVolShadow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="allBnScript.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="animate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="astrotools.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="astrotools_cyclorbit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bezier.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Blob.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="displaydevices.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FBO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="formattedstringview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GetMacAddress.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGL\GLee.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ImplicitPolygonizer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="interp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="joystick.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="l3ds.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="numrecip_svd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="objectpropertyview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="objecttree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="objecttreeview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="opengl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QXWIN\qbintagfile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QXWIN\Qerror.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QXWIN\qfile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QXWIN\qstring.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QXWIN\qstringformat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QXWIN\qtranslate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QXWIN\qxbitmap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QXWIN\qxbuttonbar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QXWIN\qxcolor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qxformattedstring.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QXWIN\qxgrid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QXWIN\qxpanelheader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QXWIN\qxscrollbar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QXWIN\qxtabbar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QXWIN\qxwin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RBO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="renderfunctions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="renderwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SC_bitmap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SC_boolean.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SC_color.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SC_customfunc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SC_datatype_enum.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SC_env.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SC_expr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SC_forcefield.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SC_func.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SC_functor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SC_functree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SC_IOfunc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SC_list.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SC_map.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SC_mathfunc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SC_operator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SC_script.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SC_scriptcomp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SC_source.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SC_time.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SC_typecast.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SC_value.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptsourceview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="settingsdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="shader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sound.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QXWIN\sxstoredbitmap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tesselator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TestIntersect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QXWIN\tobject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QXWIN\tools.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vec_transformation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vecmath.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="video.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WarpMesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CSG_components.cpp">
+      <Filter>Source Files\CSG</Filter>
+    </ClCompile>
+    <ClCompile Include="CSG_face.cpp">
+      <Filter>Source Files\CSG</Filter>
+    </ClCompile>
+    <ClCompile Include="CSG_line.cpp">
+      <Filter>Source Files\CSG</Filter>
+    </ClCompile>
+    <ClCompile Include="CSG_object.cpp">
+      <Filter>Source Files\CSG</Filter>
+    </ClCompile>
+    <ClCompile Include="CSG_segment.cpp">
+      <Filter>Source Files\CSG</Filter>
+    </ClCompile>
+    <ClCompile Include="CSG_shape.cpp">
+      <Filter>Source Files\CSG</Filter>
+    </ClCompile>
+    <ClCompile Include="FormatText.cpp">
+      <Filter>Source Files\FormatText</Filter>
+    </ClCompile>
+    <ClCompile Include="FormatTextEquation.cpp">
+      <Filter>Source Files\FormatText</Filter>
+    </ClCompile>
+    <ClCompile Include="FormatTextTabular.cpp">
+      <Filter>Source Files\FormatText</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="3DCosmos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="2DContour.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dclock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3DControls.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3DCurve.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3denums.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dfont.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3DFormattedText.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dgeoobjects.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3Dmesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3DMeshObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dmotion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3DPEngine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dscene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3DSpaceWarper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3DSpecialObjects.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dstarglobe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dstarmap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dsubframe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3DSurface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dtexture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dvideo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dviewport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3DVolShadow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="astrotools.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="astrotools_cyclorbit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bezier.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Blob.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="csg_components.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CSG_face.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CSG_line.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CSG_segment.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CSG_shape.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="displaydevices.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FBO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="formattedstringview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="formattext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="formattextequation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="formattexttabular.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ImplicitPolygonizer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="interp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="joystick.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="l3ds.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="numrecip_svd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="objectpropertyview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="objecttree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="objecttreeview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="opengl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="qxformattedstring.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RBO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="renderwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SC_boolean.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SC_color.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SC_customfunc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SC_datatype_enum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sc_env.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sc_expr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SC_ExpressionCacher.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sc_forcefield.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sc_func.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SC_functor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sc_functree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SC_list.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SC_map.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sc_operator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sc_script.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sc_scriptcomp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sc_source.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SC_time.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SC_typecast.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sc_value.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scriptsourceview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="settingsdialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sound.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tesselator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="valnames.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vc80.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vc90.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vec_transformation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vecmath.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="video.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WarpMesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="3DCosmos.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="add1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="back1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="bitmap1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="bitmap2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="bmp00001.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="bmp00002.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="bmp00003.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="bmp00004.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="bmp00005.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="bmp00006.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="bmp00007.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="bmp00008.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="bmp00009.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="bmp00010.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="bmp00011.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="bmp00012.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="bmp00013.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="clipboar.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="new1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="proceed1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="proceeda.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="stop1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="undo1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="3DCosmos.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cursor1.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>
